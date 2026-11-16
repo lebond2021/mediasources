@@ -59,12 +59,17 @@ jobs:
           --per-host 8 --timeout 12 --budget "$BUDGET"
 
       - name: 去重 + 探测 + 生成
-        run: python -m tvh build --workers 96 --timeout 8 --jar-top 30
+        run: |
+          # 先留一份线上快照，供构建后对比「新增/移除」
+          curl -fsSL "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/dist/index.json" \
+            -o data/state/prev_index.json || echo "无历史快照（首次运行）"
+          python -m tvh build --workers 96 --timeout 8 --jar-top 30
 
       - name: 校验与报告
         run: |
           python tools/validate.py --all || true
           python tools/report.py
+          python tools/diff_report.py --out docs/changes.md || true
 
       - name: 发布到 dist 分支（单提交，不涨仓库体积）
         env:
@@ -76,6 +81,7 @@ jobs:
           rm -rf /tmp/pub && mkdir -p /tmp/pub
           cp dist/*.json /tmp/pub/
           cp docs/aggregation-report.md /tmp/pub/REPORT.md
+          cp docs/changes.md /tmp/pub/CHANGES.md 2>/dev/null || true
           cd /tmp/pub
           git init -q -b dist
           git add -A
