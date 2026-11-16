@@ -130,28 +130,40 @@ tools/
 
 ## 8. 发布成"一条链接"
 
-**已发布的现成链接（本次构建，4269 站）：**
+**官方链接（仓库 `lebond2021/mediasources` 的 `dist` 分支，每天自动重建）：**
 
 | 用途 | 链接 |
 | --- | --- |
-| 主链接（填这个就行） | https://pomf2.lain.la/f/zsfi987w.json |
-| 镜像 1 | https://kappa.lol/zkTeVG |
-| 镜像 2（3 小时临时） | https://d.uguu.se/LAGmdmWzBMSX.json |
-| 精简版（300 站，低配盒子） | https://pomf2.lain.la/f/vg4v8foi.json |
-| 多仓版（影视仓/多仓 App） | https://pomf2.lain.la/f/9bxmppiy.json |
+| 主链接（推荐，GitHub Pages） | https://lebond2021.github.io/mediasources/index.json |
+| 直连 raw（最新，国内可能被墙） | https://raw.githubusercontent.com/lebond2021/mediasources/dist/index.json |
+| jsDelivr 加速镜像 | https://cdn.jsdelivr.net/gh/lebond2021/mediasources@dist/index.json |
+| 精简版（300 站，低配盒子） | https://cdn.jsdelivr.net/gh/lebond2021/mediasources@dist/index_lite.json |
+| 多仓版（影视仓） | https://cdn.jsdelivr.net/gh/lebond2021/mediasources@dist/storehouse.json |
+| 全量档（6.3 万站，仅供归档，勿填盒子） | https://cdn.jsdelivr.net/gh/lebond2021/mediasources@dist/index_all.json |
 
-重新发布（每次重建后跑一次）：
+`dist` 分支永远只有一个提交（每次强推覆盖），所以仓库体积不会随天数膨胀；`main` 分支只放代码。
+
+**三种发布方式：**
+
+1. **本机/局域网**：`py tools/serve.py` → `http://<你的IP>:8080/index.json`。
+2. **GitHub（当前采用）**：`tools/update.ps1` 每天把 `dist/` 强推到 `dist` 分支。
+3. **匿名文件床**（临时备用）：`py tools/publish2.py dist/index.json`（pomf + kappa + uguu，自动回读校验）。
+
+## 8.5 每日自动更新
+
+| 通道 | 状态 | 说明 |
+| --- | --- | --- |
+| Windows 计划任务 `TVBox-Aggregator-Daily` | **已启用** | 每天 04:10 跑 `tools/update.ps1`：发现新仓库 → 抓取 → 去重 → 探测剔除失效 → 生成 → 强推 `dist` 分支 |
+| GitHub Actions `.github/workflows/update.yml` | 已提交，待启用 | 账号级被 GitHub 关闭（`422 Actions has been disabled for this user`），在 https://github.com/settings 里恢复 Actions 后自动按 cron `10 20 * * *`（UTC，= 北京 04:10）运行 |
+
+手动跑一次：
 
 ```powershell
-py tools/publish2.py dist/index.json      # pomf + kappa + uguu，自动回读校验
+powershell -NoProfile -ExecutionPolicy Bypass -File tools\update.ps1
+powershell -NoProfile -ExecutionPolicy Bypass -File tools\update.ps1 -PublishOnly   # 只重发当前 dist
 ```
 
-其它方式：
-
-1. **局域网/本机**：`py tools/serve.py` → 打印 `http://<你的IP>:8080/index.json`。
-2. **公共文件床**：`py tools/publish.py --to catbox`（catbox 目前对本机 IP 返回 412，已改用 pomf/kappa）。
-3. **自己的仓库（推荐长期用，国内可直连 jsDelivr）**：把 `dist/` 推到 GitHub 仓库，用
-   `https://cdn.jsdelivr.net/gh/<user>/<repo>@main/index.json`，配合 `.github/workflows/update.yml` 定时重建。
+日志在 `data/logs/update-*.log`（保留最近 30 份）。计划任务开启 "错过补跑"，关机错过的会在下次开机后补一次。
 
 ## 9. 已知限制
 
