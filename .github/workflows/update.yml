@@ -89,6 +89,9 @@ jobs:
           git push -q --force \
             "https://x-access-token:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git" dist:dist
           echo "已发布：https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/dist/index.json"
+          for f in index.json index_lite.json storehouse.json index_all.json; do
+            curl -fsS "https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@dist/${f}" >/dev/null || true
+          done
 
       - name: 汇总
         run: |

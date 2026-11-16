@@ -103,6 +103,17 @@ try {
     Remove-Item $pub -Recurse -Force -ErrorAction SilentlyContinue
 }
 
+# 5.1) 刷新 jsDelivr 缓存，避免用户拿到上一轮的文件
+if ($originUrl -match 'github\.com/([^/]+/[^/]+?)(\.git)?/?$') {
+    $slug = ($matches[1] -replace '\.git$', '')
+    foreach ($f in @('index.json', 'index_lite.json', 'storehouse.json', 'index_all.json')) {
+        try {
+            Invoke-WebRequest "https://purge.jsdelivr.net/gh/$slug@dist/$f" -UseBasicParsing -TimeoutSec 30 | Out-Null
+            L "  · 已刷新 jsDelivr: $f"
+        } catch { }
+    }
+}
+
 # 6) 保留最近 30 份日志
 Get-ChildItem $logDir -Filter 'update-*.log' | Sort-Object LastWriteTime -Descending |
     Select-Object -Skip 30 | Remove-Item -Force -ErrorAction SilentlyContinue
