@@ -1,0 +1,427 @@
+# Q1a live source files (.txt/.m3u not JSON)
+repo    path                     bytes    lines  encoding        #genre#  http lines  dup urls
+------  -----------------------  -------  -----  --------------  -------  ----------  --------
+cliya   18live.txt               488997   4541   utf-8           yes      4536        0       
+cliya   live.m3u                 139139   1139   utf-8           -        1139        30      
+cliya   live.txt                 7549     119    utf-8           yes      113         4       
+qist    ITV.txt                  88216    647    utf-8           yes      637         0       
+qist    list.m3u                 88791    1649   utf-8           -        860         9       
+qist    list.txt                 16038    205    utf-8           yes      202         0       
+qist    listx.m3u                6322832  51643  utf-8           -        51574       1362    
+qist    listx.txt                117939   1304   utf-8           yes      1296        0       
+qist    livex.m3u                1053416  29303  utf-8           -        14651       0       
+qist    radio.m3u                160844   2957   utf-8           -        1478        22      
+qist    radio.txt                107296   1484   utf-8           yes      1478        22      
+qist    tvboxtv.txt              156020   1400   utf-8           yes      1391        0       
+qist    tvlive.txt               158895   1430   utf-8           yes      1420        1       
+qist    yo21.txt                 4785     38     utf-8           -        38          1       
+qist    zb.txt                   236816   2880   utf-8           yes      2821        26      
+qist    FTY/id.m3u               15119    119    utf-8           -        88          3       
+qist    FTY/id.txt               9615     63     utf-8           yes      59          0       
+qist    jar/fan.txt              1397957  4898   utf-8(replace)  -        0           0       
+qist    js/lf_live.txt           1712     38     utf-8           -        14          0       
+qist    js/lf_live1.txt          560      16     utf-8           -        3           0       
+qist    json/115share.txt        50547    645    utf-8           -        0           0       
+qist    json/alishare.ebook.txt  2633     77     utf-8           -        0           0       
+qist    json/alishare.txt        589      17     utf-8           -        0           0       
+qist    json/pushshare.a.txt     28438    227    utf-8           -        4           0       
+qist    json/pushshare.txt       834      13     utf-8           -        11          0       
+qist    json/quarkshare.txt      245      8      utf-8           -        0           0       
+qist    json/sambashare.a.txt    454      7      utf-8           -        0           0       
+qist    json/sambashare.txt      454      7      utf-8           -        0           0       
+qist    json/thundershare.txt    927      15     utf-8           -        0           0       
+qist    json/ucshare.txt         421      13     utf-8           -        0           0       
+qist    lib/sambashare.txt       454      7      utf-8           -        0           0       
+qist    live/山东联通.txt            25050    177    utf-8           -        177         0       
+qist    live/广东联通内网.txt          62942    191    utf-8           yes      190         0       
+qist    live/河南联通单播.txt          53746    105    utf-8           -        0           0       
+qist    live/辽宁移动华为.txt          32843    390    utf-8           -        390         0       
+qist    live/辽宁移动烽火.txt          39473    390    utf-8           -        390         0       
+qist    live/辽宁联通.txt            25732    154    utf-8(replace)  -        0           0       
+qist    xiaosa/ITV.txt           85205    647    utf-8           yes      637         0       
+tvyuan  sources.txt              6645     187    utf-8           -        99          7       
+
+total live-ish files: 39
+
+# Q1b live file format samples (first 6 non-empty lines)
+-- cliya/18live.txt  (4541 lines)
+   无码步兵,#genre#
+   carib-002,https://fc.maa1808.com/c/fpsvmyqlej/fpsvmyqlej.m3u8
+   carib-004,https://fc.maa1808.com/f/xuyanbincr/xuyanbincr.m3u8
+   carib-146,https://fc.maa1808.com/c/nofftnyelj/nofftnyelj.m3u8
+   carib-182,https://fc.maa1808.com/f/tveemkomvr/tveemkomvr.m3u8
+   carib-206,https://fc.maa1808.com/d/oduhcvyunk/oduhcvyunk.m3u8
+-- cliya/live.m3u  (1139 lines)
+   #EXTM3U x-tvg-url="https://live.fanmingming.com/e.xml,http://epg.51zmt.top:8000/e.xml.gz,https://epg.112114.xyz/pp.xml,https://raw.githubusercontent.c
+   #EXTINF:-1 tvg-id="凤凰中文" tvg-name="凤凰中文" tvg-logo="https://live.fanmingming.com/tv/凤凰卫视中文台.png" group-title="国际频道",凤凰中文
+   http://[2409:8087:3869:8021:1001::e5]:6610/PLTV/88888910/224/3221226248/index.m3u8
+   #EXTINF:-1 tvg-id="凤凰资讯" tvg-name="凤凰资讯" tvg-logo="https://live.fanmingming.com/tv/凤凰卫视资讯台.png" group-title="国际频道",凤凰资讯
+   http://[2409:8087:3869:8021:1001::e5]:6610/PLTV/88888910/224/3221226274/index.m3u8
+   #EXTINF:-1 tvg-id="凤凰香港" tvg-name="凤凰香港" tvg-logo="https://live.fanmingming.com/tv/凤凰卫视香港台.png" group-title="国际频道",凤凰香港
+-- cliya/live.txt  (119 lines)
+   2023/05/03更新,#genre#
+   港台频道,#genre#
+   凤凰中文,http://[2409:8087:3869:8021:1001::e5]:6610/PLTV/88888910/224/3221226248/index.m3u8
+   凤凰中文,http://[2409:8087:3428:20:500::100f]:6610/PLTV/88888888/224/3221227222/index.m3u8?servicetype=1
+   凤凰中文,http://[2409:8087:2001:20:2800:0:df6e:eb26]/ott.mobaibox.com/PLTV/1/224/3221228447/index.m3u8
+   凤凰资讯,http://[2409:8087:2001:20:2800:0:df6e:eb26]/ott.mobaibox.com/PLTV/1/224/3221228524/index.m3u8
+-- qist/ITV.txt  (647 lines)
+   央视频道,#genre#
+   CCTV1,http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=5000000001000004953&livemode=1&stbId=meyou&mode=1
+   CCTV1,http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=5000000004000002226&livemode=1&stbId=meyou&mode=1
+   CCTV1,http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=5000000010000030810&livemode=1&stbId=meyou&mode=1
+   CCTV1,http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=5000000011000265001&livemode=1&stbId=meyou&mode=1
+   CCTV1,http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=2000000002000000052&livemode=1&stbId=meyou&mode=1
+-- qist/list.m3u  (1649 lines)
+   #EXTM3U
+   #EXTINF:-1 group-title="CCTV",CCTV1
+   http://dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226231/index.m3u8
+   #EXTINF:-1 group-title="CCTV",CCTV2
+   http://dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226195/index.m3u8
+   #EXTINF:-1 group-title="CCTV",CCTV2
+-- qist/list.txt  (205 lines)
+   CCTV,#genre#
+   CCTV1,http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226016/index.m3u8
+   CCTV1,http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226559/index.m3u8
+   CCTV1,http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226514/index.m3u8
+   CCTV2,http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226540/index.m3u8
+   CCTV2,http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225588/index.m3u8
+-- qist/listx.m3u  (51643 lines)
+   #EXTM3U
+   #EXTINF:-1 group-title="性视界" tvg-logo="https://yang-1989.eu.org/logo/NSFW.png",亲相奸暂住在我家的长腿尤物表妹 第01集
+   https://t21.cdn2020.com/video/m3u8/2023/04/18/2f36d209/index.m3u8
+   #EXTINF:-1 group-title="性视界" tvg-logo="https://yang-1989.eu.org/logo/NSFW.png",千禧传媒.QXF002.Rona.变态圣诞老人下集 第01集
+   https://t21.cdn2020.com/video/m3u8/2023/01/11/9d3f287a/index.m3u8
+   #EXTINF:-1 group-title="性视界" tvg-logo="https://yang-1989.eu.org/logo/NSFW.png",千禧传媒.QXF001.程葳.变态圣诞老人上集 第01集
+-- qist/listx.txt  (1304 lines)
+   玩偶,#genre#
+   《兩周年JK特別版》狂肏清純少女蜜鮑,https://j9.avstatic.com/contents/videos/33000/33044/index.m3u8
+   衝浪少女的碎碎念,https://j9.avstatic.com/contents/videos/35000/35874/index.m3u8
+   风花雪「第一视角」,https://j9.avstatic.com/contents/videos/30000/30135/index.m3u8
+   风花雪「第三视角」,https://j9.avstatic.com/contents/videos/30000/30129/index.m3u8
+   风花雪「足爱」,https://j9.avstatic.com/contents/videos/30000/30153/index.m3u8
+-- qist/livex.m3u  (29303 lines)
+   #EXTM3U
+   #EXTINF:-1 group-title="AV1",#1
+   https://vod.mycamtv.net/1.m3u8
+   #EXTINF:-1 group-title="AV1",#2
+   https://vod.mycamtv.net/2.m3u8
+   #EXTINF:-1 group-title="AV1",#3
+-- qist/radio.m3u  (2957 lines)
+   #EXTM3U
+   #EXTINF:-1 group-title="央广",500首华语经典
+   http://ls.qingting.fm/live/3412131.m3u8?bitrate=64
+   #EXTINF:-1 group-title="央广",CRI 环球资讯广播 FM90.5
+   http://sk.cri.cn/905.m3u8
+   #EXTINF:-1 group-title="央广",CRI 中文环球广播
+-- qist/radio.txt  (1484 lines)
+   央广,#genre#
+   500首华语经典,http://ls.qingting.fm/live/3412131.m3u8?bitrate=64
+   CRI 环球资讯广播 FM90.5,http://sk.cri.cn/905.m3u8
+   CRI 中文环球广播,http://sk.cri.cn/hyhq.m3u8
+   CRI 南海之声,http://sk.cri.cn/nhzs.m3u8
+   CRI Hit FM FM88.7,http://sk.cri.cn/887.m3u8
+-- qist/tvboxtv.txt  (1400 lines)
+   黑龙江移动,#genre#
+   CCTV1,http://[2409:8087:1a09:df::401d]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226016/1.m3u8?icpid=88888888&from=5&hms_devid=980&online=172005
+   CCTV2,http://[2409:8087:1a09:df::401d]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225588/1.m3u8?icpid=88888888&from=5&hms_devid=980&online=172005
+   CCTV3,http://[2409:8087:1a09:df::401d]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226021/1.m3u8?icpid=88888888&from=5&hms_devid=980&online=172005
+   CCTV4,http://[2409:8087:1a09:df::401d]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226428/1.m3u8?icpid=88888888&from=5&hms_devid=980&online=172005
+   CCTV5,http://[2409:8087:1a09:df::401d]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226019/1.m3u8?icpid=88888888&from=5&hms_devid=980&online=172005
+-- qist/tvlive.txt  (1430 lines)
+   黑龙江移动,#genre#
+   CCTV1,http://[2409:8087:1a09:df::401d]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226016/1.m3u8?icpid=88888888&from=5&hms_devid=980&online=172005
+   CCTV2,http://[2409:8087:1a09:df::401d]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225588/1.m3u8?icpid=88888888&from=5&hms_devid=980&online=172005
+   CCTV3,http://[2409:8087:1a09:df::401d]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226021/1.m3u8?icpid=88888888&from=5&hms_devid=980&online=172005
+   CCTV4,http://[2409:8087:1a09:df::401d]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226428/1.m3u8?icpid=88888888&from=5&hms_devid=980&online=172005
+   CCTV5,http://[2409:8087:1a09:df::401d]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226019/1.m3u8?icpid=88888888&from=5&hms_devid=980&online=172005
+-- qist/yo21.txt  (38 lines)
+   testvod,http://127.0.0.1:9978/proxy?do=yt&proxy=socks://127.0.0.1:10172&url=https://www.youtube.com/watch?v=xOfwfZhw_oo
+   鳳凰資訊,http://127.0.0.1:9978/proxy?do=yt&proxy=socks://127.0.0.1:10172&url=http://www.youtube.com/watch?v=if6yQq_JJyY
+   凤凰卫视,http://127.0.0.1:9978/proxy?do=yt&proxy=socks://127.0.0.1:10172&url=http://www.youtube.com/watch?v=dmDg7NfUoSw
+   寰宇新聞, http://127.0.0.1:9978/proxy?do=yt&proxy=socks://127.0.0.1:10172&url=https://www.youtube.com/watch?v=B7Zp3d6xXWw
+   鏡新聞, http://127.0.0.1:9978/proxy?do=yt&proxy=socks://127.0.0.1:10172&url=https://www.youtube.com/watch?v=5n0y6b0Q25o
+   東森Live, http://127.0.0.1:9978/proxy?do=yt&proxy=socks://127.0.0.1:10172&url=https://www.youtube.com/watch?v=R2iMq5LKXco
+-- qist/zb.txt  (2880 lines)
+   👉易看电视,#genre#
+   易看电视,http://em.21dtv.com/songs/60143733.mkv
+   公众号 白虾工具,https://vd2.bdstatic.com/mda-nccytxs33wk5c0z6/sc/cae_h264_delogo/1647213382954115936/mda-nccytxs33wk5c0z6.mp4
+   严禁商用,https://vd2.bdstatic.com/mda-mmkfweauph7ju2rr/sc/cae_h264_delogo/1643229088196056141/mda-mmkfweauph7ju2rr.mp4
+   后果自负,http://em.21dtv.com/songs/60033420.mkv
+   📽直播通用线路,#genre#
+-- qist/FTY/id.m3u  (119 lines)
+   #EXTM3U
+   #EXTINF:-1 tvg-id="1" tvg-name="CCTV1" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV1.png" group-title="央视",CCTV-1综合
+   http://127.0.0.1:9978/proxy?do=Migu&proxyApi=aHR0cDovL2Fpa2Fudm9kLm1pZ3V2aWRlby5jb20vdmlkZW8vcC9saXZlLmpzcD91c2VyPWd1ZXN0JmNoYW5uZWw9&id=265183188
+   #EXTINF:-1 tvg-id="2" tvg-name="CCTV2" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV2.png" group-title="央视",CCTV-2财经
+   http://127.0.0.1:9978/proxy?do=Migu&proxyApi=aHR0cDovL2Fpa2Fudm9kLm1pZ3V2aWRlby5jb20vdmlkZW8vcC9saXZlLmpzcD91c2VyPWd1ZXN0JmNoYW5uZWw9&id=265667329
+   #EXTINF:-1 tvg-id="3" tvg-name="CCTV3" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV3.png" group-title="央视",CCTV-3综艺
+-- qist/FTY/id.txt  (63 lines)
+   央视,#genre#
+   CCTV1综合,http://127.0.0.1:9978/proxy?do=Migu&proxyApi=aHR0cDovL2Fpa2Fudm9kLm1pZ3V2aWRlby5jb20vdmlkZW8vcC9saXZlLmpzcD91c2VyPWd1ZXN0JmNoYW5uZWw9&id=26518
+   CCTV2财经,http://127.0.0.1:9978/proxy?do=Migu&proxyApi=aHR0cDovL2Fpa2Fudm9kLm1pZ3V2aWRlby5jb20vdmlkZW8vcC9saXZlLmpzcD91c2VyPWd1ZXN0JmNoYW5uZWw9&id=26566
+   CCTV3综艺,http://127.0.0.1:9978/proxy?do=Migu&proxyApi=aHR0cDovL2Fpa2Fudm9kLm1pZ3V2aWRlby5jb20vdmlkZW8vcC9saXZlLmpzcD91c2VyPWd1ZXN0JmNoYW5uZWw9&id=26566
+   CCTV4中文国际,http://127.0.0.1:9978/proxy?do=Migu&proxyApi=aHR0cDovL2Fpa2Fudm9kLm1pZ3V2aWRlby5jb20vdmlkZW8vcC9saXZlLmpzcD91c2VyPWd1ZXN0JmNoYW5uZWw9&id=265
+   CCTV4欧洲,http://127.0.0.1:9978/proxy?do=Migu&proxyApi=aHR0cDovL2Fpa2Fudm9kLm1pZ3V2aWRlby5jb20vdmlkZW8vcC9saXZlLmpzcD91c2VyPWd1ZXN0JmNoYW5uZWw9&id=26566
+-- qist/jar/fan.txt  (4898 lines)
+   PK  =7o]               classes.dex�}|Tյ��g&3��k2@��dxdDHB M�@P&�	Hf&3^ZED�����j�ji�j}U�Ukm�ֶ�U����Y��V��ۇ�[o��k�=��� W�����g���~��
+   f���@p����@3p:p&`[�8�.�<|
+   L�Fۀ�@��� |
+   ��A�@�xx(�����>�^���S�� ��W����㈪�f`p3�C�C`���C����&�[Nv� ?>Jk1�@��&�2�w�l>�R \<	��X@�x�=�hp#�0�D�m�� �ID�7 o3O&�� ��
+   �xx� (X��0��8|��>@����Y���j��\	�|x� p4@׀@�� ����h���|xx�(\��0.n�F�1��$���E���_ j"� L�3�
+   ��ˀF`�8��xxxxxxxx�+����, �S�`��;������O/o� Ne?0���g ]@�	\|��(�3�W����!��c�����"@��\\ n�����
+-- qist/js/lf_live.txt  (38 lines)
+   格式说明：
+   #订阅名
+   地址(支持m3u订阅、tvbox配置文件中live选项的直播地址订阅)
+   相对路径说明
+   以./开头，相对位置是本订阅文件
+   以/开头，存储卡的根目录
+-- qist/js/lf_live1.txt  (16 lines)
+   格式说明：
+   #订阅名
+   地址(支持m3u订阅、tvbox配置文件中live选项的直播地址订阅)
+   相对路径说明
+   以./开头，相对位置是本订阅文件
+   以/开头，存储卡的根目录
+-- qist/json/115share.txt  (645 lines)
+   self 我的115网盘 1
+   swz93883nhj?password=sa53 豆瓣|TOP250电影_1.67TB 1
+   swz8h1h33xj?password=0000 豆瓣|TOP250电影_12.65Tb 1
+   swz18wn3zh9?password=yf61 演唱会|演唱会原盘_820T 1
+   sw6udf93wcx?password=na63 演唱会|演唱会_蓝光原盘22TB
+   swzg9pt3wye?password=c899 演唱会|演唱会_重编码6TB
+-- qist/json/alishare.ebook.txt  (77 lines)
+   zAajGfX1cxE 中信出版图书 1
+   kgCYrLpLgiZ 机械工业出版社6000册 1
+   EmhjMiwBrNj 清华大学出版社2237册 1
+   3XEmnpcKYwd 新知文库 1
+   XpsFL9BcCbN 北京国家图书馆 1
+   BPkNEszAXjr 一万本图书馆PDF 1
+-- qist/json/alishare.txt  (17 lines)
+   self 我的阿里云盘
+   cdqCsAWD9wC?pwd=6666 Tacit0924-总合集 1 updated_at DESC
+   mxAfB6eRgY4 阿里1T 1
+   4ydLxf7VgH7 平凡中的 1
+   gf2GebXnZHh 诺兰全集 1
+   dieULBdYP3D YYDSVIP|YYDSVIP 1
+-- qist/json/pushshare.a.txt  (227 lines)
+   https://www.alipan.com/s/self 我的阿里云盘
+   https://pan.quark.cn/s/self 我的夸克云盘
+   https://pan.xunlei.com/s/self 我的迅雷云盘
+   https://mypikpak.com/s/self 我的PikPak云盘
+   magnet:?xt=urn:btih:451922E5C710C677DBB64322C0C949DF29C7B9F0	446G
+   magnet:?xt=urn:btih:34C72FBF622E254ADE5DB11354CE7773ECEEA123	あやみ旬果.[64GB]
+-- qist/json/pushshare.txt  (13 lines)
+   https://www.alipan.com/s/self 我的阿里云盘
+   https://pan.quark.cn/s/self 我的夸克云盘
+   https://drive.uc.cn/s/self 我的UC云盘
+   https://115.com/s/self 我的115云盘
+   https://pan.xunlei.com/s/self 我的迅雷云盘
+   https://mypikpak.com/s/self 我的PikPak云盘
+-- qist/json/quarkshare.txt  (8 lines)
+   self 我的夸克网盘
+   885fd4ba2d92 每日短剧更新
+   432b5cd3a225 短剧162g
+   c54a8e47f82f 短剧114g
+   047991d5955e 经典剧集
+   ecdf7d6ffaaa 经典港剧合集1
+-- qist/json/sambashare.a.txt  (7 lines)
+   user:pass@192.168.101.13/share Samba分享 0 updated_at DESC
+   user:pass@192.168.101.13/share2 Samba分享2 0 updated_at DESC
+   user:pass@192.168.101.13/share8 Samba分享8 0 updated_at DESC
+   user:pass@192.168.101.13/share10 Samba分享10 0 updated_at DESC
+   user:pass@192.168.101.13/share11 Samba分享11 0 updated_at DESC
+   user:pass@192.168.101.13/share12 Samba分享12 0 updated_at DESC
+-- qist/json/sambashare.txt  (7 lines)
+   user:pass@192.168.101.13/share Samba分享 0 updated_at DESC
+   user:pass@192.168.101.13/share2 Samba分享2 0 updated_at DESC
+   user:pass@192.168.101.13/share8 Samba分享8 0 updated_at DESC
+   user:pass@192.168.101.13/share10 Samba分享10 0 updated_at DESC
+   user:pass@192.168.101.13/share11 Samba分享11 0 updated_at DESC
+   user:pass@192.168.101.13/share12 Samba分享12 0 updated_at DESC
+-- qist/json/thundershare.txt  (15 lines)
+   self 我的迅雷雲盤
+   VNg6eg34ncoRGHp98SBeYRUmA1?pwd=ywp2 刘德华高清电影电视剧全集
+   VNg6YRPKiFWtWRrEfTcmpo4nA1?pwd=3dk6 李连杰电影合集
+   VNg6af5Yu4IVpCplLZEXpTCHA1?pwd=e3tk 周星驰电影合集
+   VNg6ZDjEu4IVpCplLZEXovZMA1?pwd=i83r 成龙电影合集
+   VNg6aYN6S67q560x6uBmiTxGA1?pwd=vcff 金庸武侠作品电视剧版合集
+-- qist/json/ucshare.txt  (13 lines)
+   self 我的UC网盘
+   10b31a7c5f844 资源分享
+   42e08284433b4?pwd=NZQb 影视ziyuan每日更新
+   c0503fdee6644 2024最新精整豆瓣TOP250部
+   391b86c09cd24 2023日剧
+   21f04a22052f4 2023韩剧
+-- qist/lib/sambashare.txt  (7 lines)
+   user:pass@192.168.101.13/share Samba分享 0 updated_at DESC
+   user:pass@192.168.101.13/share2 Samba分享2 0 updated_at DESC
+   user:pass@192.168.101.13/share8 Samba分享8 0 updated_at DESC
+   user:pass@192.168.101.13/share10 Samba分享10 0 updated_at DESC
+   user:pass@192.168.101.13/share11 Samba分享11 0 updated_at DESC
+   user:pass@192.168.101.13/share12 Samba分享12 0 updated_at DESC
+-- qist/live/山东联通.txt  (177 lines)
+   CCTV1综合HD,http://119.187.121.178:8091/PLTV/88888888/224/3221225871/10000100000000060000000000219040_0.smil/01.m3u8?fmt=ts2hls,0,01.m3u8
+   CCTV2财经HD,http://119.187.121.178:8091/PLTV/88888888/224/3221226043/10000100000000060000000000286778_0.smil/01.m3u8?fmt=ts2hls,0,01.m3u8
+   CCTV3综艺,http://119.187.121.178:8091/PLTV/88888888/224/3221225790/10000100000000060000000000215615_0.smil/01.m3u8?fmt=ts2hls,0,01.m3u8
+   CCTV4中文国际HD,http://119.187.121.178:8091/PLTV/88888888/224/3221226524/10000100000000060000000001329929_0.smil/01.m3u8?fmt=ts2hls,0,01.m3u8
+   CCTV5体育,http://119.187.121.178:8091/PLTV/88888888/224/3221225791/10000100000000060000000000215620_0.smil/01.m3u8?fmt=ts2hls,0,01.m3u8
+   CCTV5+体育赛事HD,http://119.187.121.178:8091/PLTV/88888888/224/3221225876/10000100000000060000000000215725_0.smil/01.m3u8?fmt=ts2hls,0,01.m3u8
+-- qist/live/广东联通内网.txt  (191 lines)
+   广东联通内网,#genre#
+   CCTV1,http://112.89.33.7:80/PLTV/88888973/224/3221225768/10000100000000060000000000337107_0.smil/01.m3u8?fmt=ts2hls,1706,01.m3u8,0,8568,0,0&accountinf
+   CCTV2,http://112.89.33.7:80/PLTV/88888973/224/3221225767/10000100000000060000000000337109_0.smil/01.m3u8?fmt=ts2hls,1706,01.m3u8,0,8594,0,0&accountinf
+   CCTV3,http://112.89.33.4:80/PLTV/88888973/224/3221226350/10000100000000060000000001464865_0.smil/01.m3u8?fmt=ts2hls,1705,01.m3u8,0,8585,0,0&accountinf
+   CCTV4,http://112.89.45.21:80/PLTV/88888973/224/3221226356/10000100000000060000000001481216_0.smil/01.m3u8?fmt=ts2hls,244,01.m3u8,0,8595,0,0&accountinf
+   CCTV5,http://112.89.33.8:80/PLTV/88888973/224/3221226352/10000100000000060000000001464824_0.smil/01.m3u8?fmt=ts2hls,1707,01.m3u8,0,8593,0,0&accountinf
+-- qist/live/河南联通单播.txt  (105 lines)
+   导视,rtsp://10.253.76.35:554/live/ch23021718371664224003.sdp?playtype=1&boid=001&clienttype=1&time=20251215230832+08&life=172800&ifpricereqsnd=1&vcdnid=
+   CCTV1高清,rtsp://10.253.76.35:554/live/ch14041015570107698054.sdp?playtype=1&boid=001&clienttype=1&time=20251215230832+08&life=172800&ifpricereqsnd=1&vc
+   CCTV2高清,rtsp://10.253.76.35:554/live/ch15043011171070217538.sdp?playtype=1&boid=001&clienttype=1&time=20251215230832+08&life=172800&ifpricereqsnd=1&vc
+   CCTV4高清,rtsp://10.253.76.35:554/live/ch21060917363559486478.sdp?playtype=1&boid=001&clienttype=1&time=20251215230832+08&life=172800&ifpricereqsnd=1&vc
+   CCTV7高清,rtsp://10.253.76.35:554/live/ch15050516504767103232.sdp?playtype=1&boid=001&clienttype=1&time=20251215230832+08&life=172800&ifpricereqsnd=1&vc
+   CCTV9高清,rtsp://10.253.76.35:554/live/ch15050517110349057462.sdp?playtype=1&boid=001&clienttype=1&time=20251215230832+08&life=172800&ifpricereqsnd=1&vc
+-- qist/live/辽宁移动华为.txt  (390 lines)
+   CCTV4K超高清,http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227623/index.m3u8
+   CCTV16奥林匹克4K,http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227709/index.m3u8
+   北京卫视4K,http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227629/index.m3u8
+   北京卫视4K,http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227656/index.m3u8
+   东方卫视4K,http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227539/index.m3u8
+   广东卫视4K,http://hwottcdn.ln.chinamobile.com/PLTV/11/224/3221227712/index.m3u8
+-- qist/live/辽宁移动烽火.txt  (390 lines)
+   CCTV4K超高清,http://ltcottcdnfh.ln.chinamobile.com/PLTV/11/224/3221227623/index.m3u8?servicetype=1
+   CCTV16奥林匹克4K,http://ltcottcdnfh.ln.chinamobile.com/PLTV/11/224/3221227709/index.m3u8?servicetype=1
+   北京卫视4K,http://ltcottcdnfh.ln.chinamobile.com/PLTV/11/224/3221227629/index.m3u8?servicetype=1
+   北京卫视4K,http://ltcottcdnfh.ln.chinamobile.com/PLTV/11/224/3221227656/index.m3u8?servicetype=1
+   东方卫视4K,http://ltcottcdnfh.ln.chinamobile.com/PLTV/11/224/3221227539/index.m3u8?servicetype=1
+   广东卫视4K,http://ltcottcdnfh.ln.chinamobile.com/PLTV/11/224/3221227712/index.m3u8?servicetype=1
+-- qist/live/辽宁联通.txt  (154 lines)
+   �����[T��, # g e n r e #  
+    C C T V - 1 �~T, r t s p : / / 1 0 . 1 5 . 2 5 0 . 1 3 / P L T V / 8 8 8 8 8 8 8 8 / 2 2 4 / 0 / 3 2 2 1 2 2 6 1 1 8 / i p t v 6 5 7 9 5 . s m i l 
+    C C T V - 2 "��~, r t s p : / / 1 0 . 1 5 . 2 5 0 . 1 3 / P L T V / 8 8 8 8 8 8 8 8 / 2 2 4 / 3 2 2 1 2 2 6 5 8 4 / 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 6 0
+    C C T V - 3 �~z�, r t s p : / / 1 0 . 1 5 . 2 5 0 . 1 3 / P L T V / 8 8 8 8 8 8 8 8 / 2 2 4 / 3 2 2 1 2 2 6 7 2 6 / 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 6 0
+    C C T V - 4 �VE�, r t s p : / / 1 0 . 1 5 . 2 5 0 . 1 3 / P L T V / 8 8 8 8 8 8 8 8 / 2 2 4 / 3 2 2 1 2 2 6 6 0 1 / 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 6 0
+    C C T V - 5 SO��, r t s p : / / 1 0 . 1 5 . 2 5 0 . 1 3 / P L T V / 8 8 8 8 8 8 8 8 / 2 2 4 / 3 2 2 1 2 2 6 7 0 7 / 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 6 0
+-- qist/xiaosa/ITV.txt  (647 lines)
+   央视频道,#genre#
+   CCTV1,http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=5000000001000004953&livemode=1&stbId=yu&mode=1
+   CCTV1,http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=5000000004000002226&livemode=1&stbId=yu&mode=1
+   CCTV1,http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=5000000010000030810&livemode=1&stbId=yu&mode=1
+   CCTV1,http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=FifastbLive&Contentid=5000000011000265001&livemode=1&stbId=yu&mode=1
+   CCTV1,http://gslbserv.itv.cmvideo.cn:80/1.m3u8?channel-id=hnbblive&Contentid=2000000002000000052&livemode=1&stbId=yu&mode=1
+-- tvyuan/sources.txt  (187 lines)
+   # 2026-11-15 09:05:01
+   [21ms] 11
+   https://cdn.jsdelivr.net/gh/liu673cn/box@main/m.json
+   [23ms] 我的
+   https://iptv-org.github.io/iptv/categories/news.m3u
+   [29ms] 多个多仓
+
+# Q1c live line-shape classification across all live files
+   bare url                       43527
+   comment/other #                43455
+   name,url                       16976
+   other                          3427
+   name,url,extra(,)              1654
+   genre-header (name,#genre#)    111
+
+# Q1d jar files (spider jars)
+repo  path                             bytes     md5                               sidecar
+----  -------------------------------  --------  --------------------------------  -------
+qist  cat/18_dist/index.config.js.md5  32                                          -      
+qist  cat/18_dist/index.js.md5         32                                          -      
+qist  cat/dist/index.config.js.md5     32                                          -      
+qist  cat/dist/index.js.md5            32                                          -      
+qist  jar/custom_spider.jar            266777    41c87635d7592069884a5dafa12acabe  -      
+qist  jar/fty.jar                      640982    b25d0e7f7c87f31aa886b78fe43a7d4c  -      
+qist  jar/pg23a94bb_upgraded.jar       11725653  7c8f662c4d1ed4351e02691c15ed24a2  -      
+qist  jar/pg_upgraded.jar              2912031   e58c3a2975d24db4978065ab895cf297  -      
+qist  jar/spider.jar                   1929492   cbe016eb3cb002ae62058604843f5106  -      
+qist  jar/XBPQ_upgraded.jar            659007    c10ebfca316c4ac51cb00547bfdd2389  -      
+qist  jar/XYQ.jar                      393490    705ba6e23c4384c37a11dd904727520b  -      
+qist  lib/aliproxy.32.md5              34                                          -      
+qist  lib/aliproxy.md5                 34                                          -      
+qist  lib/clash2singbox.md5            34                                          -      
+qist  lib/sing-box.md5                 34                                          -      
+qist  lib/tgsearch.md5                 34                                          -      
+qist  lib/xray.md5                     34                                          -      
+qist  xiaosa/spider.jar                1929492   cbe016eb3cb002ae62058604843f5106  -      
+
+# Q1e js / py counts by directory (top 25 dirs)
+   qist     js                       .js  269
+   qist     cat/js                   .js  165
+   qist     xiaosa/js                .js  83
+   qist     cat/tjs/js               .js  65
+   qist     cat/tjs/lib              .js  40
+   qist     xiaosa/py                .py  32
+   qist     FTY                      .js  30
+   qist     lib                      .js  29
+   qist     py                       .py  22
+   qist     cat/js/lib               .js  8
+   qist     tools                    .py  6
+   qist     cat/18_dist              .js  2
+   qist     cat/dist                 .js  2
+   qist     json                     .py  1
+   qist     lib                      .py  1
+   qist     tools                    .js  1
+   tvyuan   (root)                   .py  1
+
+# Q1f py tools in qist (file list with sizes, top 25 by size)
+path                       bytes 
+-------------------------  ------
+qist/py/红果短剧.py            326612
+qist/xiaosa/py/红果短剧.py     326612
+qist/py/WLZB.py            52300 
+qist/py/网络直播.py            52300 
+qist/xiaosa/py/WLZB.py     52300 
+qist/xiaosa/py/网络直播.py     52300 
+qist/xiaosa/py/偷乐短剧.py     33532 
+qist/py/世界听书.py            32631 
+qist/xiaosa/py/世界听书.py     32631 
+qist/py/华谊影视.py            30429 
+qist/py/华数.py              27881 
+qist/xiaosa/py/哔哩视频.py     25967 
+qist/py/libvio.py          25902 
+qist/py/GZYS.py            21734 
+qist/xiaosa/py/GZYS.py     21734 
+qist/py/爱听音乐.py            20181 
+qist/xiaosa/py/爱听音乐.py     20181 
+qist/py/TVB云播.py           17418 
+qist/tools/build_local.py  16159 
+qist/tools/tvbox.py        16136 
+qist/py/Czsapp.py          14682 
+qist/xiaosa/py/腾讯视频.py     14669 
+tvyuan/update.py           14667 
+qist/xiaosa/py/河马短剧.py     14517 
+qist/py/SZYS.py            13827 
+
+# Q1g ext form samples (3 per form)
+-- missing n=1228
+   key=豆                  api=csp_DouDouGuard                ext=null
+   key=YGP                api=csp_YGPGuard                   ext=null
+   key=alllive            api=csp_AllliveGuard               ext=null
+-- other-str n=802
+   key=csp_AList          api=csp_AList                      ext="./json/alist.json"
+   key=drpy_js_360影视      api=./lib/drpy2.min.js             ext="./js/360影视.js"
+   key=drpy_js_奇珍异兽       api=./lib/drpy2.min.js             ext="./js/奇珍异兽.js"
+-- json-obj n=540
+   key=玩偶                 api=csp_WoGGGuard                  ext={"Cloud-drive": "tvfan/Cloud-drive.txt", "from": "4k|auto", "siteUrl": "https://www.wogg.com/", "danMu": "弹"}
+   key=抠搜                 api=csp_KkSsGuard                  ext={"Cloud-drive": "tvfan/Cloud-drive.txt", "from": "4k|auto"}
+   key=UC                 api=csp_UuSsGuard                  ext={"Cloud-drive": "tvfan/Cloud-drive.txt", "from": "4k|auto"}
+-- url n=286
+   key=zxzj               api=csp_ZxzjGuard                  ext="https://www.zxzjhd.com/"
+   key=奥特                 api=csp_AueteGuard                 ext="https://auete.com/"
+   key=新6V                api=csp_SixVGuard                  ext="https://www.xb6v.com/"
+-- likely-base64 n=98
+   key=神车                 api=csp_AppSKGuard                 ext="rfOX1voDIQhH8epBwtCFsq+8syyZ18T30GkibomjS1xHcE9fpWU7oKJ1cO9K0M5hrnOHZ9dKjiJz5HEyTr57RZHCqunfFT7jH/mEy+uqVyo="
+   key=溢彩                 api=csp_AppSxGuard                 ext="rfOb1uAWbkRHp7hdxprG9un3+T/f19e82TUvZMviAElDfhsS/jcju7U0fe1MnN1h63CTaYIPjmEw9C0qVsgBO8um85+eGlSkG/r2q6m0DA=="
+   key=萌米                 api=csp_AppTTGuard                 ext="uqGL1bNENEIVq+dC1p/Y9uWjuA=="
+-- empty n=23
+   key=AppV7_Dsx          api=csp_DaShiXiong                 ext=""
+   key=py_porn            api=./js/ss/porn.py                ext=""
+   key=py_huangguo        api=./js/ss/huangguo.py            ext=""
+-- json-str n=12
+   key=csp_Zhaozy         api=csp_Zhaozy                     ext="{\"username\":\"fanty\",\"password\":\"qqq111\",\"searchurl\":\"https://zhaoziyuan1.cc/so?filename={wd}\"}"
+   key=csp_xBPQ_超清        api=csp_xBPQ                       ext="{\"分类url\":\"https://avhh.vip/cq/{cateId}-{catePg}.html\", \"分类\":\"请勿外传$2k-yazhou#按主页切换源$2k-zipaitoupai#无分类切换VPN$2k-ch
+   key=csp_XBPQ_98影院      api=csp_XBPQ                       ext="{\"免嗅\":\"0\",\"副标题\":\"right\\\">&&</span>\",\"播放标题\":\">&&</a>\",\"播放数组\":\"<ul class=\\\"stui-content__playlist&&</u

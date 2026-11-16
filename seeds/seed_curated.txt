@@ -1,0 +1,36 @@
+# TVBox 聚合器 —— 精选种子源（人工维护，长期稳定的仓库/镜像）
+# 格式：URL<TAB>名称<TAB>备注
+#
+# ============ 核心仓库（直接 raw 配置） ============
+https://raw.githubusercontent.com/qist/tvbox/master/0821.json	qist/0821	大合集
+https://raw.githubusercontent.com/qist/tvbox/master/tvbox.json	qist/tvbox	主配置
+https://raw.githubusercontent.com/qist/tvbox/master/jsm.json	qist/jsm	JS 专版
+https://raw.githubusercontent.com/qist/tvbox/master/js.json	qist/js	JS 合集
+https://raw.githubusercontent.com/qist/tvbox/master/fty.json	qist/fty	饭太硬
+https://raw.githubusercontent.com/qist/tvbox/master/XYQ.json	qist/XYQ	香雅情
+https://raw.githubusercontent.com/qist/tvbox/master/9918.json	qist/9918	多多
+https://raw.githubusercontent.com/qist/tvbox/master/dianshi.json	qist/dianshi	电视
+https://raw.githubusercontent.com/noimank/tvbox/main/tvboxmuti.json	noimank/muti	多仓
+https://gitlab.com/noimank/tvbox/-/raw/main/tvbox1.json	noimank/tvbox1	GitLab
+https://raw.githubusercontent.com/25175/tvyuan/main/tvbox_full.json	tvyuan/full	全量
+https://raw.githubusercontent.com/25175/tvyuan/main/tvbox.json	tvyuan/main	简约
+https://raw.githubusercontent.com/25175/tvyuan/main/tvbox_multi.json	tvyuan/multi	多仓
+https://raw.githubusercontent.com/cliya/TVBox/main/18.json	cliya/18	18+
+https://raw.githubusercontent.com/cliya/TVBox/main/cangku.json	cliya/cangku	仓库
+https://raw.githubusercontent.com/cliya/TVBox/main/duocang.json	cliya/duocang	多仓
+
+# ============ 知名个人源 ============
+https://raw.githubusercontent.com/liu673cn/box/main/m.json	liu673cn/box	猫影视盒
+https://raw.liucn.cc/box/dc.txt	liucn/dc	多仓
+https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json	gaotianliuyun/gao	高天流云
+https://raw.githubusercontent.com/gaotianliuyun/gao/master/0821.json	gaotianliuyun/gao-0821
+https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json	xyq254245	香雅情
+https://raw.githubusercontent.com/gaotianliuyun/gao/master/XYQ.json	gaotianliuyun/XYQ
+https://raw.githubusercontent.com/supermeguo/BoxRes/main/Myuse/catcr.json	supermeguo	catcr
+https://raw.githubusercontent.com/guot55/YGBH/main/vip2.json	guot55/vip2	宝盒VIP
+https://dxawi.github.io/0/0.json	dxawi/0	单源
+https://gh-proxy.org/https://raw.githubusercontent.com/ggrrttyyiii/CatVodSpider/refs/heads/main/json/demo.json	ggrrttyyiii/CatVodSpider	镜像
+
+# ============ 聚合站 / 列表页 ============
+https://tvbox.clbug.com/user.php	clbug 源列表	HTML 列表页
+https://tvbox.clbug.com/	clbug 首页

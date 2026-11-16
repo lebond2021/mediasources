@@ -1,0 +1,8 @@
+qist/jar/fan.txt                   dex=37992  /DouDouGuard;=1  /XBPQ;=0  /Bili;=0  Lcom/github/catvod/spider=79
+qist/jar/pg_upgraded.jar           dex=7043744  /DouDouGuard;=0  /XBPQ;=0  /Bili;=1  Lcom/github/catvod/spider=1094
+qist/jar/pg23a94bb_upgraded.jar    dex=5965264  /DouDouGuard;=0  /XBPQ;=0  /Bili;=1  Lcom/github/catvod/spider=1106
+qist/jar/spider.jar                dex=4960220  /DouDouGuard;=0  /XBPQ;=1  /Bili;=1  Lcom/github/catvod/spider=3361
+qist/jar/XYQ.jar                   dex=990256  /DouDouGuard;=0  /XBPQ;=0  /Bili;=1  Lcom/github/catvod/spider=716
+qist/jar/custom_spider.jar         dex=1156116  /DouDouGuard;=0  /XBPQ;=0  /Bili;=1  Lcom/github/catvod/spider=549
+qist/jar/XBPQ_upgraded.jar         dex=1548408  /DouDouGuard;=0  /XBPQ;=1  /Bili;=0  Lcom/github/catvod/spider=1765
+qist/jar/fty.jar                   dex=1509644  /DouDouGuard;=0  /XBPQ;=1  /Bili;=1  Lcom/github/catvod/spider=928

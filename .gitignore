@@ -1,0 +1,12 @@
+# 运行期数据（体积大、可重建）
+data/
+sources/
+dist/
+# Python
+__pycache__/
+*.pyc
+.venv/
+# 杂项
+*.log
+*.tmp
+.DS_Store

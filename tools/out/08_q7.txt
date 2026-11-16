@@ -1,0 +1,194 @@
+# Q7 all .json files: 266
+repo    class             count
+------  ----------------  -----
+cliya   multi-storeHouse  2    
+cliya   multi-urls        2    
+qist    UNPARSEABLE       1    
+qist    biliext           12   
+qist    cat-open-config   6    
+qist    class-filters     37   
+qist    csp-site-rule     32   
+qist    json-array        14   
+qist    multi-urls        1    
+qist    other-dict        35   
+qist    tvbox-config      17   
+qist    xyq-spider-rule   102  
+tvbox   multi-urls        1    
+tvyuan  multi-storeHouse  1    
+tvyuan  tvbox-config      3    
+
+# Q7b identical-content groups (md5), size>1
+distinct contents=215, groups with >1 file=33, files inside groups=84
+md5         n  members                                                                                                    
+----------  -  -----------------------------------------------------------------------------------------------------------
+dc5642066e  4  qist/json/BSDM.json | qist/xiaosa/json/BSDM.json | qist/xiaosa/XYQHiker/巴士动漫.json | qist/XYQHiker/巴士动漫.json
+5361e6eed4  4  qist/json/DLXFS.json | qist/XBPQ/哆啦新番社.json | qist/xiaosa/json/DLXFS.json | qist/xiaosa/XBPQ/哆啦新番社.json    
+8d9deae7ca  4  qist/json/DYG.json | qist/xiaosa/json/DYG.json | qist/xiaosa/XYQHiker/电影港.json | qist/XYQHiker/电影港.json    
+cd75787b0a  4  qist/json/JQYS.json | qist/xiaosa/json/JQYS.json | qist/xiaosa/XYQHiker/剧圈影视.json | qist/XYQHiker/剧圈影视.json
+ba2c1f23c2  4  qist/json/MBYS.json | qist/XBPQ/面包影视.json | qist/xiaosa/json/MBYS.json | qist/xiaosa/XBPQ/面包影视.json        
+0acc9082ec  4  qist/json/XZYS.json | qist/XBPQ/小镇影视.json | qist/xiaosa/json/XZYS.json | qist/xiaosa/XBPQ/小镇影视.json        
+48dee577b2  4  qist/json/YLYS.json | qist/XBPQ/永乐影视.json | qist/xiaosa/json/YLYS.json | qist/xiaosa/XBPQ/永乐影视.json        
+a143f103d2  3  qist/json/CZKT.json | qist/xiaosa/json/CZKT.json | qist/xiaosa/json/初中课堂.json                              
+b1c16f762a  3  qist/json/GZKT.json | qist/xiaosa/json/GZKT.json | qist/xiaosa/json/高中课堂.json                              
+ff9fdadaf1  3  qist/json/SEJY.json | qist/xiaosa/json/SEJY.json | qist/xiaosa/json/少儿教育.json                              
+5d490ab778  3  qist/json/XXKT.json | qist/xiaosa/json/XXKT.json | qist/xiaosa/json/小学课堂.json                              
+6455d134fa  2  qist/json/aliShare.json | qist/xiaosa/json/aliShare.json                                                   
+74e7bd0102  2  qist/json/alist.json | qist/xiaosa/json/alist.json                                                         
+45882085a3  2  qist/json/ky4kbgq7b273.json | qist/xiaosa/json/ky4kbgq7b273.json                                           
+6e24c8e432  2  qist/json/quarkShare.json | qist/xiaosa/json/quarkShare.json                                               
+5ddffe354e  2  qist/json/ucShare.json | qist/xiaosa/json/ucShare.json                                                     
+bfac88c839  2  qist/XBPQ/养生堂.json | qist/xiaosa/XBPQ/养生堂.json                                                             
+d423feeaf6  2  qist/XBPQ/樱花动漫.json | qist/xiaosa/XBPQ/樱花动漫.json                                                           
+328511c56b  2  qist/XBPQ/雪花.json | qist/xiaosa/XBPQ/雪花.json                                                               
+335684b884  2  qist/XBPQ/韩剧看看.json | qist/xiaosa/XBPQ/韩剧看看.json                                                           
+34a36a6a6b  2  qist/xiaosa/json/BLTS.json | qist/xiaosa/json/哔哩哔哩听书.json                                                  
+875bcb2ffb  2  qist/xiaosa/json/BLXP.json | qist/xiaosa/json/哔哩哔哩小品.json                                                  
+12835c5c2e  2  qist/xiaosa/json/BLXQ.json | qist/xiaosa/json/哔哩哔哩戏曲.json                                                  
+55cd7b2300  2  qist/xiaosa/json/BLXS.json | qist/xiaosa/json/哔哩哔哩相声.json                                                  
+6005e9dd22  2  qist/xiaosa/json/BLYCH.json | qist/xiaosa/json/哔哩哔哩演唱会.json                                                
+af5f12dd4e  2  qist/xiaosa/json/hb.json | qist/xiaosa/json/虎斑.json                                                        
+df35f825fe  2  qist/xiaosa/json/kf.json | qist/xiaosa/json/夸父.json                                                        
+a8632f2a02  2  qist/xiaosa/json/lj.json | qist/xiaosa/json/雷鲸.json                                                        
+5f8003fd53  2  qist/xiaosa/json/og.json | qist/xiaosa/json/欧歌.json                                                        
+305c697691  2  qist/xiaosa/json/xbky.json | qist/xiaosa/json/快映.json                                                      
+225c7510e6  2  qist/xiaosa/json/yyds.json | qist/xiaosa/json/多多.json                                                      
+725cbc2b06  2  qist/xiaosa/XYQHiker/来看影视.json | qist/XYQHiker/来看影视.json                                                   
+76aacd307d  2  qist/xiaosa/XYQHiker/短剧屋.json | qist/XYQHiker/短剧屋.json                                                     
+
+# Q7c qist json by directory
+dir              class            n 
+---------------  ---------------  --
+(root)           multi-urls       1 
+(root)           tvbox-config     12
+FTY              biliext          2 
+FTY              class-filters    8 
+FTY              other-dict       1 
+XBPQ             xyq-spider-rule  23
+XYQBiu           other-dict       2 
+XYQHiker         other-dict       6 
+XYQHiker         xyq-spider-rule  14
+biliext          biliext          7 
+cat/js           cat-open-config  4 
+cat/tjs          cat-open-config  2 
+cat/tjs          tvbox-config     2 
+js               json-array       2 
+json             UNPARSEABLE      1 
+json             biliext          2 
+json             class-filters    8 
+json             json-array       8 
+json             other-dict       16
+json             xyq-spider-rule  10
+lib              other-dict       3 
+tools            tvbox-config     2 
+xiaosa           tvbox-config     1 
+xiaosa/XBPQ      xyq-spider-rule  35
+xiaosa/XYQHiker  other-dict       2 
+xiaosa/XYQHiker  xyq-spider-rule  14
+xiaosa/json      biliext          1 
+xiaosa/json      class-filters    21
+xiaosa/json      csp-site-rule    32
+xiaosa/json      json-array       4 
+xiaosa/json      other-dict       5 
+xiaosa/json      xyq-spider-rule  6 
+
+# Q7d qist: same basename in multiple dirs (mirror pairs)
+basenames appearing >1: 41
+identical-basename groups=28, differing=13
+basename           paths                                                                   identical?
+-----------------  ----------------------------------------------------------------------  ----------
+BSDM.json          json/BSDM.json | xiaosa/json/BSDM.json                                  same      
+CZKT.json          json/CZKT.json | xiaosa/json/CZKT.json                                  same      
+DLXFS.json         json/DLXFS.json | xiaosa/json/DLXFS.json                                same      
+DYG.json           json/DYG.json | xiaosa/json/DYG.json                                    same      
+GZKT.json          json/GZKT.json | xiaosa/json/GZKT.json                                  same      
+JQYS.json          json/JQYS.json | xiaosa/json/JQYS.json                                  same      
+MBYS.json          json/MBYS.json | xiaosa/json/MBYS.json                                  same      
+SEJY.json          json/SEJY.json | xiaosa/json/SEJY.json                                  same      
+XXKT.json          json/XXKT.json | xiaosa/json/XXKT.json                                  same      
+XZYS.json          json/XZYS.json | xiaosa/json/XZYS.json                                  same      
+YLYS.json          json/YLYS.json | xiaosa/json/YLYS.json                                  same      
+aliShare.json      json/aliShare.json | xiaosa/json/aliShare.json                          same      
+alist.json         js/alist.json | json/alist.json | xiaosa/json/alist.json                DIFF(2)   
+dianshi.json       dianshi.json | tools/dianshi.json                                       DIFF(2)   
+jsm.json           jsm.json | tools/jsm.json                                               DIFF(2)   
+ky4kbgq7b273.json  json/ky4kbgq7b273.json | xiaosa/json/ky4kbgq7b273.json                  same      
+nmys.json          FTY/nmys.json | json/nmys.json                                          DIFF(2)   
+quarkShare.json    json/quarkShare.json | xiaosa/json/quarkShare.json                      same      
+ucShare.json       json/ucShare.json | xiaosa/json/ucShare.json                            same      
+wogg.json          json/wogg.json | xiaosa/json/wogg.json                                  DIFF(2)   
+七新影视.json          xiaosa/XYQHiker/七新影视.json | XYQHiker/七新影视.json                          DIFF(2)   
+养生堂.json           XBPQ/养生堂.json | xiaosa/XBPQ/养生堂.json                                    same      
+农民影视.json          xiaosa/XBPQ/农民影视.json | xiaosa/XYQHiker/农民影视.json | XYQHiker/农民影视.json  DIFF(3)   
+初中课堂.json          biliext/初中课堂.json | FTY/初中课堂.json | xiaosa/json/初中课堂.json               DIFF(3)   
+剧圈影视.json          xiaosa/XYQHiker/剧圈影视.json | XYQHiker/剧圈影视.json                          same      
+可可影视.json          xiaosa/XBPQ/可可影视.json | XYQHiker/可可影视.json                              DIFF(2)   
+哆啦新番社.json         XBPQ/哆啦新番社.json | xiaosa/XBPQ/哆啦新番社.json                                same      
+小学课堂.json          biliext/小学课堂.json | FTY/小学课堂.json | xiaosa/json/小学课堂.json               DIFF(3)   
+小镇影视.json          XBPQ/小镇影视.json | xiaosa/XBPQ/小镇影视.json                                  same      
+少儿教育.json          biliext/少儿教育.json | FTY/少儿教育.json | xiaosa/json/少儿教育.json               DIFF(3)   
+巴士动漫.json          xiaosa/XYQHiker/巴士动漫.json | XYQHiker/巴士动漫.json                          same      
+来看影视.json          xiaosa/XYQHiker/来看影视.json | XYQHiker/来看影视.json                          same      
+樱花动漫.json          XBPQ/樱花动漫.json | xiaosa/XBPQ/樱花动漫.json                                  same      
+永乐影视.json          XBPQ/永乐影视.json | xiaosa/XBPQ/永乐影视.json                                  same      
+电影港.json           xiaosa/XYQHiker/电影港.json | XYQHiker/电影港.json                            same      
+短剧屋.json           xiaosa/XYQHiker/短剧屋.json | XYQHiker/短剧屋.json                            same      
+雪花.json            XBPQ/雪花.json | xiaosa/XBPQ/雪花.json                                      same      
+面包影视.json          XBPQ/面包影视.json | xiaosa/XBPQ/面包影视.json                                  same      
+韩剧看看.json          XBPQ/韩剧看看.json | xiaosa/XBPQ/韩剧看看.json                                  same      
+骚火影视.json          xiaosa/XBPQ/骚火影视.json | xiaosa/XYQHiker/骚火影视.json                       DIFF(2)   
+高中课堂.json          biliext/高中课堂.json | FTY/高中课堂.json | xiaosa/json/高中课堂.json               DIFF(3)   
+
+# Q7e sample: 10 files from 10 different subdirs
+dirs total=16
+-- 0707.json  (102 B, multi-urls, raw)
+   md5=4f6202109b  mirror_of=-
+   top keys: urls
+   head: "{\r\n  \"urls\": [\r\n    {\r\n      \"url\": \"./99188.json\",\r\n      \"name\": \"高天流云 18+\"\r\n    }\r\n  ]\r\n}\r\n"
+-- FTY/Bili1.json  (11649 B, class-filters, raw)
+   md5=8eff9b5b37  mirror_of=-
+   top keys: class, filters
+   head: "{\"class\":[{\"type_name\":\"登陆配置\",\"type_id\":\"peizhi\"},{\"type_name\":\"搞笑\",\"type_id\":\"搞笑\"},{\"type_name\":\"鬼畜\",\"type_id\":\"鬼畜\"},{\"type_name\":\"Sports\",\"type_id\":"
+-- XBPQ/VidHub.json  (612 B, xyq-spider-rule, raw)
+   md5=e41f7adfa8  mirror_of=-
+   top keys: 简介, 嗅探词,  数组, 副标题, 图片, 线路数组, 线路标题, 分类url, 分类
+   head: "{\r\n                \"简介\": \"<span>&&</span>\",\r\n                \"嗅探词\": \".mp4#.m3u8#.flv\",\r\n                \" 数组\": \"class=\\\"module-item-titlebox\\\">&&</div"
+-- XYQBiu/88看球.json  (1913 B, other-dict, raw)
+   md5=0acaa02d22  mirror_of=-
+   top keys: title, author, UserAgent, firstpage, class_url, class_name, class_value, filterdata, cat_YN_twice, cat_twice_pre, cat_twice_suf, cat_arr_pre
+   head: "{\r\n    \"title\": \"88看球\",\r\n    \"author\": \"香雅情\",\r\n    \"UserAgent\": \"MOBILE_UA\",\r\n    \"firstpage\": \"1\",\r\n    \"class_url\": \"http://www.888kanqiu.tv\",\r\n    "
+-- XYQHiker/996影视.json  (3574 B, xyq-spider-rule, json5-clean)
+   md5=e899607976  mirror_of=-
+   top keys: 规则名, 规则作者, 请求头参数, 网页编码格式, 图片是否需要代理, 是否开启获取首页数据, 首页推荐链接, 首页列表数组规则, 首页片单列表数组规则, 首页片单是否Jsoup写法, 分类起始页码, 分类链接
+   head: "{\r\n    \"规则名\": \"996影视\",\r\n    \"规则作者\": \"\",\r\n    \"请求头参数\": \"手机\",\r\n    \"网页编码格式\": \"UTF-8\",\r\n    \"图片是否需要代理\": \"0\",\r\n    \"是否开启获取首页数据\": \"1\",\r\n    \"首页推荐链接\": \"http"
+-- biliext/Bili.json  (52293 B, biliext, raw)
+   md5=94368f7e1c  mirror_of=-
+   top keys: cookie, classes, filter
+   head: "{\r\n    \"cookie\": \"clan://XYQTVBox/bilicookie.txt\",\r\n    \"classes\": [\r\n        {\r\n            \"type_name\": \"搞笑\",\r\n            \"type_id\": \"搞笑\"\r\n        "
+-- cat/js/config_open.json  (29140 B, cat-open-config, raw)
+   md5=cc8f30e460  mirror_of=-
+   top keys: video, read, comic, pan, color
+   head: "{\r\n    \"video\": {\r\n        \"sites\": [\r\n            {\r\n                \"key\": \"豆瓣\",\r\n                \"name\": \"🟢 豆瓣👁️‍\",\r\n                \"type\": 3,\r\n  "
+-- cat/tjs/18_open_config.json  (3560 B, cat-open-config, raw)
+   md5=9cac07c436  mirror_of=-
+   top keys: video, read, pan
+   head: "{\r\n    \"video\": {\r\n        \"sites\": [\r\n            {\r\n                \"key\": \"ciliduo\",\r\n                \"name\": \"🔞┃磁力多BT┃🔞\",\r\n                \"api\": "
+-- js/alist.json  (1683 B, json-array, raw)
+   md5=f96608368c  mirror_of=-
+   top keys: <array len=9>
+   head: "[\r\n{\r\n\"name\": \"小鸭\",\r\n\"server\": \"http://shicheng.wang:555/\",\r\n\"startPage\": \"/\",\r\n\"showAll\": false,\r\n\"search\": true,\r\n\"params\": {\r\n\"/abc\": {\r\n\"password\""
+-- json/BSDM.json  (3250 B, xyq-spider-rule, json5-clean)
+   md5=dc5642066e  mirror_of=qist/xiaosa/json/BSDM.json, qist/xiaosa/XYQHiker/巴士动漫.json, qist/XYQHiker/巴士动漫.json
+   top keys: 规则名, 规则作者, 请求头参数, 网页编码格式, 图片是否需要代理, 是否开启获取首页数据, 首页推荐链接, 首页列表数组规则, 首页片单列表数组规则, 首页片单是否Jsoup写法, 分类起始页码, 分类链接
+   head: "{\r\n    \"规则名\": \"动漫巴士\",\r\n    \"规则作者\": \"\",\r\n    \"请求头参数\": \"User-Agent$MOBILE_UA#Accept$text/html#accept-language$zh-CN,zh;q=0.8\",\r\n    \"网页编码格式\": \"UTF-8\",\r\n"
+-- lib/singbox.json  (4234 B, other-dict, raw)
+   md5=ebb9c4ba4b  mirror_of=-
+   top keys: log, dns, inbounds, outbounds, route, experimental
+   head: "{\r\n  \"log\": {\r\n    \"level\": \"debug\",\r\n    \"timestamp\": true\r\n  },\r\n  \"dns\": {\r\n    \"servers\": [\r\n      {\r\n        \"tag\": \"remote\",\r\n        \"address\":"
+-- tools/dianshi.json  (23373 B, tvbox-config, raw)
+   md5=ebad96bc9d  mirror_of=-
+   top keys: spider, lives, wallpaper, danmaku, sites, parses, flags, doh, rules, ads
+   head: "{\r\n\"spider\":\"./jar/spider.jar;md5;c6985455e2cf0029e7901288a84f1e81\",\r\n\"lives\":[\r\n    {\"name\":\"live\",\"boot\": false,\"type\":0,\"url\":\"./tv.txt\",\"playerTyp"
+
+# Q7f are these files referenced by any config? (by basename)
+json referenced by some sites api/ext: 117 / 266
+unreferenced (first 30): 18duocang.json, cangku.json, duocang.json, 0707.json, 0821.json, 0825.json, 0826.json, 0827.json, 367.json, 9918.json, 99188.json, dianshi.json, fty.json, js.json, jsm.json, XYQ.json, cat/js/config_open.json, cat/js/config_open99.json, cat/js/config_open99_online.json, cat/js/config_open_online.json, cat/tjs/18_open_config.json, cat/tjs/18_tv_config.json, cat/tjs/open_config.json, cat/tjs/tv_config.json, FTY/Bili1.json, FTY/MTV.json, FTY/nmys.json, FTY/名师课堂.json, FTY/戏曲大全.json, js/live2mv_data.json

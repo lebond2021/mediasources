@@ -1,0 +1,303 @@
+# 01 inventory
+
+repo    files  dirs  bytes        top ext                                                                   
+------  -----  ----  -----------  --------------------------------------------------------------------------
+cliya   8      0     647,553      .json=4, .txt=2, .m3u=1, .md=1                                            
+qist    1098   29    113,881,863  .js=694, .json=257, .py=62, .txt=32, .md5=10, .gz=9, .jpg=8, .jar=8, .md=7
+tvbox   2      0     3,648        .md=1, .json=1                                                            
+tvyuan  10     2     614,175      .json=4, .md=2, .gitignore=1, .txt=1, .py=1, .yml=1                       
+
+## directories (non-.git)
+cliya (0): (flat)
+qist (29): .github, .github/workflows, FTY, XBPQ, XYQBiu, XYQHiker, biliext, cat, cat/18_dist, cat/dist, cat/js, cat/js/lib, cat/tjs, cat/tjs/js, cat/tjs/lib, cat/tjs/resources, jar, js, json, lib, live, py, tools, xiaosa, xiaosa/XBPQ, xiaosa/XYQHiker, xiaosa/js, xiaosa/json, xiaosa/py
+tvbox (0): (flat)
+tvyuan (2): .github, .github/workflows
+
+# json-ish candidates per repo
+
+repo    tvbox-config  multi-urls  multi-storeHouse  csp-site-rule  xyq-spider-rule  class-filters  biliext  cat-open-config  json-array  other-dict  UNPARSEABLE  TOTAL
+------  ------------  ----------  ----------------  -------------  ---------------  -------------  -------  ---------------  ----------  ----------  -----------  -----
+cliya   0             2           2                 0              0                0              0        0                0           0           0            4    
+qist    17            1           0                 32             102              37             12       6                16          35          1            259  
+tvbox   0             1           0                 0              0                0              0        0                0           0           0            1    
+tvyuan  3             0           1                 0              0                0              0        0                0           0           0            4    
+
+## config-json locations by directory (tvbox-config + multi-*)
+cliya: {'(root)': 4}
+qist: {'(root)': 13, 'cat/tjs': 2, 'tools': 2, 'xiaosa': 1}
+tvbox: {'(root)': 1}
+tvyuan: {'(root)': 4}
+
+# per-file classification
+== cliya ==
+  18.json                                                        multi-urls         ok=True json5-clean comments
+  18duocang.json                                                 multi-storeHouse   ok=True json5-clean comments
+  cangku.json                                                    multi-urls         ok=True json5-clean comments
+  duocang.json                                                   multi-storeHouse   ok=True json5-clean comments
+== qist ==
+  0707.json                                                      multi-urls         ok=True raw 
+  0821.json                                                      tvbox-config       ok=True raw 
+  0825.json                                                      tvbox-config       ok=True raw 
+  0826.json                                                      tvbox-config       ok=True raw 
+  0827.json                                                      tvbox-config       ok=True raw 
+  367.json                                                       tvbox-config       ok=True raw 
+  9918.json                                                      tvbox-config       ok=True raw comments
+  99188.json                                                     tvbox-config       ok=True raw comments
+  dianshi.json                                                   tvbox-config       ok=True raw trailing-comma
+  fty.json                                                       tvbox-config       ok=True raw 
+  js.json                                                        tvbox-config       ok=True raw 
+  jsm.json                                                       tvbox-config       ok=True raw trailing-comma
+  XYQ.json                                                       tvbox-config       ok=True json5-clean comments
+  biliext/Bili.json                                              biliext            ok=True raw 
+  biliext/Bili短剧.json                                            biliext            ok=True raw 
+  biliext/初中课堂.json                                              biliext            ok=True raw 
+  biliext/小学课堂.json                                              biliext            ok=True raw 
+  biliext/少儿教育.json                                              biliext            ok=True raw 
+  biliext/幼儿乐园.json                                              biliext            ok=True raw 
+  biliext/高中课堂.json                                              biliext            ok=True raw 
+  cat/js/config_open.json                                        cat-open-config    ok=True raw 
+  cat/js/config_open99.json                                      cat-open-config    ok=True raw BOM
+  cat/js/config_open99_online.json                               cat-open-config    ok=True raw BOM
+  cat/js/config_open_online.json                                 cat-open-config    ok=True raw BOM
+  cat/tjs/18_open_config.json                                    cat-open-config    ok=True raw 
+  cat/tjs/18_tv_config.json                                      tvbox-config       ok=True raw 
+  cat/tjs/open_config.json                                       cat-open-config    ok=True raw 
+  cat/tjs/tv_config.json                                         tvbox-config       ok=True raw 
+  FTY/Bili1.json                                                 class-filters      ok=True raw 
+  FTY/bilibili.json                                              class-filters      ok=True raw 
+  FTY/biliych.json                                               class-filters      ok=True raw 
+  FTY/MTV.json                                                   class-filters      ok=True raw 
+  FTY/nmys.json                                                  other-dict         ok=True json5-clean comments
+  FTY/初中课堂.json                                                  class-filters      ok=True raw 
+  FTY/名师课堂.json                                                  biliext            ok=True raw 
+  FTY/小学课堂.json                                                  class-filters      ok=True raw 
+  FTY/少儿教育.json                                                  class-filters      ok=True raw 
+  FTY/戏曲大全.json                                                  biliext            ok=True raw 
+  FTY/高中课堂.json                                                  class-filters      ok=True raw 
+  js/alist.json                                                  json-array         ok=True raw 
+  js/live2mv_data.json                                           json-array         ok=True raw 
+  json/aliShare.json                                             json-array         ok=True raw 
+  json/alist.json                                                other-dict         ok=True raw 
+  json/api黑木耳.json                                               xyq-spider-rule    ok=True json5-clean comments
+  json/bili.json                                                 class-filters      ok=True raw 
+  json/BSDM.json                                                 xyq-spider-rule    ok=True json5-clean comments
+  json/chuqiuyu.json                                             biliext            ok=True raw 
+  json/CZKT.json                                                 class-filters      ok=True raw 
+  json/dj看球.json                                                 UNPARSEABLE        ok=False raw 
+  json/DLXFS.json                                                xyq-spider-rule    ok=True raw 
+  json/dmw.json                                                  other-dict         ok=True json5-clean comments
+  json/douban.json                                               other-dict         ok=True raw 
+  json/duboku.json                                               other-dict         ok=True raw 
+  json/DYG.json                                                  other-dict         ok=True json5-clean comments
+  json/gongreng.json                                             other-dict         ok=True raw 
+  json/GZKT.json                                                 class-filters      ok=True raw 
+  json/jianpian.json                                             other-dict         ok=True raw 
+  json/JQYS.json                                                 xyq-spider-rule    ok=True json5-clean comments
+  json/ky4kbgq7b273.json                                         other-dict         ok=True raw 
+  json/market.json                                               json-array         ok=True raw 
+  json/MBYS.json                                                 xyq-spider-rule    ok=True raw 
+  json/moli.json                                                 other-dict         ok=True raw 
+  json/nmys.json                                                 other-dict         ok=True json5-clean comments
+  json/notice.json                                               other-dict         ok=True raw 
+  json/pikpakclass.a.json                                        json-array         ok=True raw 
+  json/pikpakclass.a1.json                                       json-array         ok=True raw 
+  json/pikpakclass.json                                          json-array         ok=True raw 
+  json/pikpakclass18.json                                        json-array         ok=True raw 
+  json/quarkShare.json                                           json-array         ok=True raw 
+  json/SEJY.json                                                 class-filters      ok=True raw 
+  json/tgsearch.json                                             class-filters      ok=True raw 
+  json/ucShare.json                                              json-array         ok=True raw 
+  json/webdav.json                                               other-dict         ok=True raw 
+  json/wogg.json                                                 other-dict         ok=True raw 
+  json/xuexi.json                                                biliext            ok=True raw 
+  json/XXKT.json                                                 class-filters      ok=True raw 
+  json/XZYS.json                                                 xyq-spider-rule    ok=True raw 
+  json/YLYS.json                                                 xyq-spider-rule    ok=True raw 
+  json/youtube.json                                              class-filters      ok=True raw 
+  json/youtube1.json                                             class-filters      ok=True raw 
+  json/yt.json                                                   other-dict         ok=True raw 
+  json/企鹅直播.json                                                 other-dict         ok=True json5-clean comments
+  json/动漫巴士.json                                                 other-dict         ok=True raw 
+  json/厂长影视.json                                                 xyq-spider-rule    ok=True json5-clean comments
+  json/奇乐.json                                                   xyq-spider-rule    ok=True raw 
+  json/奇优.json                                                   xyq-spider-rule    ok=True raw 
+  lib/alishare.txt                                               json-array         ok=True raw 
+  lib/singbox.json                                               other-dict         ok=True raw 
+  lib/token.json                                                 other-dict         ok=True raw 
+  lib/wgcf.json                                                  other-dict         ok=True raw 
+  tools/dianshi.json                                             tvbox-config       ok=True raw trailing-comma
+  tools/jsm.json                                                 tvbox-config       ok=True raw trailing-comma
+  XBPQ/bttt.json                                                 xyq-spider-rule    ok=True json5-clean comments
+  XBPQ/rarbt.json                                                xyq-spider-rule    ok=True raw 
+  XBPQ/VidHub.json                                               xyq-spider-rule    ok=True raw 
+  XBPQ/养生堂.json                                                  xyq-spider-rule    ok=True json5-clean comments
+  XBPQ/哆啦新番社.json                                                xyq-spider-rule    ok=True raw 
+  XBPQ/圣城1080.json                                               xyq-spider-rule    ok=True raw 
+  XBPQ/好恐怖.json                                                  xyq-spider-rule    ok=True raw 
+  XBPQ/小白.json                                                   xyq-spider-rule    ok=True raw 
+  XBPQ/小镇影视.json                                                 xyq-spider-rule    ok=True raw 
+  XBPQ/布谷4K.json                                                 xyq-spider-rule    ok=True raw 
+  XBPQ/文才.json                                                   xyq-spider-rule    ok=True raw 
+  XBPQ/樱花动漫.json                                                 xyq-spider-rule    ok=True raw 
+  XBPQ/永乐影视.json                                                 xyq-spider-rule    ok=True raw 
+  XBPQ/电影先生.json                                                 xyq-spider-rule    ok=True raw 
+  XBPQ/白嫖影视.json                                                 xyq-spider-rule    ok=True raw 
+  XBPQ/相声.json                                                   xyq-spider-rule    ok=True raw 
+  XBPQ/秋霞.json                                                   xyq-spider-rule    ok=True raw 
+  XBPQ/评书.json                                                   xyq-spider-rule    ok=True raw 
+  XBPQ/雪花.json                                                   xyq-spider-rule    ok=True raw 
+  XBPQ/面包影视.json                                                 xyq-spider-rule    ok=True raw 
+  XBPQ/韩剧看看.json                                                 xyq-spider-rule    ok=True raw 
+  XBPQ/麻衣影院.json                                                 xyq-spider-rule    ok=True raw 
+  XBPQ/黑狐影院.json                                                 xyq-spider-rule    ok=True raw 
+  xiaosa/api.json                                                tvbox-config       ok=True raw 
+  xiaosa/js/alishare.txt                                         json-array         ok=True raw 
+  xiaosa/json/123.json                                           csp-site-rule      ok=True raw 
+  xiaosa/json/aliShare.json                                      json-array         ok=True raw 
+  xiaosa/json/alist.json                                         other-dict         ok=True raw 
+  xiaosa/json/aliyunpansearch.json                               biliext            ok=True raw 
+  xiaosa/json/am.json                                            csp-site-rule      ok=True raw 
+  xiaosa/json/bj.json                                            csp-site-rule      ok=True raw 
+  xiaosa/json/BLHJ.json                                          class-filters      ok=True raw 
+  xiaosa/json/BLTS.json                                          class-filters      ok=True raw 
+  xiaosa/json/BLXP.json                                          class-filters      ok=True raw 
+  xiaosa/json/BLXQ.json                                          class-filters      ok=True raw 
+  xiaosa/json/BLXS.json                                          class-filters      ok=True raw 
+  xiaosa/json/BLYCH.json                                         class-filters      ok=True raw 
+  xiaosa/json/BSDM.json                                          xyq-spider-rule    ok=True json5-clean comments
+  xiaosa/json/cctv.json                                          other-dict         ok=True raw 
+  xiaosa/json/CZKT.json                                          class-filters      ok=True raw 
+  xiaosa/json/dawo.json                                          csp-site-rule      ok=True raw 
+  xiaosa/json/DLXFS.json                                         xyq-spider-rule    ok=True raw 
+  xiaosa/json/DYG.json                                           other-dict         ok=True json5-clean comments
+  xiaosa/json/ex.json                                            csp-site-rule      ok=True raw 
+  xiaosa/json/GZKT.json                                          class-filters      ok=True raw 
+  xiaosa/json/hb.json                                            csp-site-rule      ok=True raw 
+  xiaosa/json/hm.json                                            csp-site-rule      ok=True raw 
+  xiaosa/json/JQYS.json                                          xyq-spider-rule    ok=True json5-clean comments
+  xiaosa/json/kf.json                                            csp-site-rule      ok=True raw 
+  xiaosa/json/ky4kbgq7b273.json                                  other-dict         ok=True raw 
+  xiaosa/json/lb.json                                            csp-site-rule      ok=True raw 
+  xiaosa/json/lj.json                                            csp-site-rule      ok=True raw 
+  xiaosa/json/MBYS.json                                          xyq-spider-rule    ok=True raw 
+  xiaosa/json/mogg.json                                          csp-site-rule      ok=True raw 
+  xiaosa/json/og.json                                            csp-site-rule      ok=True raw 
+  xiaosa/json/pan1.json                                          csp-site-rule      ok=True raw 
+  xiaosa/json/quarkShare.json                                    json-array         ok=True raw 
+  xiaosa/json/sd.json                                            csp-site-rule      ok=True raw 
+  xiaosa/json/SEJY.json                                          class-filters      ok=True raw 
+  xiaosa/json/ucShare.json                                       json-array         ok=True raw 
+  xiaosa/json/wogg.json                                          csp-site-rule      ok=True raw 
+  xiaosa/json/xbky.json                                          csp-site-rule      ok=True raw 
+  xiaosa/json/xf.json                                            csp-site-rule      ok=True raw 
+  xiaosa/json/xm.json                                            csp-site-rule      ok=True raw 
+  xiaosa/json/XXKT.json                                          class-filters      ok=True raw 
+  xiaosa/json/XZYS.json                                          xyq-spider-rule    ok=True raw 
+  xiaosa/json/YLYS.json                                          xyq-spider-rule    ok=True raw 
+  xiaosa/json/yyds.json                                          csp-site-rule      ok=True raw 
+  xiaosa/json/zz.json                                            csp-site-rule      ok=True raw 
+  xiaosa/json/二小.json                                            csp-site-rule      ok=True raw 
+  xiaosa/json/初中课堂.json                                          class-filters      ok=True raw 
+  xiaosa/json/哔哩合集.json                                          class-filters      ok=True raw 
+  xiaosa/json/哔哩哔哩听书.json                                        class-filters      ok=True raw 
+  xiaosa/json/哔哩哔哩小品.json                                        class-filters      ok=True raw 
+  xiaosa/json/哔哩哔哩戏曲.json                                        class-filters      ok=True raw 
+  xiaosa/json/哔哩哔哩演唱会.json                                       class-filters      ok=True raw 
+  xiaosa/json/哔哩哔哩相声.json                                        class-filters      ok=True raw 
+  xiaosa/json/哔哩视频.json                                          class-filters      ok=True raw BOM
+  xiaosa/json/多多.json                                            csp-site-rule      ok=True raw 
+  xiaosa/json/夸父.json                                            csp-site-rule      ok=True raw 
+  xiaosa/json/小学课堂.json                                          class-filters      ok=True raw 
+  xiaosa/json/少儿教育.json                                          class-filters      ok=True raw 
+  xiaosa/json/快映.json                                            csp-site-rule      ok=True raw 
+  xiaosa/json/木偶.json                                            csp-site-rule      ok=True raw 
+  xiaosa/json/欧歌.json                                            csp-site-rule      ok=True raw 
+  xiaosa/json/海绵.json                                            csp-site-rule      ok=True raw 
+  xiaosa/json/玩偶.json                                            csp-site-rule      ok=True raw 
+  xiaosa/json/至臻.json                                            csp-site-rule      ok=True raw 
+  xiaosa/json/荐片.json                                            other-dict         ok=True raw 
+  xiaosa/json/虎斑.json                                            csp-site-rule      ok=True raw 
+  xiaosa/json/蜡笔.json                                            csp-site-rule      ok=True raw 
+  xiaosa/json/采集静态.json                                          json-array         ok=True raw 
+  xiaosa/json/雷鲸.json                                            csp-site-rule      ok=True raw 
+  xiaosa/json/高中课堂.json                                          class-filters      ok=True raw 
+  xiaosa/XBPQ/七七影视.json                                          xyq-spider-rule    ok=True raw 
+  xiaosa/XBPQ/七点影视.json                                          xyq-spider-rule    ok=True raw 
+  xiaosa/XBPQ/三九影视.json                                          xyq-spider-rule    ok=True raw 
+  xiaosa/XBPQ/三四影视.json                                          xyq-spider-rule    ok=True raw 
+  xiaosa/XBPQ/修罗影视.json                                          xyq-spider-rule    ok=True raw 
+  xiaosa/XBPQ/免费影视.json                                          xyq-spider-rule    ok=True raw 
+  xiaosa/XBPQ/养生堂.json                                           xyq-spider-rule    ok=True json5-clean comments
+  xiaosa/XBPQ/农民影视.json                                          xyq-spider-rule    ok=True raw 
+  xiaosa/XBPQ/可可影视.json                                          xyq-spider-rule    ok=True raw 
+  xiaosa/XBPQ/吉吉短剧.json                                          xyq-spider-rule    ok=True raw 
+  xiaosa/XBPQ/哆啦新番社.json                                         xyq-spider-rule    ok=True raw 
+  xiaosa/XBPQ/奇迹影视.json                                          xyq-spider-rule    ok=True raw 
+  xiaosa/XBPQ/小枫影视.json                                          xyq-spider-rule    ok=True raw 
+  xiaosa/XBPQ/小镇影视.json                                          xyq-spider-rule    ok=True raw 
+  xiaosa/XBPQ/尼玛影视.json                                          xyq-spider-rule    ok=True raw 
+  xiaosa/XBPQ/布谷TV.json                                          xyq-spider-rule    ok=True raw 
+  xiaosa/XBPQ/明星影视.json                                          xyq-spider-rule    ok=True raw 
+  xiaosa/XBPQ/樱花动漫.json                                          xyq-spider-rule    ok=True raw 
+  xiaosa/XBPQ/樱花影视.json                                          xyq-spider-rule    ok=True raw 
+  xiaosa/XBPQ/永乐影视.json                                          xyq-spider-rule    ok=True raw 
+  xiaosa/XBPQ/流光影视.json                                          xyq-spider-rule    ok=True raw 
+  xiaosa/XBPQ/海纳影视.json                                          xyq-spider-rule    ok=True raw 
+  xiaosa/XBPQ/爱我短剧.json                                          xyq-spider-rule    ok=True raw 
+  xiaosa/XBPQ/狐狸君.json                                           xyq-spider-rule    ok=True raw 
+  xiaosa/XBPQ/番茄短剧.json                                          xyq-spider-rule    ok=True raw 
+  xiaosa/XBPQ/皮皮虾.json                                           xyq-spider-rule    ok=True raw 
+  xiaosa/XBPQ/短剧网.json                                           xyq-spider-rule    ok=True raw 
+  xiaosa/XBPQ/秀儿影视.json                                          xyq-spider-rule    ok=True raw 
+  xiaosa/XBPQ/莫小影视.json                                          xyq-spider-rule    ok=True raw 
+  xiaosa/XBPQ/雪糕影视.json                                          xyq-spider-rule    ok=True raw 
+  xiaosa/XBPQ/雪花.json                                            xyq-spider-rule    ok=True raw 
+  xiaosa/XBPQ/面包影视.json                                          xyq-spider-rule    ok=True raw 
+  xiaosa/XBPQ/韩剧看看.json                                          xyq-spider-rule    ok=True raw 
+  xiaosa/XBPQ/骚火影视.json                                          xyq-spider-rule    ok=True raw comments
+  xiaosa/XBPQ/麦田影视.json                                          xyq-spider-rule    ok=True raw 
+  xiaosa/XYQHiker/BT天堂.json                                      xyq-spider-rule    ok=True json5-clean comments
+  xiaosa/XYQHiker/七新影视.json                                      xyq-spider-rule    ok=True json5-clean comments
+  xiaosa/XYQHiker/九八影视.json                                      xyq-spider-rule    ok=True json5-clean comments
+  xiaosa/XYQHiker/八号影视.json                                      xyq-spider-rule    ok=True json5-clean comments
+  xiaosa/XYQHiker/农民影视.json                                      other-dict         ok=True raw 
+  xiaosa/XYQHiker/剧圈影视.json                                      xyq-spider-rule    ok=True json5-clean comments
+  xiaosa/XYQHiker/巴士动漫.json                                      xyq-spider-rule    ok=True json5-clean comments
+  xiaosa/XYQHiker/星辰影视.json                                      xyq-spider-rule    ok=True raw 
+  xiaosa/XYQHiker/来看影视.json                                      xyq-spider-rule    ok=True json5-clean comments
+  xiaosa/XYQHiker/电影港.json                                       other-dict         ok=True json5-clean comments
+  xiaosa/XYQHiker/电影牛.json                                       xyq-spider-rule    ok=True raw 
+  xiaosa/XYQHiker/百思派.json                                       xyq-spider-rule    ok=True raw 
+  xiaosa/XYQHiker/盒子影视.json                                      xyq-spider-rule    ok=True json5-clean comments
+  xiaosa/XYQHiker/看看影视.json                                      xyq-spider-rule    ok=True json5-clean comments
+  xiaosa/XYQHiker/短剧屋.json                                       xyq-spider-rule    ok=True json5-clean comments
+  xiaosa/XYQHiker/骚火影视.json                                      xyq-spider-rule    ok=True json5-clean comments
+  XYQBiu/88看球.json                                               other-dict         ok=True raw 
+  XYQBiu/网易CC直播.json                                             other-dict         ok=True json5-clean comments
+  XYQHiker/996影视.json                                            xyq-spider-rule    ok=True json5-clean comments
+  XYQHiker/七新影视.json                                             xyq-spider-rule    ok=True json5-clean comments
+  XYQHiker/云盘资源.json                                             other-dict         ok=True raw 
+  XYQHiker/兔小贝.json                                              xyq-spider-rule    ok=True raw 
+  XYQHiker/兔小贝2.json                                             xyq-spider-rule    ok=True raw 
+  XYQHiker/农民影视.json                                             xyq-spider-rule    ok=True raw 
+  XYQHiker/剧圈影视.json                                             xyq-spider-rule    ok=True json5-clean comments
+  XYQHiker/可可影视.json                                             xyq-spider-rule    ok=True json5-clean comments
+  XYQHiker/哔嘀影视.json                                             xyq-spider-rule    ok=True json5-clean comments
+  XYQHiker/巴士动漫.json                                             xyq-spider-rule    ok=True json5-clean comments
+  XYQHiker/影搜.json                                               other-dict         ok=True raw 
+  XYQHiker/播视童趣.json                                             other-dict         ok=True json5-clean comments
+  XYQHiker/斗鱼直播.json                                             other-dict         ok=True raw 
+  XYQHiker/来看影视.json                                             xyq-spider-rule    ok=True json5-clean comments
+  XYQHiker/河马短剧.json                                             xyq-spider-rule    ok=True json5-clean comments
+  XYQHiker/爱你短剧.json                                             xyq-spider-rule    ok=True json5-clean comments
+  XYQHiker/玩偶哥哥.json                                             xyq-spider-rule    ok=True json5-clean comments
+  XYQHiker/电影港.json                                              other-dict         ok=True json5-clean comments
+  XYQHiker/短剧屋.json                                              xyq-spider-rule    ok=True json5-clean comments
+  XYQHiker/虎牙直播.json                                             other-dict         ok=True raw 
+== tvbox ==
+  tvboxmuti.json                                                 multi-urls         ok=True raw 
+== tvyuan ==
+  tvbox.json                                                     tvbox-config       ok=True raw 
+  tvbox_collect.json                                             tvbox-config       ok=True raw 
+  tvbox_full.json                                                tvbox-config       ok=True raw comments
+  tvbox_multi.json                                               multi-storeHouse   ok=True raw 

@@ -1,0 +1,94 @@
+# 每配置 sites 统计（复核）
+
+file                            sites  (type,api)  key   name
+------------------------------  -----  ----------  ----  ----
+tvyuan/tvbox_full.json          1451   845         1434  1441
+qist/js.json                    298    69          296   296 
+qist/dianshi.json               163    113         163   163 
+qist/jsm.json                   162    113         162   162 
+qist/0825.json                  135    93          134   134 
+qist/xiaosa/api.json            116    93          116   116 
+qist/367.json                   106    74          103   105 
+qist/0821.json                  86     48          84    86  
+qist/99188.json                 64     57          64    63  
+qist/9918.json                  61     54          61    60  
+qist/0826.json                  54     39          54    54  
+qist/tools/dianshi.json         53     27          53    53  
+qist/tools/jsm.json             52     27          52    52  
+qist/fty.json                   49     39          49    49  
+qist/XYQ.json                   49     25          49    49  
+qist/0827.json                  33     33          33    33  
+qist/cat/tjs/tv_config.json     28     28          28    28  
+qist/cat/tjs/18_tv_config.json  10     10          10    10  
+tvyuan/tvbox.json               10     6           9     10  
+tvyuan/tvbox_collect.json       9      8           9     9   
+
+# 含 >=40 字符 base64 片段（复核）N=26
+
+file                            hits
+------------------------------  ----
+tvyuan/tvbox_full.json          172 
+qist/cat/tjs/tv_config.json     46  
+qist/cat/tjs/open_config.json   45  
+qist/xiaosa/json/采集静态.json      15  
+qist/367.json                   14  
+qist/0821.json                  12  
+qist/0826.json                  12  
+qist/xiaosa/api.json            10  
+qist/dianshi.json               9   
+qist/fty.json                   9   
+qist/jsm.json                   9   
+qist/json/market.json           8   
+tvyuan/tvbox_multi.json         5   
+qist/json/dj看球.json             3   
+qist/json/厂长影视.json             3   
+qist/js/live2mv_data.json       2   
+qist/json/aliShare.json         2   
+qist/lib/wgcf.json              2   
+qist/xiaosa/json/aliShare.json  2   
+qist/cat/tjs/18_tv_config.json  1   
+qist/lib/singbox.json           1   
+qist/XBPQ/相声.json               1   
+qist/XBPQ/评书.json               1   
+qist/xiaosa/json/pan1.json      1   
+tvbox/tvboxmuti.json            1   
+tvyuan/tvbox.json               1   
+
+# qist .json 分类（复核，N=257）
+
+xyq-spider-rule      102
+class-filters        37
+other-dict           35
+csp-site-rule        32
+tvbox-config         17
+json-array           14
+biliext              12
+cat-open-config      6
+multi-urls           1
+UNPARSEABLE          1
+
+# 直播文件行数（复核）
+
+cliya/18live.txt                           4560 lines    488997 B  utf-8
+cliya/live.txt                              123 lines      7549 B  utf-8
+cliya/live.m3u                             1146 lines    139139 B  utf-8
+qist/list.txt                               206 lines     16038 B  utf-8
+qist/list.m3u                              1649 lines     88791 B  utf-8
+qist/listx.txt                             1305 lines    117939 B  utf-8
+qist/listx.m3u                            51643 lines   6322832 B  utf-8
+qist/livex.m3u                            29304 lines   1053416 B  utf-8
+qist/radio.txt                             1485 lines    107296 B  utf-8
+qist/radio.m3u                             2957 lines    160844 B  utf-8
+qist/ITV.txt                                648 lines     88216 B  utf-8
+qist/zb.txt                                2998 lines    236816 B  utf-8
+qist/tvboxtv.txt                           1425 lines    156020 B  utf-8
+qist/tvlive.txt                            1455 lines    158895 B  utf-8
+qist/FTY/id.txt                              67 lines      9615 B  utf-8
+qist/FTY/id.m3u                             119 lines     15119 B  utf-8
+qist/live/山东联通.txt                          178 lines     25050 B  utf-8
+qist/live/广东联通内网.txt                        192 lines     62942 B  utf-8
+qist/live/河南联通单播.txt                        105 lines     53746 B  utf-8
+qist/live/辽宁移动华为.txt                        390 lines     32843 B  utf-8
+qist/live/辽宁移动烽火.txt                        390 lines     39473 B  utf-8
+qist/live/辽宁联通.txt                          152 lines     25732 B  utf-16le
+qist/js/lf_live.txt                          40 lines      1712 B  utf-8

@@ -1,0 +1,344 @@
+EXT HIST: {".js": 694, ".json": 266, ".py": 63, ".txt": 35, ".md": 11, ".md5": 10, ".gz": 9, ".jpg": 8, ".jar": 8, ".m3u": 6, ".yml": 3, ".gitignore": 2, ".ico": 1, ".png": 1, "(none)": 1}
+
+CANDIDATE FILES per repo (ok): {"qist|True": 216, "qist|False": 36, "tvbox|True": 1, "tvyuan|True": 4}
+
+== top-level key freq (dict-parseable files only) ==
+分类                       64
+分类url                    64
+线路标题                     43
+简介                       40
+class                    37
+播放数组                     33
+图片                       32
+数组                       32
+Classes                  32
+SiteUrl                  32
+线路数组                     31
+filters                  29
+播放列表                     29
+副标题                      29
+播放标题                     26
+标题                       25
+主页url                    24
+Domains                  24
+SiteName                 24
+SiteWord                 24
+链接                       23
+播放链接                     22
+请求头                      22
+搜索链接                     22
+编码                       20
+搜索url                    20
+sites                    19
+lives                    18
+spider                   17
+主演                       17
+导演                       17
+wallpaper                16
+rules                    15
+搜索数组                     15
+parses                   13
+影片类型                     13
+搜索标题                     13
+doh                      12
+classes                  12
+filter                   12
+影片年代                     12
+搜索图片                     12
+ads                      11
+影片地区                     11
+搜索副标题                    11
+搜索模式                     11
+站名                       11
+搜索片单副标题                  11
+搜索片单链接加前缀                11
+搜索请求头参数                  11
+cookie                   10
+分类链接                     10
+搜索片单链接加后缀                10
+跳转播放链接                   9
+首页                       9
+规则作者                     9
+分类列表数组规则                 9
+分类名称                     9
+分类名称替换词                  9
+分类截取模式                   9
+分类片单副标题                  9
+分类片单图片                   9
+分类片单是否Jsoup写法            9
+分类片单标题                   9
+分类片单链接                   9
+分类片单链接加前缀                9
+分类起始页码                   9
+图片是否需要代理                 9
+手动嗅探视频链接关键词              9
+手动嗅探视频链接过滤词              9
+是否开启手动嗅探                 9
+筛选数据                     9
+网页编码格式                   9
+规则名                      9
+请求头参数                    9
+链接是否直接播放                 9
+搜索列表数组规则                 9
+搜索截取模式                   9
+搜索片单图片                   9
+搜索片单是否Jsoup写法            9
+
+== per-file ==
+qist    0707.json                                                       102 ok=True enc=utf-8 kind=dict err= top=urls
+qist    0821.json                                                     24023 ok=True enc=utf-8 kind=dict err= top=doh,flags,lives,logo,parses,rules,sites,spider,wallpaper
+qist    0825.json                                                     27845 ok=True enc=utf-8 kind=dict err= top=ads,doh,lives,rules,sites,spider,wallpaper
+qist    0826.json                                                     12175 ok=True enc=utf-8 kind=dict err= top=lives,logo,sites,spider,wallpaper
+qist    0827.json                                                     10476 ok=True enc=utf-8 kind=dict err= top=ads,doh,rules,sites,spider,wallpaper
+qist    367.json                                                      57251 ok=True enc=utf-8 kind=dict err= top=ads,doh,flags,ijk,lives,logo,parses,rules,sites,spider,wallpaper,warningText
+qist    9918.json                                                     14844 ok=True enc=utf-8 kind=dict err= top=lives,logo,rules,sites,spider,wallpaper
+qist    99188.json                                                    17359 ok=True enc=utf-8 kind=dict err= top=lives,logo,rules,sites,spider,wallpaper
+qist    dianshi.json                                                  47366 ok=True enc=utf-8 kind=dict err= top=ads,danmaku,doh,flags,lives,parses,rules,sites,spider,wallpaper
+qist    fty.json                                                      12354 ok=True enc=utf-8 kind=dict err= top=hosts,lives,logo,rules,sites,spider,wallpaper
+qist    js.json                                                       53083 ok=True enc=utf-8 kind=dict err= top=ads,doh,flags,lives,parses,rules,sites,spider,wallpaper
+qist    jsm.json                                                      47970 ok=True enc=utf-8 kind=dict err= top=ads,danmaku,doh,flags,hosts,lives,parses,rules,sites,spider,wallpaper
+qist    XYQ.json                                                      19424 ok=False enc=utf-8 kind=None err=JSONDecodeError: Expecting value: line 29 column 9 (char 1436) top=
+qist    biliext/Bili.json                                             52293 ok=True enc=utf-8 kind=dict err= top=classes,cookie,filter
+qist    biliext/Bili短剧.json                                            1331 ok=True enc=utf-8 kind=dict err= top=classes,cookie,filter
+qist    biliext/初中课堂.json                                             36825 ok=True enc=utf-8 kind=dict err= top=classes,cookie,filter
+qist    biliext/小学课堂.json                                             32033 ok=True enc=utf-8 kind=dict err= top=classes,cookie,filter
+qist    biliext/少儿教育.json                                              1070 ok=True enc=utf-8 kind=dict err= top=classes,cookie
+qist    biliext/幼儿乐园.json                                              1563 ok=True enc=utf-8 kind=dict err= top=classes,cookie
+qist    biliext/高中课堂.json                                             48168 ok=True enc=utf-8 kind=dict err= top=classes,cookie,filter
+qist    cat/js/config_open.json                                       29140 ok=True enc=utf-8 kind=dict err= top=color,comic,pan,read,video
+qist    cat/js/config_open99.json                                     16424 ok=True enc=utf-8-sig kind=dict err= top=color,comic,pan,video
+qist    cat/js/config_open99_online.json                              15332 ok=True enc=utf-8-sig kind=dict err= top=color,comic,pan,video
+qist    cat/js/config_open_online.json                                28941 ok=True enc=utf-8-sig kind=dict err= top=color,comic,pan,read,video
+qist    cat/tjs/18_open_config.json                                    3560 ok=True enc=utf-8 kind=dict err= top=pan,read,video
+qist    cat/tjs/18_tv_config.json                                     14444 ok=True enc=utf-8 kind=dict err= top=ads,doh,ijk,lives,parses,rules,sites,wallpaper
+qist    cat/tjs/open_config.json                                      20162 ok=True enc=utf-8 kind=dict err= top=pan,read,video
+qist    cat/tjs/tv_config.json                                        28272 ok=True enc=utf-8 kind=dict err= top=ads,doh,ijk,lives,parses,rules,sites,wallpaper
+qist    FTY/Bili1.json                                                11649 ok=True enc=utf-8 kind=dict err= top=class,filters
+qist    FTY/bilibili.json                                             47958 ok=True enc=utf-8 kind=dict err= top=class,filters
+qist    FTY/biliych.json                                               8484 ok=True enc=utf-8 kind=dict err= top=class,filters
+qist    FTY/MTV.json                                                  21954 ok=True enc=utf-8 kind=dict err= top=class,filters
+qist    FTY/nmys.json                                                 10824 ok=False enc=utf-8 kind=None err=JSONDecodeError: Expecting property name enclosed in double quotes: line 47 column 8 (char top=
+qist    FTY/初中课堂.json                                                 31796 ok=True enc=utf-8 kind=dict err= top=class,filters
+qist    FTY/名师课堂.json                                                  8053 ok=True enc=utf-8 kind=dict err= top=classes,filter
+qist    FTY/小学课堂.json                                                  9659 ok=True enc=utf-8 kind=dict err= top=class,filters
+qist    FTY/少儿教育.json                                                  3714 ok=True enc=utf-8 kind=dict err= top=class,filters
+qist    FTY/戏曲大全.json                                                 39123 ok=True enc=utf-8 kind=dict err= top=classes,cookie,filter
+qist    FTY/高中课堂.json                                                 32078 ok=True enc=utf-8 kind=dict err= top=class,filters
+qist    js/alist.json                                                  1683 ok=True enc=utf-8 kind=list[9] err= top=
+qist    js/live2mv_data.json                                           1809 ok=True enc=utf-8 kind=list[16] err= top=
+qist    json/aliShare.json                                             1331 ok=True enc=utf-8 kind=list[5] err= top=
+qist    json/alist.json                                                 534 ok=True enc=utf-8 kind=dict err= top=drives,vodPic
+qist    json/bili.json                                                61089 ok=True enc=utf-8 kind=dict err= top=class,filters
+qist    json/BSDM.json                                                 3250 ok=False enc=utf-8 kind=None err=JSONDecodeError: Expecting property name enclosed in double quotes: line 17 column 5 (char top=
+qist    json/chuqiuyu.json                                            61147 ok=True enc=utf-8 kind=dict err= top=classes,cookie,filter
+qist    json/CZKT.json                                                42627 ok=True enc=utf-8 kind=dict err= top=class,filters
+qist    json/dj看球.json                                                11718 ok=False enc=utf-8 kind=None err=JSONDecodeError: Expecting property name enclosed in double quotes: line 5 column 5 (char  top=
+qist    json/DLXFS.json                                                1291 ok=True enc=utf-8 kind=dict err= top=主页url,分类,分类url,剧情,图片,排序,播放列表,播放数组,播放标题,播放链接,数组,标题,线路标题,编码,请求头,链接
+qist    json/douban.json                                              21579 ok=True enc=utf-8 kind=dict err= top=book,book_hot,hot_gaia,movie,rank_list_movie,rank_list_tv,show_hot,tv,tv_hot
+qist    json/duboku.json                                              16503 ok=True enc=utf-8 kind=dict err= top=author,cateId,cateIdR,cateManual,cateName,cateNode,cateUrl,cateVodId,cateVodIdR,cateVodImg,cateVodImgR,cateVodMark,cateV
+qist    json/gongreng.json                                             7128 ok=True enc=utf-8 kind=dict err= top=author,cateManual,cateUrl,cateVodId,cateVodIdR,cateVodImg,cateVodImgR,cateVodMark,cateVodName,cateVodNode,dcPlayUrl,dcVi
+qist    json/GZKT.json                                                48002 ok=True enc=utf-8 kind=dict err= top=class,filters
+qist    json/jianpian.json                                             8028 ok=True enc=utf-8 kind=dict err= top=0,1,2,3,4
+qist    json/JQYS.json                                                 3526 ok=False enc=utf-8 kind=None err=JSONDecodeError: Expecting property name enclosed in double quotes: line 18 column 5 (char top=
+qist    json/ky4kbgq7b273.json                                           51 ok=True enc=utf-8 kind=dict err= top=apiDomain
+qist    json/market.json                                               4237 ok=True enc=utf-8 kind=list[4] err= top=
+qist    json/MBYS.json                                                  290 ok=True enc=utf-8 kind=dict err= top=分类,分类url,简介,编码,请求头
+qist    json/moli.json                                                13206 ok=True enc=utf-8 kind=dict err= top=1,2,41
+qist    json/nmys.json                                                10836 ok=False enc=utf-8 kind=None err=JSONDecodeError: Expecting property name enclosed in double quotes: line 47 column 8 (char top=
+qist    json/notice.json                                                108 ok=True enc=utf-8 kind=dict err= top=date,duration,msg
+qist    json/pikpakclass.a.json                                        4769 ok=True enc=utf-8 kind=list[49] err= top=
+qist    json/pikpakclass.a1.json                                       1950 ok=True enc=utf-8 kind=list[28] err= top=
+qist    json/pikpakclass.json                                          9968 ok=True enc=utf-8 kind=list[77] err= top=
+qist    json/pikpakclass18.json                                        3787 ok=True enc=utf-8 kind=list[38] err= top=
+qist    json/quarkShare.json                                           2620 ok=True enc=utf-8 kind=list[5] err= top=
+qist    json/SEJY.json                                                12990 ok=True enc=utf-8 kind=dict err= top=class,filters
+qist    json/tgsearch.json                                              665 ok=True enc=utf-8 kind=dict err= top=class,jx,parse,recommend
+qist    json/ucShare.json                                               791 ok=True enc=utf-8 kind=list[4] err= top=
+qist    json/webdav.json                                                296 ok=True enc=utf-8 kind=dict err= top=drives
+qist    json/wogg.json                                                26269 ok=True enc=utf-8 kind=dict err= top=1,2,3,4,5,6
+qist    json/xuexi.json                                               23681 ok=True enc=utf-8 kind=dict err= top=classes,cookie,filter
+qist    json/XXKT.json                                                31983 ok=True enc=utf-8 kind=dict err= top=class,filters
+qist    json/XZYS.json                                                  205 ok=True enc=utf-8 kind=dict err= top=分类,分类url,线路数组,线路标题
+qist    json/YLYS.json                                                  795 ok=True enc=utf-8 kind=dict err= top=分类,分类url,类型,编码,请求头
+qist    json/youtube.json                                             40547 ok=True enc=utf-8 kind=dict err= top=class,filters,jx,parse,recommend
+qist    json/youtube1.json                                            61109 ok=True enc=utf-8 kind=dict err= top=class,filters,jx,parse,recommend
+qist    json/yt.json                                                  16954 ok=True enc=utf-8 kind=dict err= top=20,21,45,46,47,48,5,51,53,58
+qist    json/企鹅直播.json                                                 2521 ok=False enc=utf-8 kind=None err=JSONDecodeError: Expecting property name enclosed in double quotes: line 4 column 1 (char  top=
+qist    json/动漫巴士.json                                                 7936 ok=True enc=utf-8 kind=dict err= top=cateId,cateIdR,cateManual,cateName,cateNode,cateUrl,cateVodId,cateVodIdR,cateVodImg,cateVodMark,cateVodName,cateVodNode,
+qist    json/厂长影视.json                                                 2957 ok=False enc=utf-8 kind=None err=JSONDecodeError: Expecting property name enclosed in double quotes: line 4 column 1 (char  top=
+qist    json/奇乐.json                                                   3087 ok=True enc=utf-8 kind=dict err= top=主演,主页url,分类,分类url,副标题,嗅探词,图片,导演,影片地区,影片年代,影片类型,搜索url,搜索副标题,搜索后缀,搜索图片,搜索数组,搜索标题,搜索模式,搜索链接,播放列表,播放数组,播放标题,播放链接,播放链接前缀,数组,标
+qist    json/奇优.json                                                   2182 ok=True enc=utf-8 kind=dict err= top=主演,主页url,分类,分类url,副标题,嗅探词,图片,导演,影片地区,影片年代,影片类型,搜索url,搜索副标题,搜索后缀,搜索图片,搜索数组,搜索标题,搜索模式,搜索链接,播放列表,播放数组,播放标题,播放链接,播放链接前缀,数组,标
+qist    lib/alishare.txt                                               1501 ok=True enc=utf-8 kind=list[17] err= top=
+qist    lib/singbox.json                                               4234 ok=True enc=utf-8 kind=dict err= top=dns,experimental,inbounds,log,outbounds,route
+qist    lib/token.json                                                 2109 ok=True enc=utf-8 kind=dict err= top=aliproxy,aliproxy_url,danmu,is_vip,libxl_url,oauth_auth_url,oauth_client_id,oauth_client_secret,oauth_refresh_url,open_a
+qist    lib/wgcf.json                                                  4721 ok=True enc=utf-8 kind=dict err= top=dns,inbounds,log,outbounds,routing
+qist    tools/dianshi.json                                            23373 ok=True enc=utf-8 kind=dict err= top=ads,danmaku,doh,flags,lives,parses,rules,sites,spider,wallpaper
+qist    tools/jsm.json                                                24008 ok=True enc=utf-8 kind=dict err= top=ads,danmaku,doh,flags,hosts,lives,parses,rules,sites,spider,wallpaper
+qist    XBPQ/bttt.json                                                 3618 ok=False enc=utf-8 kind=None err=JSONDecodeError: Expecting property name enclosed in double quotes: line 20 column 5 (char top=
+qist    XBPQ/rarbt.json                                                 657 ok=True enc=utf-8 kind=dict err= top=主演,主页url,分类,分类url,副标题,嗅探词,图片,导演,影片类型,搜索url,搜索模式,线路数组
+qist    XBPQ/VidHub.json                                                612 ok=True enc=utf-8 kind=dict err= top= 数组,分类,分类url,副标题,嗅探词,图片,简介,线路数组,线路标题
+qist    XBPQ/养生堂.json                                                  1228 ok=False enc=utf-8 kind=None err=JSONDecodeError: Expecting property name enclosed in double quotes: line 3 column 5 (char  top=
+qist    XBPQ/哆啦新番社.json                                                1291 ok=True enc=utf-8 kind=dict err= top=主页url,分类,分类url,剧情,图片,排序,播放列表,播放数组,播放标题,播放链接,数组,标题,线路标题,编码,请求头,链接
+qist    XBPQ/圣城1080.json                                               5405 ok=True enc=utf-8 kind=dict err= top=主演,主页url,作者,分类,分类url,副标题,图片,导演,影片状态,影片类型,搜索url,搜索副标题,搜索图片,搜索数组,搜索标题,搜索链接,播放列表,播放数组,播放标题,数组,标题,站名,筛选,简介,线路数组,线路标题,链接
+qist    XBPQ/好恐怖.json                                                   699 ok=True enc=utf-8 kind=dict err= top=主页url,倒序,分类,分类url,副标题,播放列表,播放数组,起始页
+qist    XBPQ/小白.json                                                    486 ok=True enc=utf-8 kind=dict err= top=主页url,倒序,分类,分类url,副标题,图片,播放列表,播放数组,标题,编码,起始页
+qist    XBPQ/小镇影视.json                                                  205 ok=True enc=utf-8 kind=dict err= top=分类,分类url,线路数组,线路标题
+qist    XBPQ/布谷4K.json                                                  907 ok=True enc=utf-8 kind=dict err= top=分类,分类链接,搜索数组,搜索链接,播放列表,播放数组,简介,线路数组,线路标题
+qist    XBPQ/文才.json                                                   2542 ok=True enc=utf-8 kind=dict err= top=主演,二次截取,倒序,分类,分类url,分类值,副标题,图片,导演,影片地区,影片年代,影片类型,搜索url,搜索二次截取,搜索副标题,搜索图片,搜索数组,搜索标题,搜索模式,搜索链接,播放列表,播放数组,播放标题,播放请求头,播放链接,播
+qist    XBPQ/樱花动漫.json                                                  352 ok=True enc=utf-8 kind=dict err= top=分类,分类url,副标题,播放数组,数组,简介,线路标题
+qist    XBPQ/永乐影视.json                                                  795 ok=True enc=utf-8 kind=dict err= top=分类,分类url,类型,编码,请求头
+qist    XBPQ/电影先生.json                                                  679 ok=True enc=utf-8 kind=dict err= top=分类,分类url,图片,搜索url,搜索副标题,搜索数组,搜索标题,播放数组,播放标题,简介,线路数组,线路标题
+qist    XBPQ/白嫖影视.json                                                  280 ok=True enc=utf-8 kind=dict err= top=分类,分类url,地区
+qist    XBPQ/相声.json                                                    923 ok=True enc=utf-8 kind=dict err= top=主演,主页url,分类,分类url,副标题,图片,导演,播放二次截取,播放列表,播放副标题,播放数组,播放标题,播放链接,数组,数组二次截取,标题,简介,线路数组,线路标题,链接
+qist    XBPQ/秋霞.json                                                   1173 ok=True enc=utf-8 kind=dict err= top=主页url,分类ID,分类url,分类数组,分类标题,搜索url,搜索图片,搜索数组,搜索标题,搜索链接,播放列表,播放数组,播放标题,播放链接,数组,简介,线路数组,线路标题,请求头
+qist    XBPQ/评书.json                                                    855 ok=True enc=utf-8 kind=dict err= top=主演,主页url,分类,分类url,副标题,图片,导演,播放二次截取,播放列表,播放副标题,播放数组,播放标题,播放链接,数组,数组二次截取,标题,简介,线路数组,线路标题,链接
+qist    XBPQ/雪花.json                                                   1200 ok=True enc=utf-8 kind=dict err= top=主演,主页url,二次截取,分类,分类url,副标题,图片,导演,影片地区,影片年代,影片类型,搜索url,播放二次截取,播放列表,播放数组,播放标题,播放链接,数组,标题,状态,站名,简介,线路数组,线路标题,链接
+qist    XBPQ/面包影视.json                                                  290 ok=True enc=utf-8 kind=dict err= top=分类,分类url,简介,编码,请求头
+qist    XBPQ/韩剧看看.json                                                 2215 ok=True enc=utf-8 kind=dict err= top=主演,主页url,作者,倒序,分类,分类url,剧情,剧情值,副标题,嗅探词,图片,导演,影片地区,影片年代,影片类型,搜索url,搜索二次截取,搜索副标题,搜索后缀,搜索图片,搜索数组,搜索标题,搜索模式,搜索请求头,搜索链接,播放列表,
+qist    XBPQ/麻衣影院.json                                                  172 ok=True enc=utf-8 kind=dict err= top=分类,分类url
+qist    XBPQ/黑狐影院.json                                                 1344 ok=True enc=utf-8 kind=dict err= top=主演,主页url,免嗅,分类,分类url,副标题,嗅探词,图片,导演,搜索url,搜索副标题,搜索后缀,搜索图片,搜索数组,搜索标题,搜索模式,搜索链接,播放列表,播放数组,播放标题,播放链接,数组,标题,状态,站名,简介,线路数组,线路标
+qist    xiaosa/api.json                                               28141 ok=True enc=utf-8 kind=dict err= top=ads,danmaku,doh,flags,lives,logo,parses,rules,sites,spider,wallpaper
+qist    xiaosa/js/alishare.txt                                         1501 ok=True enc=utf-8 kind=list[17] err= top=
+qist    xiaosa/json/123.json                                            525 ok=True enc=utf-8 kind=dict err= top=Classes,SiteUrl
+qist    xiaosa/json/aliShare.json                                      1331 ok=True enc=utf-8 kind=list[5] err= top=
+qist    xiaosa/json/alist.json                                          534 ok=True enc=utf-8 kind=dict err= top=drives,vodPic
+qist    xiaosa/json/aliyunpansearch.json                               5275 ok=True enc=utf-8 kind=dict err= top=classes,filters,siteUrl
+qist    xiaosa/json/am.json                                             645 ok=True enc=utf-8 kind=dict err= top=Classes,Domains,SiteName,SiteUrl,SiteWord
+qist    xiaosa/json/bj.json                                           43076 ok=True enc=utf-8 kind=dict err= top=Classes,Domains,Filters,SiteName,SiteUrl,SiteWord
+qist    xiaosa/json/BLHJ.json                                        169526 ok=True enc=utf-8 kind=dict err= top=class,filters
+qist    xiaosa/json/BLTS.json                                          1430 ok=True enc=utf-8 kind=dict err= top=class
+qist    xiaosa/json/BLXP.json                                          1196 ok=True enc=utf-8 kind=dict err= top=class
+qist    xiaosa/json/BLXQ.json                                          4768 ok=True enc=utf-8 kind=dict err= top=class
+qist    xiaosa/json/BLXS.json                                           724 ok=True enc=utf-8 kind=dict err= top=class
+qist    xiaosa/json/BLYCH.json                                        24972 ok=True enc=utf-8 kind=dict err= top=class,filters
+qist    xiaosa/json/BSDM.json                                          3250 ok=False enc=utf-8 kind=None err=JSONDecodeError: Expecting property name enclosed in double quotes: line 17 column 5 (char top=
+qist    xiaosa/json/cctv.json                                            52 ok=True enc=utf-8 kind=dict err= top=errcode,msg
+qist    xiaosa/json/CZKT.json                                         42627 ok=True enc=utf-8 kind=dict err= top=class,filters
+qist    xiaosa/json/dawo.json                                         43435 ok=True enc=utf-8 kind=dict err= top=Classes,Domains,Filters,SiteName,SiteUrl,SiteWord
+qist    xiaosa/json/DLXFS.json                                         1291 ok=True enc=utf-8 kind=dict err= top=主页url,分类,分类url,剧情,图片,排序,播放列表,播放数组,播放标题,播放链接,数组,标题,线路标题,编码,请求头,链接
+qist    xiaosa/json/ex.json                                             737 ok=True enc=utf-8 kind=dict err= top=Classes,Domains,SiteName,SiteUrl,SiteWord
+qist    xiaosa/json/GZKT.json                                         48002 ok=True enc=utf-8 kind=dict err= top=class,filters
+qist    xiaosa/json/hb.json                                             766 ok=True enc=utf-8 kind=dict err= top=Classes,Domains,SiteName,SiteUrl,SiteWord
+qist    xiaosa/json/hm.json                                             529 ok=True enc=utf-8 kind=dict err= top=Classes,SiteUrl
+qist    xiaosa/json/JQYS.json                                          3526 ok=False enc=utf-8 kind=None err=JSONDecodeError: Expecting property name enclosed in double quotes: line 18 column 5 (char top=
+qist    xiaosa/json/kf.json                                            1040 ok=True enc=utf-8 kind=dict err= top=Classes,Cookie,SiteUrl
+qist    xiaosa/json/ky4kbgq7b273.json                                    51 ok=True enc=utf-8 kind=dict err= top=apiDomain
+qist    xiaosa/json/lb.json                                             896 ok=True enc=utf-8 kind=dict err= top=Classes,Domains,SiteName,SiteUrl,SiteWord
+qist    xiaosa/json/lj.json                                             846 ok=True enc=utf-8 kind=dict err= top=Classes,SiteUrl
+qist    xiaosa/json/MBYS.json                                           290 ok=True enc=utf-8 kind=dict err= top=分类,分类url,简介,编码,请求头
+qist    xiaosa/json/mogg.json                                           623 ok=True enc=utf-8 kind=dict err= top=Classes,Domains,SiteName,SiteUrl,SiteWord
+qist    xiaosa/json/og.json                                             619 ok=True enc=utf-8 kind=dict err= top=Classes,Domains,SiteName,SiteUrl,SiteWord
+qist    xiaosa/json/pan1.json                                           663 ok=True enc=utf-8 kind=dict err= top=Classes,Cookie,SiteUrl
+qist    xiaosa/json/quarkShare.json                                    2620 ok=True enc=utf-8 kind=list[5] err= top=
+qist    xiaosa/json/sd.json                                             655 ok=True enc=utf-8 kind=dict err= top=Classes,Domains,SiteName,SiteUrl,SiteWord
+qist    xiaosa/json/SEJY.json                                         12990 ok=True enc=utf-8 kind=dict err= top=class,filters
+qist    xiaosa/json/ucShare.json                                        791 ok=True enc=utf-8 kind=list[4] err= top=
+qist    xiaosa/json/wogg.json                                         60867 ok=True enc=utf-8 kind=dict err= top=Classes,Domains,Filters,SiteName,SiteUrl,SiteWord
+qist    xiaosa/json/xbky.json                                           799 ok=True enc=utf-8 kind=dict err= top=Classes,Domains,SiteName,SiteUrl,SiteWord
+qist    xiaosa/json/xf.json                                           43016 ok=True enc=utf-8 kind=dict err= top=Classes,Domains,Filters,SiteName,SiteUrl,SiteWord
+qist    xiaosa/json/xm.json                                           43195 ok=True enc=utf-8 kind=dict err= top=Classes,Domains,Filters,SiteName,SiteUrl,SiteWord
+qist    xiaosa/json/XXKT.json                                         31983 ok=True enc=utf-8 kind=dict err= top=class,filters
+qist    xiaosa/json/XZYS.json                                           205 ok=True enc=utf-8 kind=dict err= top=分类,分类url,线路数组,线路标题
+qist    xiaosa/json/YLYS.json                                           795 ok=True enc=utf-8 kind=dict err= top=分类,分类url,类型,编码,请求头
+qist    xiaosa/json/yyds.json                                           782 ok=True enc=utf-8 kind=dict err= top=Classes,Domains,SiteName,SiteUrl,SiteWord
+qist    xiaosa/json/zz.json                                             924 ok=True enc=utf-8 kind=dict err= top=Classes,Domains,SiteName,SiteUrl,SiteWord
+qist    xiaosa/json/二小.json                                             737 ok=True enc=utf-8 kind=dict err= top=Classes,Domains,SiteName,SiteUrl,SiteWord
+qist    xiaosa/json/初中课堂.json                                         42627 ok=True enc=utf-8 kind=dict err= top=class,filters
+qist    xiaosa/json/哔哩合集.json                                        169214 ok=True enc=utf-8 kind=dict err= top=class,filters
+qist    xiaosa/json/哔哩哔哩听书.json                                        1430 ok=True enc=utf-8 kind=dict err= top=class
+qist    xiaosa/json/哔哩哔哩小品.json                                        1196 ok=True enc=utf-8 kind=dict err= top=class
+qist    xiaosa/json/哔哩哔哩戏曲.json                                        4768 ok=True enc=utf-8 kind=dict err= top=class
+qist    xiaosa/json/哔哩哔哩演唱会.json                                      24972 ok=True enc=utf-8 kind=dict err= top=class,filters
+qist    xiaosa/json/哔哩哔哩相声.json                                         724 ok=True enc=utf-8 kind=dict err= top=class
+qist    xiaosa/json/哔哩视频.json                                         10749 ok=True enc=utf-8-sig kind=dict err= top=class,filters
+qist    xiaosa/json/多多.json                                             782 ok=True enc=utf-8 kind=dict err= top=Classes,Domains,SiteName,SiteUrl,SiteWord
+qist    xiaosa/json/夸父.json                                            1040 ok=True enc=utf-8 kind=dict err= top=Classes,Cookie,SiteUrl
+qist    xiaosa/json/小学课堂.json                                         31983 ok=True enc=utf-8 kind=dict err= top=class,filters
+qist    xiaosa/json/少儿教育.json                                         12990 ok=True enc=utf-8 kind=dict err= top=class,filters
+qist    xiaosa/json/快映.json                                             799 ok=True enc=utf-8 kind=dict err= top=Classes,Domains,SiteName,SiteUrl,SiteWord
+qist    xiaosa/json/木偶.json                                             660 ok=True enc=utf-8 kind=dict err= top=Classes,Domains,SiteName,SiteUrl,SiteWord
+qist    xiaosa/json/欧歌.json                                             619 ok=True enc=utf-8 kind=dict err= top=Classes,Domains,SiteName,SiteUrl,SiteWord
+qist    xiaosa/json/海绵.json                                             551 ok=True enc=utf-8 kind=dict err= top=Classes,SiteUrl
+qist    xiaosa/json/玩偶.json                                           60905 ok=True enc=utf-8 kind=dict err= top=Classes,Domains,Filters,SiteName,SiteUrl,SiteWord
+qist    xiaosa/json/至臻.json                                             999 ok=True enc=utf-8 kind=dict err= top=Classes,Domains,SiteName,SiteUrl,SiteWord
+qist    xiaosa/json/荐片.json                                           12473 ok=True enc=utf-8 kind=dict err= top=0,1,2,3,4
+qist    xiaosa/json/虎斑.json                                             766 ok=True enc=utf-8 kind=dict err= top=Classes,Domains,SiteName,SiteUrl,SiteWord
+qist    xiaosa/json/蜡笔.json                                             898 ok=True enc=utf-8 kind=dict err= top=Classes,Domains,SiteName,SiteUrl,SiteWord
+qist    xiaosa/json/采集静态.json                                         10975 ok=True enc=utf-8 kind=list[15] err= top=
+qist    xiaosa/json/雷鲸.json                                             846 ok=True enc=utf-8 kind=dict err= top=Classes,SiteUrl
+qist    xiaosa/json/高中课堂.json                                         48002 ok=True enc=utf-8 kind=dict err= top=class,filters
+qist    xiaosa/XBPQ/七七影视.json                                           224 ok=True enc=utf-8 kind=dict err= top=分类,分类url,简介
+qist    xiaosa/XBPQ/七点影视.json                                           328 ok=True enc=utf-8 kind=dict err= top=分类,分类url,图片,简介,线路数组
+qist    xiaosa/XBPQ/三九影视.json                                           256 ok=True enc=utf-8 kind=dict err= top=分类,分类url,简介
+qist    xiaosa/XBPQ/三四影视.json                                           202 ok=True enc=utf-8 kind=dict err= top=分类,分类url,简介
+qist    xiaosa/XBPQ/修罗影视.json                                           601 ok=True enc=utf-8 kind=dict err= top=分类,分类url,副标题,图片,播放列表,播放数组,播放标题,数组,标题,简介,线路标题,跳转播放链接,链接
+qist    xiaosa/XBPQ/免费影视.json                                           720 ok=True enc=utf-8 kind=dict err= top=主页url,分类,分类url,副标题,图片,搜索url,播放数组,播放标题,数组,标题,站名,简介,线路数组,线路标题,编码,请求头,跳转播放链接,链接
+qist    xiaosa/XBPQ/养生堂.json                                           1228 ok=False enc=utf-8 kind=None err=JSONDecodeError: Expecting property name enclosed in double quotes: line 3 column 5 (char  top=
+qist    xiaosa/XBPQ/农民影视.json                                           460 ok=True enc=utf-8 kind=dict err= top=分类,分类url,图片,数组,简介,线路数组,编码,请求头
+qist    xiaosa/XBPQ/可可影视.json                                           396 ok=True enc=utf-8 kind=dict err= top=分类,分类url,副标题,播放列表,数组,简介
+qist    xiaosa/XBPQ/吉吉短剧.json                                           121 ok=True enc=utf-8 kind=dict err= top=分类,分类url
+qist    xiaosa/XBPQ/哆啦新番社.json                                         1291 ok=True enc=utf-8 kind=dict err= top=主页url,分类,分类url,剧情,图片,排序,播放列表,播放数组,播放标题,播放链接,数组,标题,线路标题,编码,请求头,链接
+qist    xiaosa/XBPQ/奇迹影视.json                                           728 ok=True enc=utf-8 kind=dict err= top=二次截取,分类,分类url,副标题,图片,播放列表,播放数组,播放标题,数组,简介,线路数组,线路标题
+qist    xiaosa/XBPQ/小枫影视.json                                           546 ok=True enc=utf-8 kind=dict err= top=二次截取,分类,分类url,副标题,图片,数组,线路数组,线路标题
+qist    xiaosa/XBPQ/小镇影视.json                                           205 ok=True enc=utf-8 kind=dict err= top=分类,分类url,线路数组,线路标题
+qist    xiaosa/XBPQ/尼玛影视.json                                           219 ok=True enc=utf-8 kind=dict err= top=分类,分类url,简介
+qist    xiaosa/XBPQ/布谷TV.json                                          1107 ok=True enc=utf-8 kind=dict err= top=主演,主页url,分类,分类url,导演,影片地区,影片年代,搜索url,搜索数组,播放列表,播放数组,播放链接,简介,线路数组,线路标题
+qist    xiaosa/XBPQ/明星影视.json                                          3164 ok=True enc=utf-8 kind=dict err= top=主演,主页url,二次截取,作者,分类,分类url,剧情,副标题,图片,图片代理,导演,年份,年份值,影片地区,影片年代,影片类型,排序,排序值,搜索url,搜索副标题,搜索图片,搜索数组,搜索标题,搜索模式,搜索请求头,搜索链接,播放列表
+qist    xiaosa/XBPQ/樱花动漫.json                                           352 ok=True enc=utf-8 kind=dict err= top=分类,分类url,副标题,播放数组,数组,简介,线路标题
+qist    xiaosa/XBPQ/樱花影视.json                                           212 ok=True enc=utf-8 kind=dict err= top=分类,分类url,线路标题
+qist    xiaosa/XBPQ/永乐影视.json                                           795 ok=True enc=utf-8 kind=dict err= top=分类,分类url,类型,编码,请求头
+qist    xiaosa/XBPQ/流光影视.json                                           745 ok=True enc=utf-8 kind=dict err= top=分类,分类url,副标题,图片,播放列表,播放数组,播放标题,播放链接,播放链接前缀,数组,标题,线路数组,线路标题,链接,首页
+qist    xiaosa/XBPQ/海纳影视.json                                           275 ok=True enc=utf-8 kind=dict err= top=分类,分类url,数组,简介
+qist    xiaosa/XBPQ/爱我短剧.json                                          1192 ok=True enc=utf-8 kind=dict err= top=主页url,分类,分类url,分类值,副标题,图片,搜索url,搜索图片,搜索数组,搜索标题,搜索链接,播放列表,播放数组,播放标题,播放链接,数组,标题,简介,线路数组,线路标题,请求头,跳转播放链接,链接
+qist    xiaosa/XBPQ/狐狸君.json                                            821 ok=True enc=utf-8 kind=dict err= top=主演,分类,分类url,副标题,影片年代,影片类型,搜索url,搜索副标题,搜索图片,搜索数组,搜索标题,搜索模式,搜索链接,播放列表,播放数组,播放标题,播放链接,标题,简介
+qist    xiaosa/XBPQ/番茄短剧.json                                          1402 ok=True enc=utf-8 kind=dict err= top=主演,主页url,倒序,分类,分类url,分类值,副标题,图片,导演,影片地区,影片年代,影片类型,排序,排序值,搜索url,搜索模式,搜索请求头,播放二次截取,播放列表,播放数组,播放标题,播放链接,数组,标题,状态,筛选,简介,线路数组
+qist    xiaosa/XBPQ/皮皮虾.json                                            273 ok=True enc=utf-8 kind=dict err= top=分类,分类url,线路标题,首页
+qist    xiaosa/XBPQ/短剧网.json                                            183 ok=True enc=utf-8 kind=dict err= top=分类,分类url
+qist    xiaosa/XBPQ/秀儿影视.json                                           392 ok=True enc=utf-8 kind=dict err= top=分类,分类url,副标题,搜索url,数组,简介
+qist    xiaosa/XBPQ/莫小影视.json                                           235 ok=True enc=utf-8 kind=dict err= top=分类,分类url,图片,首页
+qist    xiaosa/XBPQ/雪糕影视.json                                           270 ok=True enc=utf-8 kind=dict err= top=分类,分类url,类型
+qist    xiaosa/XBPQ/雪花.json                                            1200 ok=True enc=utf-8 kind=dict err= top=主演,主页url,二次截取,分类,分类url,副标题,图片,导演,影片地区,影片年代,影片类型,搜索url,播放二次截取,播放列表,播放数组,播放标题,播放链接,数组,标题,状态,站名,简介,线路数组,线路标题,链接
+qist    xiaosa/XBPQ/面包影视.json                                           290 ok=True enc=utf-8 kind=dict err= top=分类,分类url,简介,编码,请求头
+qist    xiaosa/XBPQ/韩剧看看.json                                          2215 ok=True enc=utf-8 kind=dict err= top=主演,主页url,作者,倒序,分类,分类url,剧情,剧情值,副标题,嗅探词,图片,导演,影片地区,影片年代,影片类型,搜索url,搜索二次截取,搜索副标题,搜索后缀,搜索图片,搜索数组,搜索标题,搜索模式,搜索请求头,搜索链接,播放列表,
+qist    xiaosa/XBPQ/骚火影视.json                                           751 ok=True enc=utf-8 kind=dict err= top=倒序,分类,分类url,图片,导演,播放二次截取,播放数组,数组,标题,演员,简介,请求头,链接,首页
+qist    xiaosa/XBPQ/麦田影视.json                                          1967 ok=True enc=utf-8 kind=dict err= top=主演,主页url,分类,分类url,分类值,副标题,图片,导演,影片地区,影片年代,影片类型,搜索url,搜索二次截取,搜索副标题,搜索图片,搜索数组,搜索标题,搜索模式,搜索链接,播放二次截取,播放列表,播放数组,播放标题,播放链接,数组
+qist    xiaosa/XYQHiker/BT天堂.json                                      3559 ok=False enc=utf-8 kind=None err=JSONDecodeError: Expecting property name enclosed in double quotes: line 20 column 5 (char top=
+qist    xiaosa/XYQHiker/七新影视.json                                      3658 ok=False enc=utf-8 kind=None err=JSONDecodeError: Expecting property name enclosed in double quotes: line 16 column 5 (char top=
+qist    xiaosa/XYQHiker/九八影视.json                                      4090 ok=False enc=utf-8 kind=None err=JSONDecodeError: Expecting property name enclosed in double quotes: line 8 column 5 (char  top=
+qist    xiaosa/XYQHiker/八号影视.json                                      3354 ok=False enc=utf-8 kind=None err=JSONDecodeError: Expecting property name enclosed in double quotes: line 17 column 5 (char top=
+qist    xiaosa/XYQHiker/农民影视.json                                      3691 ok=True enc=utf-8 kind=dict err= top=sea_PtBody,sea_arr_rule,sea_is_jsoup,sea_pic,sea_title,sea_url,search_mode,search_url,分析MacPlayer,分类列表数组规则,分类名称,分类名称替换词,
+qist    xiaosa/XYQHiker/剧圈影视.json                                      3526 ok=False enc=utf-8 kind=None err=JSONDecodeError: Expecting property name enclosed in double quotes: line 18 column 5 (char top=
+qist    xiaosa/XYQHiker/巴士动漫.json                                      3250 ok=False enc=utf-8 kind=None err=JSONDecodeError: Expecting property name enclosed in double quotes: line 17 column 5 (char top=
+qist    xiaosa/XYQHiker/星辰影视.json                                      3480 ok=True enc=utf-8 kind=dict err= top=POST请求数据,分析MacPlayer,分类列表数组规则,分类名称,分类名称替换词,分类截取模式,分类片单副标题,分类片单图片,分类片单是否Jsoup写法,分类片单标题,分类片单链接,分类片单链接加前缀,分类片单链接加后缀,分类起始页码,
+qist    xiaosa/XYQHiker/来看影视.json                                      3577 ok=False enc=utf-8 kind=None err=JSONDecodeError: Expecting property name enclosed in double quotes: line 23 column 5 (char top=
+qist    xiaosa/XYQHiker/电影牛.json                                       3436 ok=True enc=utf-8 kind=dict err= top=POST请求数据,分析MacPlayer,分类列表数组规则,分类名称,分类名称替换词,分类截取模式,分类片单副标题,分类片单图片,分类片单是否Jsoup写法,分类片单标题,分类片单链接,分类片单链接加前缀,分类片单链接加后缀,分类起始页码,
+qist    xiaosa/XYQHiker/百思派.json                                       4513 ok=True enc=utf-8 kind=dict err= top=分析MacPlayer,分类列表数组规则,分类名称,分类名称替换词,分类截取模式,分类片单副标题,分类片单图片,分类片单是否Jsoup写法,分类片单标题,分类片单链接,分类片单链接加前缀,分类起始页码,分类链接,图片是否需要代理,地区详情,
+qist    xiaosa/XYQHiker/盒子影视.json                                      3316 ok=False enc=utf-8 kind=None err=JSONDecodeError: Expecting property name enclosed in double quotes: line 17 column 5 (char top=
+qist    xiaosa/XYQHiker/看看影视.json                                      3668 ok=False enc=utf-8 kind=None err=JSONDecodeError: Expecting property name enclosed in double quotes: line 16 column 5 (char top=
+qist    xiaosa/XYQHiker/短剧屋.json                                       3274 ok=False enc=utf-8 kind=None err=JSONDecodeError: Expecting property name enclosed in double quotes: line 17 column 5 (char top=
+qist    xiaosa/XYQHiker/骚火影视.json                                      3151 ok=False enc=utf-8 kind=None err=JSONDecodeError: Expecting property name enclosed in double quotes: line 17 column 5 (char top=
+qist    XYQBiu/88看球.json                                               1913 ok=True enc=utf-8 kind=dict err= top=ManualSniffer,SUserAgent,UserAgent,VideoFormat,author,cat_YN_twice,cat_arr_pre,cat_arr_suf,cat_pic,cat_prefix,cat_subtit
+qist    XYQHiker/996影视.json                                            3574 ok=False enc=utf-8 kind=None err=JSONDecodeError: Expecting property name enclosed in double quotes: line 16 column 5 (char top=
+qist    XYQHiker/七新影视.json                                             3598 ok=False enc=utf-8 kind=None err=JSONDecodeError: Expecting property name enclosed in double quotes: line 16 column 5 (char top=
+qist    XYQHiker/云盘资源.json                                              794 ok=True enc=utf-8 kind=dict err= top=POST请求数据,地区详情,年代详情,搜索列表数组规则,搜索截取模式,搜索片单副标题,搜索片单图片,搜索片单是否Jsoup写法,搜索片单标题,搜索片单链接,搜索片单链接加前缀,搜索片单链接加后缀,搜索请求头参数,搜索链接,演员详情,简介详情
+qist    XYQHiker/兔小贝.json                                              2220 ok=True enc=utf-8 kind=dict err= top=POST请求数据,分类Json数据二次截取,分类列表数组规则,分类名称,分类名称替换词,分类截取模式,分类片单副标题,分类片单图片,分类片单是否Jsoup写法,分类片单标题,分类片单链接,分类片单链接加前缀,分类片单链接加后缀,分类起始页码
+qist    XYQHiker/兔小贝2.json                                             2943 ok=True enc=utf-8 kind=dict err= top=POST请求数据,分类列表数组规则,分类名称,分类名称替换词,分类截取模式,分类片单副标题,分类片单图片,分类片单是否Jsoup写法,分类片单标题,分类片单链接,分类片单链接加前缀,分类片单链接加后缀,分类起始页码,分类链接,图片是否需要代
+qist    XYQHiker/农民影视.json                                             3679 ok=True enc=utf-8 kind=dict err= top=sea_PtBody,sea_arr_rule,sea_is_jsoup,sea_pic,sea_title,sea_url,search_mode,search_url,分析MacPlayer,分类列表数组规则,分类名称,分类名称替换词,
+qist    XYQHiker/剧圈影视.json                                             3526 ok=False enc=utf-8 kind=None err=JSONDecodeError: Expecting property name enclosed in double quotes: line 18 column 5 (char top=
+qist    XYQHiker/可可影视.json                                             3396 ok=False enc=utf-8 kind=None err=JSONDecodeError: Expecting property name enclosed in double quotes: line 3 column 5 (char  top=
+qist    XYQHiker/哔嘀影视.json                                             4614 ok=False enc=utf-8 kind=None err=JSONDecodeError: Expecting property name enclosed in double quotes: line 12 column 5 (char top=
+qist    XYQHiker/巴士动漫.json                                             3250 ok=False enc=utf-8 kind=None err=JSONDecodeError: Expecting property name enclosed in double quotes: line 17 column 5 (char top=
+qist    XYQHiker/影搜.json                                                567 ok=True enc=utf-8 kind=dict err= top=POST请求数据,搜索列表数组规则,搜索截取模式,搜索片单副标题,搜索片单图片,搜索片单是否Jsoup写法,搜索片单标题,搜索片单链接,搜索片单链接加前缀,搜索片单链接加后缀,搜索请求头参数,搜索链接
+qist    XYQHiker/播视童趣.json                                             2889 ok=False enc=utf-8 kind=None err=JSONDecodeError: Expecting property name enclosed in double quotes: line 23 column 5 (char top=
+qist    XYQHiker/斗鱼直播.json                                            66693 ok=True enc=utf-8 kind=dict err= top=POST请求数据,分类列表数组规则,分类名称,分类名称替换词,分类截取模式,分类片单副标题,分类片单图片,分类片单是否Jsoup写法,分类片单标题,分类片单链接,分类片单链接加前缀,分类片单链接加后缀,分类起始页码,分类链接,图片是否需要代
+qist    XYQHiker/来看影视.json                                             3577 ok=False enc=utf-8 kind=None err=JSONDecodeError: Expecting property name enclosed in double quotes: line 23 column 5 (char top=
+qist    XYQHiker/河马短剧.json                                             4045 ok=False enc=utf-8 kind=None err=JSONDecodeError: Expecting property name enclosed in double quotes: line 16 column 5 (char top=
+qist    XYQHiker/爱你短剧.json                                             3384 ok=False enc=utf-8 kind=None err=JSONDecodeError: Expecting property name enclosed in double quotes: line 17 column 5 (char top=
+qist    XYQHiker/玩偶哥哥.json                                             3700 ok=False enc=utf-8 kind=None err=JSONDecodeError: Expecting property name enclosed in double quotes: line 3 column 5 (char  top=
+qist    XYQHiker/短剧屋.json                                              3274 ok=False enc=utf-8 kind=None err=JSONDecodeError: Expecting property name enclosed in double quotes: line 17 column 5 (char top=
+qist    XYQHiker/虎牙直播.json                                            16949 ok=True enc=utf-8 kind=dict err= top=POST请求数据,分类列表数组规则,分类名称,分类名称替换词,分类截取模式,分类片单副标题,分类片单图片,分类片单是否Jsoup写法,分类片单标题,分类片单链接,分类片单链接加前缀,分类片单链接加后缀,分类起始页码,分类链接,图片是否需要代
+tvbox   tvboxmuti.json                                                 2026 ok=True enc=utf-8 kind=dict err= top=urls
+tvyuan  tvbox.json                                                     2637 ok=True enc=utf-8 kind=dict err= top=lives,parses,sites,spider
+tvyuan  tvbox_collect.json                                             2428 ok=True enc=utf-8 kind=dict err= top=lives,parses,sites,spider
+tvyuan  tvbox_full.json                                              568614 ok=True enc=utf-8 kind=dict err= top=lives,parses,sites,spider
+tvyuan  tvbox_multi.json                                              11948 ok=True enc=utf-8 kind=dict err= top=storeHouse

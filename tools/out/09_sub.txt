@@ -1,0 +1,157 @@
+# configs: 20
+
+# -- parses --
+files=14 value types={'list': 14}
+field   count
+------  -----
+name    337  
+type    337  
+url     337  
+ext     185  
+header  7    
+i       1    
+   sample @0821.json: {"name": "Json聚合", "type": 3, "url": "Demo"}
+   sample @0821.json: {"name": "虾米", "type": 0, "url": "https://jx.xmflv.com/?url=", "ext": {"flag": ["qq", "腾讯", "qiyi", "爱奇艺", "奇艺", "youku", "优酷", "sohu", "搜狐", "letv", "乐视", "mgtv", "芒果", "imgo", "rx", "ltnb", "bilibili", "1905", "xigua"]
+   sample @0821.json: {"name": "PM", "url": "https://www.playm3u8.cn/jiexi.php?url=", "type": 0, "ext": {"flag": ["qiyi", "imgo", "爱奇艺", "奇艺", "qq", "腾讯", "youku", "优酷", "pptv", "PPTV", "letv", "乐视", "leshi", "bilibili", "哔哩哔哩", "哔哩", "mgtv",
+   sample @0821.json: {"name": "m3u8", "type": 0, "url": "https://jx.m3u8.tv/jiexi/?url="}
+
+# -- lives --
+files=19 value types={'list': 19}
+field       count
+----------  -----
+name        174  
+url         174  
+type        169  
+epg         103  
+logo        101  
+playerType  99   
+ua          97   
+timeout     38   
+pass        7    
+boot        2    
+timeZone    2    
+click       1    
+   sample @0821.json: {"name": "初秋语•ipv4", "type": 0, "url": "./list.txt", "playerType": 2, "epg": "http://epg.cdn.loc.cc/?ch={name}&date={date}", "logo": "https://live.fanmingming.com/tv/{name}.png"}
+   sample @0821.json: {"name": "YanG•综合", "type": 0, "url": "https://tv.iill.top/m3u/Gather", "ua": "okhttp/3.15", "playerType": 2, "epg": "http://epg.cdn.loc.cc/?ch={name}&date={date}"}
+   sample @0821.json: {"name": "YanG•直播", "type": 0, "url": "https://tv.iill.top/m3u/Live", "ua": "okhttp/3.15", "playerType": 2}
+   sample @0821.json: {"name": "YanG•体育", "type": 0, "url": "https://tv.iill.top/m3u/Sport", "ua": "okhttp/3.15", "playerType": 2}
+
+# -- rules --
+files=16 value types={'list': 16}
+field   count
+------  -----
+name    172  
+hosts   172  
+regex   148  
+script  15   
+host    6    
+rule    6    
+   sample @0821.json: {"name": "kk", "hosts": ["kuaikan"], "regex": ["5", "20.123", "20.167", "#EXT-X-DISCONTINUITY\\r*\\n*((?!#EXT-X-DISCONTINUITY)[\\s\\S])*?#EXT-X-KEY:METHOD((?!#EXT-X-DISCONTINUITY)[\\s\\S])*?#EXT-X-DISCONTINUITY"]}
+   sample @0821.json: {"name": "yqk", "hosts": ["yqk"], "regex": ["18.4", "15.1666", "#EXT-X-DISCONTINUITY\\r*\\n*((?!#EXT-X-DISCONTINUITY)[\\s\\S])*?#EXT-X-CUE-OUT((?!#EXT-X-DISCONTINUITY)[\\s\\S])*?#EXT-X-CUE-IN"]}
+   sample @0821.json: {"name": "sn", "hosts": ["suonizy"], "regex": ["#EXTINF.*?\\s+.*?original.*?\\.ts\\s+", "15.1666", "15.2666", "16.3333", "15.266667"]}
+   sample @0821.json: {"name": "bf", "hosts": ["bfzy"], "regex": ["#EXT-X-DISCONTINUITY\\r*\\n*#EXTINF:3,[\\s\\S]*?#EXT-X-DISCONTINUITY"]}
+
+# -- ads --
+files=12 value types={'list': 12}
+field  count
+-----  -----
+<str>  554  
+
+# -- flags --
+files=9 value types={'list': 9}
+field  count
+-----  -----
+<str>  438  
+
+# -- doh --
+files=12 value types={'list': 12}
+field  count
+-----  -----
+name   60   
+url    60   
+ips    60   
+   sample @0821.json: {"name": "Google", "url": "https://dns.google/dns-query", "ips": ["8.8.4.4", "8.8.8.8"]}
+   sample @0821.json: {"name": "Cloudflare", "url": "https://cloudflare-dns.com/dns-query", "ips": ["1.1.1.1", "1.0.0.1", "2606:4700:4700::1111", "2606:4700:4700::1001"]}
+   sample @0821.json: {"name": "AdGuard", "url": "https://dns.adguard.com/dns-query", "ips": ["94.140.14.140", "94.140.14.141"]}
+   sample @0821.json: {"name": "DNSWatch", "url": "https://resolver2.dns.watch/dns-query", "ips": ["84.200.69.80", "84.200.70.40"]}
+
+# -- ijk --
+files=4 value types={'list': 4}
+field    count
+-------  -----
+group    8    
+options  8    
+   sample @367.json: {"group": "软解码", "options": [{"category": 4, "name": "opensles", "value": "0"}, {"category": 4, "name": "overlay-format", "value": "842225234"}, {"category": 4, "name": "framedrop", "value": "1"}, {"category": 4, "name":
+   sample @367.json: {"group": "硬解码", "options": [{"category": 4, "name": "opensles", "value": "0"}, {"category": 4, "name": "overlay-format", "value": "842225234"}, {"category": 4, "name": "framedrop", "value": "1"}, {"category": 4, "name":
+   sample @XYQ.json: {"group": "软解码", "options": [{"category": 4, "name": "opensles", "value": "0"}, {"category": 4, "name": "overlay-format", "value": "842225234"}, {"category": 4, "name": "framedrop", "value": "1"}, {"category": 4, "name":
+   sample @XYQ.json: {"group": "硬解码", "options": [{"category": 4, "name": "opensles", "value": "0"}, {"category": 4, "name": "overlay-format", "value": "842225234"}, {"category": 4, "name": "framedrop", "value": "1"}, {"category": 4, "name":
+
+# -- hosts --
+files=3 value types={'list': 3}
+field  count
+-----  -----
+<str>  12   
+
+# Q2c relative reference resolution (./xxx in sites api/ext) vs files present in repo
+repo    status    count
+------  --------  -----
+qist    MISSING   220  
+qist    resolved  858  
+tvyuan  MISSING   180  
+missing detail (top 25):
+   qist/tools/dianshi.json -> ./lib/drpy2.min.js x26
+   qist/tools/jsm.json -> ./lib/drpy2.min.js x25
+   tvyuan/tvbox_full.json -> ./lib/drpy2.min.js x23
+   qist/tools/dianshi.json -> ./js/drpy.js x3
+   qist/tools/jsm.json -> ./js/drpy.js x3
+   tvyuan/tvbox_full.json -> ./js/drpy.js x3
+   qist/0825.json -> ./lib/token.json$$$null$$$proxy$$$1 x2
+   qist/9918.json -> ./lib/token.json$$$1 x2
+   qist/99188.json -> ./lib/token.json$$$1 x2
+   tvyuan/tvbox_full.json -> ./js/有声小说吧.js x2
+   tvyuan/tvbox_full.json -> ./drpy_libs/drpy2.min.js x2
+   tvyuan/tvbox_full.json -> ./FTY/drpy2.min.js x2
+   tvyuan/tvbox_full.json -> ./liba/apiv999drpy2.min.js x2
+   qist/0825.json -> ./lib/token.json$$$./json/pushshare.txt$$$db$$$1 x1
+   qist/0825.json -> ./lib/token.json$$$./json/pikpakclass.json$$$./json/pikpakclass.json.db.gz x1
+   qist/0825.json -> ./lib/token.json$$$./json/alishare.txt$$$db$$$1 x1
+   qist/0825.json -> ./lib/token.json$$$./json/alishare.ebook.txt$$$db$$$1 x1
+   qist/0825.json -> ./lib/token.json$$$./json/thundershare.txt x1
+   qist/0825.json -> ./lib/token.json$$$./json/quarkshare.txt x1
+   qist/0825.json -> ./lib/token.json$$$./json/115share.txt$$$db$$$1 x1
+   qist/0825.json -> ./lib/token.json$$$./json/ucshare.txt$$$db$$$1 x1
+   qist/0825.json -> ./lib/token.json$$$./json/sambashare.txt x1
+   qist/0825.json -> ./lib/token.json$$$https://www.yjys01.com/$$$null$$$1 x1
+   qist/0825.json -> ./json/jianpian.json$$$1 x1
+   qist/0825.json -> ./json/duboku.json$$$socks5://127.0.0.1:10172 x1
+
+# Q2d spider value per config + jar existence
+file                            spider value                                                            resolves?
+------------------------------  ----------------------------------------------------------------------  ---------
+qist/0821.json                  ./jar/fan.txt;md5;8432d174d72d5b608ae1bcd16d966847                      yes      
+qist/0825.json                  ./jar/pg_upgraded.jar;md5;e58c3a2975d24db4978065ab895cf297              yes      
+qist/0826.json                  ./jar/fan.txt;md5;8432d174d72d5b608ae1bcd16d966847                      yes      
+qist/0827.json                  ./jar/custom_spider.jar;md5;41c87635d7592069884a5dafa12acabe            yes      
+qist/367.json                   http://我不是.摸鱼儿.top/by/jar/moyu.php;md5;0a9c6b44a20445a9b3c2a39763ef7cf  remote   
+qist/9918.json                  ./jar/pg_upgraded.jar;md5;e58c3a2975d24db4978065ab895cf297              yes      
+qist/99188.json                 ./jar/pg23a94bb_upgraded.jar;md5;7c8f662c4d1ed4351e02691c15ed24a2       yes      
+qist/dianshi.json               ./jar/spider.jar;md5;cbe016eb3cb002ae62058604843f5106                   yes      
+qist/fty.json                   ./jar/fan.txt;md5;fa1bcd5643872834ee03be5ba2f23ac7                      yes      
+qist/js.json                    ./jar/pg_upgraded.jar;md5;e58c3a2975d24db4978065ab895cf297              yes      
+qist/jsm.json                   ./jar/spider.jar;md5;cbe016eb3cb002ae62058604843f5106                   yes      
+qist/XYQ.json                   ./jar/XYQ.jar;md5;705ba6e23c4384c37a11dd904727520b                      yes      
+qist/cat/tjs/18_tv_config.json  None                                                                    -        
+qist/cat/tjs/tv_config.json     None                                                                    -        
+qist/tools/dianshi.json         ./jar/spider.jar;md5;c6985455e2cf0029e7901288a84f1e81                   NO       
+qist/tools/jsm.json             ./jar/spider.jar;md5;c6985455e2cf0029e7901288a84f1e81                   NO       
+qist/xiaosa/api.json            ./spider.jar;md5;cbe016eb3cb002ae62058604843f5106                       yes      
+tvyuan/tvbox.json                                                                                       -        
+tvyuan/tvbox_collect.json                                                                               -        
+tvyuan/tvbox_full.json          http://oss4liview.moji.com/thd_file/2026/11/12/7b563c7039830e7c712e93f  remote   
+
+# Q2e lives[].url forms across configs
+   http           149   e.g. {"name": "YanG•综合", "type": 0, "url": "https://tv.iill.top/m3u/Gather", "ua": "okhttp/3.15", "playerType": 2, "epg": "http://epg.cdn.loc.cc/?ch={name}
+   relative       23   e.g. {"name": "初秋语•ipv4", "type": 0, "url": "./list.txt", "playerType": 2, "epg": "http://epg.cdn.loc.cc/?ch={name}&date={date}", "logo": "https://live.fan
+   empty          1   e.g. {"name": "全是气氛组", "type": 0, "url": "", "playerType": 1, "ua": "okhttp/3.15"}
+   nonstr         1   e.g. {}
+   other:aHR0cDovLzU1MC4zdmNu 1   e.g. {"name": "live", "type": 0, "url": "aHR0cDovLzU1MC4zdmNuLndvcmsvanl0di5qc29u", "playerType": 1, "ua": "okhttp/3.15", "epg": "http://epg.112114.xyz/?ch

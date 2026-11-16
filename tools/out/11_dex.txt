@@ -1,0 +1,9 @@
+qist/jar/spider.jar                    bytes=1929492 dex=4960220 csp_hits=0/673  e.g. 
+qist/jar/pg_upgraded.jar               bytes=2912031 dex=7043744 csp_hits=0/673  e.g. 
+qist/jar/pg23a94bb_upgraded.jar        bytes=11725653 dex=5965264 csp_hits=0/673  e.g. 
+qist/jar/XYQ.jar                       bytes=393490 dex=990256 csp_hits=0/673  e.g. 
+qist/jar/XBPQ_upgraded.jar             bytes=659007 dex=1548408 csp_hits=0/673  e.g. 
+qist/jar/custom_spider.jar             bytes=266777 dex=1156116 csp_hits=0/673  e.g. 
+qist/jar/fty.jar                       bytes=640982 dex=1509644 csp_hits=0/673  e.g. 
+qist/xiaosa/spider.jar                 bytes=1929492 dex=4960220 csp_hits=0/673  e.g. 
+qist/jar/fan.txt                       bytes=1397957 dex=37992 csp_hits=0/673  e.g. 

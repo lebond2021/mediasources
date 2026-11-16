@@ -1,0 +1,8 @@
+qist/jar/spider.jar                csp_=0  XBPQ=13, AppGet=4, PanWebShare=3, xbpq=2, Bili=8
+qist/jar/pg_upgraded.jar           csp_=0  XBPQ=3, Bili=1
+qist/jar/XYQ.jar                   csp_=0  XYQHiker=6, Bili=2
+qist/jar/XBPQ_upgraded.jar         csp_=0  XBPQ=26
+qist/jar/custom_spider.jar         csp_=0  Bili=1
+qist/jar/fty.jar                   csp_=0  XBPQ=4, xbpq=1, Bili=1
+qist/jar/fan.txt                   csp_=0  DouDouGuard=1, WoGGGuard=1, YGPGuard=1, Bili=1
+qist/jar/pg23a94bb_upgraded.jar    csp_=0  XBPQ=3, Bili=1

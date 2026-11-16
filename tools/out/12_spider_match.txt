@@ -1,0 +1,32 @@
+# per-config spider vs csp_ class coverage
+config                          spider                                    csp_sites  distinct_csp  class_found     missing_examples                            
+------------------------------  ----------------------------------------  ---------  ------------  --------------  --------------------------------------------
+qist/0821.json                  fan.txt                                   42         38            25/38           csp_LiteAppleGuard, csp_SbaibaiGuard, csp_Ap
+qist/0825.json                  pg_upgraded.jar                           106        83            76/83           csp_YGP, csp_NanGua, csp_Ikanbot            
+qist/0826.json                  fan.txt                                   48         37            25/37           csp_LiteAppleGuard, csp_SbaibaiGuard, csp_Ap
+qist/0827.json                  custom_spider.jar                         26         26            23/26           csp_NiNi, csp_Ying, csp_Dovx                
+qist/367.json                   http://我不是.摸鱼儿.top/by/jar/moyu.php        95         67            REMOTE/MISSING  -                                           
+qist/9918.json                  pg_upgraded.jar                           24         22            22/22           -                                           
+qist/99188.json                 pg23a94bb_upgraded.jar                    24         22            22/22           -                                           
+qist/dianshi.json               spider.jar                                113        89            89/89           -                                           
+qist/fty.json                   fan.txt                                   46         38            37/38           csp_XPathGuard                              
+qist/js.json                    pg_upgraded.jar                           71         63            60/63           csp_NanGua, csp_Gitcafe, csp_Dovx           
+qist/jsm.json                   spider.jar                                113        89            89/89           -                                           
+qist/XYQ.json                   XYQ.jar                                   42         24            24/24           -                                           
+qist/cat/tjs/18_tv_config.json  (none)                                    0          0             -               -                                           
+qist/cat/tjs/tv_config.json     (none)                                    0          0             -               -                                           
+qist/tools/dianshi.json         ./jar/spider.jar                          5          5             REMOTE/MISSING  -                                           
+qist/tools/jsm.json             ./jar/spider.jar                          5          5             REMOTE/MISSING  -                                           
+qist/xiaosa/api.json            spider.jar                                114        91            91/91           -                                           
+tvyuan/tvbox.json               (none)                                    0          0             -               -                                           
+tvyuan/tvbox_collect.json       (none)                                    0          0             -               -                                           
+tvyuan/tvbox_full.json          /12/7b563c7039830e7c712e93f27fd2e102.jpg  990        553           REMOTE/MISSING  -                                           
+
+# jar dex sizes / class-name probe
+   qist\jar\XYQ.jar                           dex=990256 
+   qist\jar\custom_spider.jar                 dex=1156116 
+   qist\jar\fan.txt                           dex=37992 has DouDouGuard
+   qist\jar\pg23a94bb_upgraded.jar            dex=5965264 
+   qist\jar\pg_upgraded.jar                   dex=7043744 
+   qist\jar\spider.jar                        dex=4960220 
+   qist\xiaosa\spider.jar                     dex=4960220 

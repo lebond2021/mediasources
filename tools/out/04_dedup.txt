@@ -1,0 +1,133 @@
+# Q4 dedup measurement over 2989 site entries from 20 config files
+
+dedup key               unique  dup count  dedup rate  remaining %
+----------------------  ------  ---------  ----------  -----------
+raw entries             2989    0          0.0%        100.0%     
+(type, api) normalized  1074    1915       64.1%       35.9%      
+(api) only              1073    1916       64.1%       35.9%      
+name normalized         2376    613        20.5%       79.5%      
+key only                1870    1119       37.4%       62.6%      
+(name, api)             2416    573        19.2%       80.8%      
+(key, api)              1997    992        33.2%       66.8%      
+(key, type, api)        1998    991        33.2%       66.8%      
+
+# Q4b per-repo uniqueness (within repo)
+repo    entries  uniq(type,api)  uniq(name)  uniq(key)  uniq(key,type,api)
+------  -------  --------------  ----------  ---------  ------------------
+cliya   0        -               -           -          -                 
+qist    1519     383             916         730        772               
+tvyuan  1470     890             1460        1448       1460              
+tvbox   0        -               -           -          -                 
+
+# Q4c per-file uniqueness
+file                            entries  uniq(type,api)  uniq(key)  uniq(name)
+------------------------------  -------  --------------  ---------  ----------
+tvyuan/tvbox_full.json          1451     888             1434       1441      
+qist/js.json                    298      69              296        296       
+qist/dianshi.json               163      113             163        163       
+qist/jsm.json                   162      113             162        162       
+qist/0825.json                  135      93              134        134       
+qist/xiaosa/api.json            116      93              116        116       
+qist/367.json                   106      74              103        105       
+qist/0821.json                  86       48              84         86        
+qist/99188.json                 64       59              64         63        
+qist/9918.json                  61       56              61         60        
+qist/0826.json                  54       39              54         54        
+qist/tools/dianshi.json         53       27              53         53        
+qist/tools/jsm.json             52       27              52         52        
+qist/fty.json                   49       39              49         49        
+qist/XYQ.json                   49       25              49         49        
+qist/0827.json                  33       33              33         33        
+qist/cat/tjs/tv_config.json     28       28              28         28        
+qist/cat/tjs/18_tv_config.json  10       10              10         10        
+tvyuan/tvbox.json               10       9               9          10        
+tvyuan/tvbox_collect.json       9        9               9          9         
+
+# Q4d PROOF: same key, different api
+-- key='玩偶' : 11 entries, 3 distinct api
+     api=csp_WoGGGuard                                                          name=👽玩偶哥哥┃4K弹幕         type=3  @qist/0821.json
+     api=csp_Wogg                                                               name=玩偶                 type=3  @qist/0827.json
+     api=csp_Doll                                                               name=玩偶                 type=3  @qist/9918.json
+-- key='苹果' : 7 entries, 3 distinct api
+     api=csp_LiteAppleGuard                                                     name=🍎苹果┃不卡             type=3  @qist/0821.json
+     api=csp_AppDrama                                                           name=苹果 • APP           type=3  @qist/dianshi.json
+     api=csp_LiteApple                                                          name=[33ms|我] 苹果        type=3  @tvyuan/tvbox_full.json
+-- key='贱贱' : 5 entries, 3 distinct api
+     api=csp_JPJGuard                                                           name=🐭荐片┃P2P            type=3  @qist/0821.json
+     api=https://gitlab.com/fantaiying/ext/-/raw/main/drpy2.min.js              name=🐭贱贱┃P2P┃纯净         type=3  @qist/367.json
+     api=./lib/apiv461drpy2.min.js                                              name=[1434ms|金鹰] 🎬荐片┃影视 type=3  @tvyuan/tvbox_full.json
+-- key='新6v' : 9 entries, 3 distinct api
+     api=csp_SixVGuard                                                          name=🧲新6V┃磁力            type=3  @qist/0821.json
+     api=csp_SixV                                                               name=新6V磁力┃慎用           type=3  @qist/0821.json
+     api=csp_Xb6v                                                               name=新6V                type=3  @qist/0825.json
+-- key='有声小说js' : 6 entries, 3 distinct api
+     api=https://gh-proxy.net/https://raw.githubusercontent.com/fantaiying7/EXT name=🎧有声┃小说             type=3  @qist/0821.json
+     api=./lib/drpy2.min.js                                                     name=听书┃有声小说[js]        type=3  @qist/0821.json
+     api=https://gitlab.com/fantaiying/ext/-/raw/main/drpy2.min.js              name=📚有声┃小说┃娱乐          type=3  @qist/367.json
+-- key='push_agent' : 16 entries, 3 distinct api
+     api=csp_PushGuard                                                          name=🛴手机┃推送             type=3  @qist/0821.json
+     api=csp_Push                                                               name=推送                 type=3  @qist/0825.json
+     api=csp_PushAgent                                                          name=📽推送                type=3  @qist/XYQ.json
+
+# Q4e PROOF: same api, different key
+-- api=lib/drpy2.min.js : 413 entries, 231 distinct key
+     key=drpy_js_360影视          name=官源┃360[js]         type=3  @qist/0821.json
+     key=drpy_js_奇珍异兽           name=官源┃爱奇艺[js]         type=3  @qist/0821.json
+     key=drpy_js_百忙无果           name=官源┃芒果[js]          type=3  @qist/0821.json
+     key=drpy_js_腾云驾雾           name=官源┃腾讯[js]          type=3  @qist/0821.json
+-- api=csp_xbpq : 142 entries, 129 distinct key
+     key=小白                     name=小白                 type=3  @qist/0825.json
+     key=BT天堂                   name=BT天堂               type=3  @qist/0825.json
+     key=布谷tv                   name=布谷4K               type=3  @qist/0825.json
+     key=haokongbu              name=好恐怖                type=3  @qist/0825.json
+-- api=csp_appget : 55 entries, 49 distinct key
+     key=忍者                     name=🥷忍者┃蓝光┃弹幕          type=3  @qist/367.json
+     key=彼岸                     name=🍂菲菲┃蓝光┃弹幕          type=3  @qist/367.json
+     key=橘子                     name=🍊橘子┃蓝光┃无广          type=3  @qist/367.json
+     key=雨滴                     name=⛱️雨滴┃蓝光┃无广         type=3  @qist/367.json
+-- api=csp_bili : 77 entries, 39 distinct key
+     key=csp_Bili               name=哔哩                 type=3  @qist/0825.json
+     key=哔哩                     name=哔哩                 type=3  @qist/0827.json
+     key=哔哩合集                   name=哔哩 • 合集            type=3  @qist/dianshi.json
+     key=哔哩哔哩音乐                 name=哔哩 • 音乐            type=3  @qist/dianshi.json
+-- api=csp_xyqhiker : 40 entries, 36 distinct key
+     key=csp_XYQHiker_影搜        name=📀影搜(XYQH)          type=3  @qist/XYQ.json
+     key=csp_XYQHiker_哔嘀影视      name=🧲哔嘀影视(XYQH)        type=3  @qist/XYQ.json
+     key=csp_XYQHiker_兔小贝       name=兔小贝(XYQH)          type=3  @qist/XYQ.json
+     key=csp_XYQHiker_兔小贝2      name=兔小贝2(XYQH)         type=3  @qist/XYQ.json
+-- api=csp_panwebshare : 37 entries, 16 distinct key
+     key=MoggV2                 name=🍁优汐木偶┃4K弹幕         type=3  @qist/367.json
+     key=UcXmV2                 name=🐂小二资源┃4K弹幕         type=3  @qist/367.json
+     key=QuarkLaBiV2            name=🖍︎蜡笔资源┃4K弹幕        type=3  @qist/367.json
+     key=QuarkzzV2              name=🏆️夸克至臻┃4K弹幕        type=3  @qist/367.json
+
+# Q4f key prefix vs api prefix mismatch (csp_ keys whose api is not csp_)
+count=11
+   key=csp_xml_索尼资源 api=https://suoniapi.com/api.php/provide/vod/from/snm3u8/ @tvbox_full.json
+   key=csp_xml_ikun api=https://ikunzyapi.com/api.php/provide/vod/from/ikm3u8/at/jso @tvbox_full.json
+   key=csp_xml_量子资源 api=http://cj.lziapi.com/api.php/provide/vod/?ac=list @tvbox_full.json
+   key=csp_xml_暴风资源 api=https://bfzyapi.com/api.php/provide/vod/?ac=list @tvbox_full.json
+   key=csp_xml_非凡资源 api=http://cj.ffzyapi.com/api.php/provide/vod/?ac=list @tvbox_full.json
+reverse (api csp_*, key not csp_): count=1669
+   key=豆 api=csp_DouDouGuard @0821.json
+   key=玩偶 api=csp_WoGGGuard @0821.json
+   key=YGP api=csp_YGPGuard @0821.json
+   key=alllive api=csp_AllliveGuard @0821.json
+   key=抠搜 api=csp_KkSsGuard @0821.json
+
+# Q4g api host frequency (top 15)
+   catbox.n13.club                            62
+   suoniapi.com                               17
+   gh-proxy.net                               15
+   cj.lziapi.com                              15
+   gh-proxy.com                               15
+   bfzyapi.com                                13
+   www.agit.ai                                12
+   jszyapi.com                                10
+   zy.jinchancaiji.com                        10
+   gh-proxy.org                               10
+   ghfast.top                                 10
+   api.apibdzy.com                            9
+   360zy.com                                  9
+   so.yinpai.xyz                              8
+   cj.ffzyapi.com                             7

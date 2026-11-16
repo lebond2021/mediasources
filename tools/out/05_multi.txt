@@ -1,0 +1,74 @@
+# Q5 multi-source files: 7
+repo    path              wrapper key  top keys    entries  mode       
+------  ----------------  -----------  ----------  -------  -----------
+cliya   18.json           urls         urls        16       json5-clean
+cliya   18duocang.json    storeHouse   storeHouse  4        json5-clean
+cliya   cangku.json       urls         urls        32       json5-clean
+cliya   duocang.json      storeHouse   storeHouse  17       json5-clean
+qist    0707.json         urls         urls        1        raw        
+tvbox   tvboxmuti.json    urls         urls        14       raw        
+tvyuan  tvbox_multi.json  storeHouse   storeHouse  93       raw        
+
+# Q5b entry field schema
+cliya/18.json [urls] n=16 fields={'url': 16, 'name': 16}
+cliya/18duocang.json [storeHouse] n=4 fields={'sourceName': 4, 'sourceUrl': 4}
+cliya/cangku.json [urls] n=32 fields={'url': 32, 'name': 32}
+cliya/duocang.json [storeHouse] n=17 fields={'sourceName': 17, 'sourceUrl': 17}
+qist/0707.json [urls] n=1 fields={'url': 1, 'name': 1}
+tvbox/tvboxmuti.json [urls] n=14 fields={'url': 14, 'name': 14}
+tvyuan/tvbox_multi.json [storeHouse] n=93 fields={'sourceName': 93, 'sourceUrl': 93}
+
+# Q5c entry value shapes (all multi files combined)
+total url entries=177, name entries=177
+scheme hist: {"https": 125, "http": 51, "(no-scheme)": 1}
+
+# Q5d duplicate sourceUrl within one multi file
+cliya/18.json: entries=16 unique_url=15 dups={"https://agit.ai/hu/hcr/raw/branch/master/1012.txt": 2}
+cliya/18duocang.json: entries=4 unique_url=4 dups=none
+cliya/cangku.json: entries=32 unique_url=32 dups=none
+cliya/duocang.json: entries=17 unique_url=17 dups=none
+qist/0707.json: entries=1 unique_url=1 dups=none
+tvbox/tvboxmuti.json: entries=14 unique_url=14 dups=none
+tvyuan/tvbox_multi.json: entries=93 unique_url=92 dups={"https://9280.kstore.space/wex.json": 2}
+
+# Q5e name/latency convention
+names starting with [<n>ms]: 93 / 177
+   cliya/18.json                            私人影院
+   cliya/18.json                            无痕线路
+   cliya/18.json                            花花世界
+   cliya/18.json                            吾爱在线
+   cliya/18.json                            星云线路
+   cliya/18.json                            不正经线
+   cliya/18.json                            JiuYing线路
+   cliya/18.json                            MHQTV线路
+
+# Q5f nested multi (url pointing at another multi file in the repo set)
+   cliya/18.json -> https://agit.ai/wuheng42/TVBOXZY/raw/branch/main/18.json
+   cliya/18duocang.json -> https://ghproxy.net/https://raw.githubusercontent.com/mengzehe/tvbox/main/18.json
+   cliya/duocang.json -> https://ghproxy.net/https://raw.githubusercontent.com/mengzehe/tvbox/main/cangku.json
+   tvyuan/tvbox_multi.json -> https://gitlab.com/noimank/tvbox/-/raw/main/tvboxmuti.json
+   tvyuan/tvbox_multi.json -> https://gh-proxy.com/https://raw.githubusercontent.com/noimank/tvbox/master/tvboxmuti.json
+
+# Q5g full content of small multi files (<=15 entries)
+-- cliya/18duocang.json
+   {"sourceName": "自用成人仓", "sourceUrl": "https://ghproxy.net/https://raw.githubusercontent.com/mengzehe/tvbox/main/18.json"}
+   {"sourceName": "喵公子仓", "sourceUrl": "https://agit.ai/yschaizhen/TVBox/raw/branch/master/huahua2.json"}
+   {"sourceName": "大烟管18+", "sourceUrl": "http://52bsj.vip:81/api/v3/file/get/67121/%E7%BB%BF%E8%8C%B61.txt?sign=P1Ko2EJyKAdWqcdNZhfmF0gsWTRvL971YmFYtzW25ek%3D%3A0
+   {"sourceName": "大烟管18+", "sourceUrl": "http://52bsj.vip:81/api/v3/file/get/67278/%E7%BB%BF%E8%8C%B64.txt?sign=MN_qRMG2fSRvQ38lIGw1alcZrrn07i27A1lVpsdyY7I%3D%3A0
+-- qist/0707.json
+   {"url": "./99188.json", "name": "高天流云 18+"}
+-- tvbox/tvboxmuti.json
+   {"url": "https://gh-proxy.com/raw.githubusercontent.com/yw88075/tvbox/main/yw.json", "name": "🚀1-心魔在线"}
+   {"url": "http://www.饭太硬.cc/tv", "name": "🚀2-饭太硬推荐"}
+   {"url": "http://www.饭太硬.net/tv", "name": "🚀3-小饭太硬备用"}
+   {"url": "https://gitlab.com/noimank/tvbox/-/raw/main/tvbox1.json", "name": "🚀4-健康家用"}
+   {"url": "https://clun.top/box.json", "name": "🚀5-Clun在线"}
+   {"url": "https://gh-proxy.com/raw.githubusercontent.com//gaotianliuyun/gao/master/0827.json", "name": "🚀6-FongMI线路"}
+   {"url": "https://gh-proxy.org/https:/raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json", "name": "🚀7-香雅情"}
+   {"url": "http://pandown.pro/tvbox/tvbox.json", "name": "🚀8-巧计线路"}
+   {"url": "http://tv.nxog.top/m/", "name": "🚀9-欧歌4K"}
+   {"url": "https://gh-proxy.com/raw.githubusercontent.com/gaotianliuyun/gao/master/js.json", "name": "🚀10-高天流云js"}
+   {"url": "https://gh-proxy.com/raw.githubusercontent.com/gaotianliuyun/gao/master/XYQ.json", "name": "🚀11-高天流云 XYQ"}
+   {"url": "http://www.lyyytv.cn/yt/yt.json", "name": "🚀12-影探线路"}
+   {"url": "https://gh-proxy.com/https://raw.githubusercontent.com/yoursmile66/TVBox/main/XC.json", "name": "🚀13-南风"}
+   {"url": "https://www.wya6.cn/tv/yc.json", "name": "🚀14-无意线路"}

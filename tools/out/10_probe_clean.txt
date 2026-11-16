@@ -1,0 +1,63 @@
+# fan.txt head (referenced as spider by 0821/0826/fty).
+   qist/jar/fan.txt enc=utf-8(replace) len=1322059.
+   | PK........=7o]................classes.dex�}.|Tյ��g&3��k2@.��dxdDHB.M�.....@.P..&�	.Hf&3.^ZED�����j�ji�j}U�Ukm�ֶ�U����Y��V��ۇ�[o��k�=���.W����.�g���~��^{�3g:�.ު9.
+   | ..f.���@.p.�.�..��@3p:p&`.[�8�...�.<.|.
+   | L�Fۀ�@.�.�.�.|.
+   | ��A�@.�.x.x.(���.��>�^���..S�.�.��W��.�.�㈪�f`.p3�C�C`���C�.�.�.�&�[...N.v.�.?.>.Jk1�@.�.�&�2�w�l>�R .\.<	�.�X@�.x.�=�h.p#�.0�D�m��.�ID�.7.o.3O&�.�.�.�.����.�.B�.
+   | �.x.x.�.(X��0�.�.8.|.�.�>@����Y���j�.�.\	�.|.x.�.p4@׀.@.�.�.�.�..��h.�.�.�.|.x.x.�.(\��0....n...�F�1�.�.$���E���_.j"�.L.�.3�.
+   | �.�...ˀF`.�.8.�.�.x.x.x.x.x.x.x.x.�+��.�.�.,.�S�.`.�.�.;�.���.��.O./.o...�.N.e?0.�.�.�.g.]@.�	\.|.�.�(�3�W�.���!��.c.�.��.�.�."@.�.�.\.\...n.�.�.�.�.�.�..}*�.�..
+   | <.<.�.
+   | �.�g��.���@9P.,.�.���@7�.\.�.�.<.
+.
+# gz files.
+   qist/json/pikpakclass.a.json.db.gz 1145838 B.
+   qist/json/pikpakclass.a1.json.db.gz 495078 B.
+   qist/json/pikpakclass.json.db.gz 825786 B.
+   qist/lib/aliproxy.32.gz 5371207 B.
+   qist/lib/aliproxy.gz 5286832 B.
+   qist/lib/clash2singbox.gz 2293039 B.
+   qist/lib/geoip.dat.gz 37858 B.
+   qist/lib/sing-box.gz 10841051 B.
+   qist/lib/xray.gz 9623089 B.
+.
+# jar internals: do csp_* class names exist?.
+distinct csp_ api values: 673.
+   qist/jar/spider.jar            entries=4.
+      csp_ names present as <name>.class: 0 / 673  e.g. .
+      structure sample: classes.dex.
+   qist/jar/pg_upgraded.jar       entries=10.
+      csp_ names present as <name>.class: 0 / 673  e.g. .
+      structure sample: classes.dex.
+   qist/jar/XYQ.jar               entries=2.
+      csp_ names present as <name>.class: 0 / 673  e.g. .
+      structure sample: classes.dex.
+   qist/jar/XBPQ_upgraded.jar     entries=3.
+      csp_ names present as <name>.class: 0 / 673  e.g. .
+      structure sample: classes.dex.
+   qist/jar/custom_spider.jar     entries=2.
+      csp_ names present as <name>.class: 0 / 673  e.g. .
+      structure sample: classes.dex.
+.
+# cross-repo key overlap.
+keys in >1 repo: 300.
+   豆                        ['qist', 'tvyuan'].
+   玩偶                       ['qist', 'tvyuan'].
+   YGP                      ['qist', 'tvyuan'].
+   alllive                  ['qist', 'tvyuan'].
+   抠搜                       ['qist', 'tvyuan'].
+   UC                       ['qist', 'tvyuan'].
+   原创                       ['qist', 'tvyuan'].
+   苹果                       ['qist', 'tvyuan'].
+   糯米                       ['qist', 'tvyuan'].
+   文采                       ['qist', 'tvyuan'].
+   Lib                      ['qist', 'tvyuan'].
+   zxzj                     ['qist', 'tvyuan'].
+   厂长                       ['qist', 'tvyuan'].
+   比特                       ['qist', 'tvyuan'].
+   低端                       ['qist', 'tvyuan'].
+.
+# key charset / shape stats.
+   contains CJK     972.
+   ascii token      749.
+   csp_ prefix      179.
+   other            2.

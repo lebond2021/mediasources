@@ -1,0 +1,238 @@
+# Q6 candidate files (json + json-in-txt): 268
+
+raw json.loads OK      : 221 / 268 = 82.5%
+after json5 cleaning OK: 267 / 268 = 99.6%
+BOM files              : 4
+files with comments    : 51
+files with trailing ,  : 5
+files w/ base64 >=40   : 30
+
+# Q6b files failing raw json.loads (47)
+repo   path                       line  col  err                                                                     json5-fixable
+-----  -------------------------  ----  ---  ----------------------------------------------------------------------  -------------
+cliya  18.json                    1     1     Expecting value: line 1 column 1 (char 0)                              YES          
+cliya  18duocang.json             1     1     Expecting value: line 1 column 1 (char 0)                              YES          
+cliya  cangku.json                1     1     Expecting value: line 1 column 1 (char 0)                              YES          
+cliya  duocang.json               1     1     Expecting value: line 1 column 1 (char 0)                              YES          
+qist   FTY/nmys.json              47    8     Expecting property name enclosed in double quotes: line 47 column 8 (  YES          
+qist   XBPQ/bttt.json             20    5     Expecting property name enclosed in double quotes: line 20 column 5 (  YES          
+qist   XBPQ/养生堂.json              3     5     Expecting property name enclosed in double quotes: line 3 column 5 (c  YES          
+qist   XYQ.json                   29    9     Expecting value: line 29 column 9 (char 1436)                          YES          
+qist   XYQBiu/网易CC直播.json         1     1     Expecting value: line 1 column 1 (char 0)                              YES          
+qist   XYQHiker/996影视.json        16    5     Expecting property name enclosed in double quotes: line 16 column 5 (  YES          
+qist   XYQHiker/七新影视.json         16    5     Expecting property name enclosed in double quotes: line 16 column 5 (  YES          
+qist   XYQHiker/剧圈影视.json         18    5     Expecting property name enclosed in double quotes: line 18 column 5 (  YES          
+qist   XYQHiker/可可影视.json         3     5     Expecting property name enclosed in double quotes: line 3 column 5 (c  YES          
+qist   XYQHiker/哔嘀影视.json         12    5     Expecting property name enclosed in double quotes: line 12 column 5 (  YES          
+qist   XYQHiker/巴士动漫.json         17    5     Expecting property name enclosed in double quotes: line 17 column 5 (  YES          
+qist   XYQHiker/播视童趣.json         23    5     Expecting property name enclosed in double quotes: line 23 column 5 (  YES          
+qist   XYQHiker/来看影视.json         23    5     Expecting property name enclosed in double quotes: line 23 column 5 (  YES          
+qist   XYQHiker/河马短剧.json         16    5     Expecting property name enclosed in double quotes: line 16 column 5 (  YES          
+qist   XYQHiker/爱你短剧.json         17    5     Expecting property name enclosed in double quotes: line 17 column 5 (  YES          
+qist   XYQHiker/玩偶哥哥.json         3     5     Expecting property name enclosed in double quotes: line 3 column 5 (c  YES          
+qist   XYQHiker/电影港.json          1     1     Expecting value: line 1 column 1 (char 0)                              YES          
+qist   XYQHiker/短剧屋.json          17    5     Expecting property name enclosed in double quotes: line 17 column 5 (  YES          
+qist   json/BSDM.json             17    5     Expecting property name enclosed in double quotes: line 17 column 5 (  YES          
+qist   json/DYG.json              1     1     Expecting value: line 1 column 1 (char 0)                              YES          
+qist   json/JQYS.json             18    5     Expecting property name enclosed in double quotes: line 18 column 5 (  YES          
+qist   json/api黑木耳.json           1     1     Expecting value: line 1 column 1 (char 0)                              YES          
+qist   json/dj看球.json             5     5     Expecting property name enclosed in double quotes: line 5 column 5 (c  NO           
+qist   json/dmw.json              1     1     Expecting value: line 1 column 1 (char 0)                              YES          
+qist   json/nmys.json             47    8     Expecting property name enclosed in double quotes: line 47 column 8 (  YES          
+qist   json/企鹅直播.json             4     1     Expecting property name enclosed in double quotes: line 4 column 1 (c  YES          
+qist   json/厂长影视.json             4     1     Expecting property name enclosed in double quotes: line 4 column 1 (c  YES          
+qist   xiaosa/XBPQ/养生堂.json       3     5     Expecting property name enclosed in double quotes: line 3 column 5 (c  YES          
+qist   xiaosa/XYQHiker/BT天堂.json  20    5     Expecting property name enclosed in double quotes: line 20 column 5 (  YES          
+qist   xiaosa/XYQHiker/七新影视.json  16    5     Expecting property name enclosed in double quotes: line 16 column 5 (  YES          
+qist   xiaosa/XYQHiker/九八影视.json  8     5     Expecting property name enclosed in double quotes: line 8 column 5 (c  YES          
+qist   xiaosa/XYQHiker/八号影视.json  17    5     Expecting property name enclosed in double quotes: line 17 column 5 (  YES          
+qist   xiaosa/XYQHiker/剧圈影视.json  18    5     Expecting property name enclosed in double quotes: line 18 column 5 (  YES          
+qist   xiaosa/XYQHiker/巴士动漫.json  17    5     Expecting property name enclosed in double quotes: line 17 column 5 (  YES          
+qist   xiaosa/XYQHiker/来看影视.json  23    5     Expecting property name enclosed in double quotes: line 23 column 5 (  YES          
+qist   xiaosa/XYQHiker/电影港.json   1     1     Expecting value: line 1 column 1 (char 0)                              YES          
+qist   xiaosa/XYQHiker/盒子影视.json  17    5     Expecting property name enclosed in double quotes: line 17 column 5 (  YES          
+qist   xiaosa/XYQHiker/看看影视.json  16    5     Expecting property name enclosed in double quotes: line 16 column 5 (  YES          
+qist   xiaosa/XYQHiker/短剧屋.json   17    5     Expecting property name enclosed in double quotes: line 17 column 5 (  YES          
+qist   xiaosa/XYQHiker/骚火影视.json  17    5     Expecting property name enclosed in double quotes: line 17 column 5 (  YES          
+qist   xiaosa/json/BSDM.json      17    5     Expecting property name enclosed in double quotes: line 17 column 5 (  YES          
+qist   xiaosa/json/DYG.json       1     1     Expecting value: line 1 column 1 (char 0)                              YES          
+qist   xiaosa/json/JQYS.json      18    5     Expecting property name enclosed in double quotes: line 18 column 5 (  YES          
+
+# Q6c first 200 chars of each raw-failure
+-- cliya/18.json (line 1 col 1)
+   "//=============成人单仓更新日期 2023/04/13=============\r\n\r\n//本成人单仓库在线链接：\r\n//https://ghproxy.net/https://raw.githubusercontent.com/mengzehe/tvbox/main/18.json\r\n//https://cdn.staticaly.com/gh/mengzehe/tvbox/mai"
+-- cliya/18duocang.json (line 1 col 1)
+   "//=============成人多仓更新日期 2023/04/25=============\r\n\r\n//本成人多仓库在线链接：\r\n//https://ghproxy.net/https://raw.githubusercontent.com/mengzehe/tvbox/main/18duocang.json\r\n//https://cdn.staticaly.com/gh/mengzehe/tv"
+-- cliya/cangku.json (line 1 col 1)
+   "//=============单仓更新日期 2023/04/22=============\r\n\r\n//本单仓库在线链接：\r\n//https://ghproxy.net/https://raw.githubusercontent.com/mengzehe/tvbox/main/cangku.json\r\n//https://github.com/mengzehe/TVBox/raw/main/cang"
+-- cliya/duocang.json (line 1 col 1)
+   "//=============多仓更新日期 2023/04/26=============\r\n\r\n//本多仓仓库在线链接：\r\n//https://ghproxy.net/https://raw.githubusercontent.com/mengzehe/tvbox/main/duocang.json\r\n//https://cdn.staticaly.com/gh/mengzehe/tvbox/m"
+-- qist/FTY/nmys.json (line 47 col 8)
+   "     {\r\n      \"author\": \"春风\",\r\n      \"ua\": \"Mozilla/5.0 (Linux; Android 10; LYA-AL00; HMSCore 6.4.0.312; GMSCore 20.15.16) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 HuaweiBrowser/11."
+-- qist/XBPQ/bttt.json (line 20 col 5)
+   "{\r\n    \"规则名\": \"BT天堂\",\r\n    \"规则作者\": \"\",\r\n    \"请求头参数\": \"PC_UA\",\r\n    \"网页编码格式\": \"UTF-8\",\r\n    \"图片是否需要代理\": \"0\",\r\n    \"是否开启获取首页数据\": \"1\",\r\n    \"首页推荐链接\": \"https://www.bttt11.com\",\r\n    \"首页列表数组规则\": \"body&&.ul"
+-- qist/XBPQ/养生堂.json (line 3 col 5)
+   "{\r\n    \"首页\": \"0\",\r\n    // \"播放链接前缀\": \"https://www.gyf.lol\",\r\n    \"数组\": \"data\\\":{\\\"tit&&s_log\",\r\n    \"图片\": \"https://p0.ssl.cdn.btime.com/+ssl.cdn.btime.com/&&\\\"\",\r\n    \"副标题\": \"le\\\":\\\"&&\\\"\",\r\n    \"标题\": \""
+-- qist/XYQ.json (line 29 col 9)
+   "{\r\n    \"wallpaper\": \"https://picsum.photos/1280/720/?blur=2\",\r\n    \"spider\": \"./jar/XYQ.jar;md5;705ba6e23c4384c37a11dd904727520b\",\r\n    \"lives\": [\r\n        {\r\n          \"name\": \"本地live文件\",\r\n          "
+-- qist/XYQBiu/网易CC直播.json (line 1 col 1)
+   "//写法思路来自biubiu影院，海阔视界，xpath筛选。\r\n//项目魔改至github开源仓库https://github.com/Tangsan99999/TvJar中的XBiubiu.java文件，\r\n//本文档为完整模板，实际情况可按规则写法删去不需要的。\r\n{\r\n    //规则名\r\n    \"title\": \"网易CC直播\",\r\n    //作者\r\n    \"author\": \"聆听"
+-- qist/XYQHiker/996影视.json (line 16 col 5)
+   "{\r\n    \"规则名\": \"996影视\",\r\n    \"规则作者\": \"\",\r\n    \"请求头参数\": \"手机\",\r\n    \"网页编码格式\": \"UTF-8\",\r\n    \"图片是否需要代理\": \"0\",\r\n    \"是否开启获取首页数据\": \"1\",\r\n    \"首页推荐链接\": \"https://www.cs1369.com\",\r\n    \"首页列表数组规则\": \"body&&.stui"
+-- qist/XYQHiker/七新影视.json (line 16 col 5)
+   "{\r\n    \"规则名\": \"七新影视\",\r\n    \"规则作者\": \"\",\r\n    \"请求头参数\": \"手机\",\r\n    \"网页编码格式\": \"UTF-8\",\r\n    \"图片是否需要代理\": \"0\",\r\n    \"是否开启获取首页数据\": \"1\",\r\n    \"首页推荐链接\": \"http://www.7xdy.com\",\r\n    \"首页列表数组规则\": \"body&&.stui-vod"
+-- qist/XYQHiker/剧圈影视.json (line 18 col 5)
+   "{\r\n    \"规则名\": \"剧圈圈\",\r\n    \"规则作者\": \"香雅情\",\r\n    \"OCR_API\":\"https://api.nn.ci/ocr/b64/text\",\r\n    \"请求头参数\": \"MOBILE_UA\",\r\n    \"网页编码格式\": \"UTF-8\",\r\n    \"图片是否需要代理\": \"否\",\r\n    \"是否开启获取首页数据\": \"1\",\r\n    \"首页推荐链接\""
+-- qist/XYQHiker/可可影视.json (line 3 col 5)
+   "{\r\n    \"规则名\": \"可可影视\",\r\n    //\"DEBUG\":\"1\",\r\n    \"规则作者\": \"香雅情\",\r\n    \"请求头参数\": \"MOBILE_UA\",\r\n    \"网页编码格式\": \"UTF-8\",\r\n    \"图片是否需要代理\": \"否\",\r\n    \"是否开启获取首页数据\": \"是\",\r\n    \"首页推荐链接\": \"https://www.keke1.app\",\r\n"
+-- qist/XYQHiker/哔嘀影视.json (line 12 col 5)
+   "{\r\n    \"规则名\": \"哔嘀影视\",\r\n    \"规则作者\": \"\",\r\n    \"请求头参数\": \"User-Agent$电脑#Referer$https://www.yjys02.com\",\r\n    \"网页编码格式\": \"UTF-8\",\r\n    \"图片是否需要代理\": \"0\",\r\n    \"是否开启获取首页数据\": \"1\",\r\n    \"首页推荐链接\": \"https://www.y"
+-- qist/XYQHiker/巴士动漫.json (line 17 col 5)
+   "{\r\n    \"规则名\": \"动漫巴士\",\r\n    \"规则作者\": \"\",\r\n    \"请求头参数\": \"User-Agent$MOBILE_UA#Accept$text/html#accept-language$zh-CN,zh;q=0.8\",\r\n    \"网页编码格式\": \"UTF-8\",\r\n    \"图片是否需要代理\": \"0\",\r\n    \"是否开启获取首页数据\": \"1\",\r\n    "
+-- qist/XYQHiker/播视童趣.json (line 23 col 5)
+   "{\r\n    \"规则名\": \"播视童趣\",\r\n    \"规则作者\": \"香雅情\",\r\n    \"请求头参数\": \"电脑\",\r\n    \"网页编码格式\": \"UTF-8\",\r\n    \"图片是否需要代理\": \"0\",\r\n    \"是否开启获取首页数据\": \"1\",\r\n    \"首页推荐链接\": \"https://www.boosj.com/baby/\",\r\n    \"首页列表数组规则\": \"body"
+-- qist/XYQHiker/来看影视.json (line 23 col 5)
+   "{\r\n    \"规则名\": \"来看点播\",\r\n    \"规则作者\": \"\",\r\n    \"请求头参数\": \"User-Agent$PC_UA#accept$text/html\",\r\n    \"网页编码格式\": \"UTF-8\",\r\n    \"图片是否需要代理\": \"0\",\r\n    \"是否开启获取首页数据\": \"1\",\r\n    \"首页推荐链接\": \"https://lkvod.org\",\r\n   "
+-- qist/XYQHiker/河马短剧.json (line 16 col 5)
+   "{\r\n    \"规则名\": \"河马短剧\",\r\n    \"规则作者\": \"香雅情\",\r\n    \"请求头参数\": \"MOBILE_UA\",\r\n    \"网页编码格式\": \"UTF-8\",\r\n    \"图片是否需要代理\": \"否\",\r\n    \"是否开启获取首页数据\": \"否\",\r\n    \"首页推荐链接\": \"https://www.kuaikaw.cn\",\r\n    \"首页列表数组规则\": \"bo"
+-- qist/XYQHiker/爱你短剧.json (line 17 col 5)
+   "{\r\n    \"规则名\": \"爱你短剧\",\r\n    \"规则作者\": \"香雅情\",\r\n    \"请求头参数\": \"MOBILE_UA\",\r\n    \"网页编码格式\": \"UTF-8\",\r\n    \"图片是否需要代理\": \"否\",\r\n    \"是否开启获取首页数据\": \"是\",\r\n    \"首页推荐链接\": \"https://ainidj.com/\",\r\n    \"首页列表数组规则\": \"body&"
+-- qist/XYQHiker/玩偶哥哥.json (line 3 col 5)
+   "{\r\n    \"规则名\": \"玩偶哥哥\",\r\n    //\"DEBUG\":\"1\",\r\n    \"规则作者\": \"香雅情\",\r\n    \"请求头参数\": \"MOBILE_UA\",\r\n    \"网页编码格式\": \"UTF-8\",\r\n    \"图片是否需要代理\": \"否\",\r\n    \"是否开启获取首页数据\": \"是\",\r\n    \"首页推荐链接\": \"https://www.wogg.net\",\r\n "
+-- qist/XYQHiker/电影港.json (line 1 col 1)
+   "//写法思路来海阔视界，xpath筛选。本人是海阔用户，所以搬了海阔的jsoup写法过来。2022年9月17日\r\n//jsoup规则写法请查阅海阔视界或者海阔影视相关教程。不支持js写法\r\n//本文档为完整模板，请不要去无中生有添加多余的键值参数。\r\n{\r\n    //规则名\r\n    \"title\": \"电影港\",\r\n    //作者\r\n    \"author\": \"香雅情\",\r\n    //请"
+-- qist/XYQHiker/短剧屋.json (line 17 col 5)
+   "{\r\n    \"规则名\": \"短剧屋\",\r\n    \"规则作者\": \"\",\r\n    \"请求头参数\": \"手机\",\r\n    \"网页编码格式\": \"UTF-8\",\r\n    \"图片是否需要代理\": \"0\",\r\n    \"是否开启获取首页数据\": \"1\",\r\n    \"首页推荐链接\": \"http://www.metaysw.com\",\r\n    \"首页列表数组规则\": \"body&&.vod-vo"
+-- qist/json/BSDM.json (line 17 col 5)
+   "{\r\n    \"规则名\": \"动漫巴士\",\r\n    \"规则作者\": \"\",\r\n    \"请求头参数\": \"User-Agent$MOBILE_UA#Accept$text/html#accept-language$zh-CN,zh;q=0.8\",\r\n    \"网页编码格式\": \"UTF-8\",\r\n    \"图片是否需要代理\": \"0\",\r\n    \"是否开启获取首页数据\": \"1\",\r\n    "
+-- qist/json/DYG.json (line 1 col 1)
+   "//写法思路来海阔视界，xpath筛选。本人是海阔用户，所以搬了海阔的jsoup写法过来。2022年9月17日\r\n//jsoup规则写法请查阅海阔视界或者海阔影视相关教程。不支持js写法\r\n//本文档为完整模板，请不要去无中生有添加多余的键值参数。\r\n{\r\n    //规则名\r\n    \"title\": \"电影港\",\r\n    //作者\r\n    \"author\": \"香雅情\",\r\n    //请"
+-- qist/json/JQYS.json (line 18 col 5)
+   "{\r\n    \"规则名\": \"剧圈圈\",\r\n    \"规则作者\": \"香雅情\",\r\n    \"OCR_API\":\"https://api.nn.ci/ocr/b64/text\",\r\n    \"请求头参数\": \"MOBILE_UA\",\r\n    \"网页编码格式\": \"UTF-8\",\r\n    \"图片是否需要代理\": \"否\",\r\n    \"是否开启获取首页数据\": \"1\",\r\n    \"首页推荐链接\""
+-- qist/json/api黑木耳.json (line 1 col 1)
+   "//黑木耳 https://heimuer.tv/\r\n//https://json.heimuer.xyz/api.php/provide/vod/?ac=list\r\n//https://json.heimuer.xyz/api.php/provide/vod/?ac=detail&wd=妖精的尾巴\r\n\r\n {\r\n    \"主页url\":\"https://json.heimuer.xyz\",\r\n "
+-- qist/json/dj看球.json (line 5 col 5)
+   "{\r\n    \"author\": \"\",\r\n    \"ua\": \"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36 Core/1.94.186.400 QQBrowser/11.3.5195.400\",\r\n    \"homeUrl"
+   STILL BROKEN AFTER CLEAN: JSONDecodeError: Extra data: line 72 column 1 (char 1665)
+-- qist/json/dmw.json (line 1 col 1)
+   "//www.dm55.cc\r\n{\r\n  \"author\":\"takagen99\",\r\n  \"ua\": \"\",\r\n  \"homeUrl\": \"http://www.88dmw.com\",\r\n  \"cateManual\": {\r\n    \"新番连载\": \"1\", \r\n    \"完结日漫\": \"3\",\r\n    \"热门国漫\": \"4\",\r\n    \"剧场动漫\": \"16\"\r\n  },\r\n  \r\n// H"
+-- qist/json/nmys.json (line 47 col 8)
+   "     {\r\n      \"author\": \"春风\",\r\n      \"ua\": \"Mozilla/5.0 (Linux; Android 10; LYA-AL00; HMSCore 6.4.0.312; GMSCore 20.15.16) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 HuaweiBrowser/11."
+-- qist/json/企鹅直播.json (line 4 col 1)
+   "{\r\n    \"author\": \"率性而活\",\r\n    \"ua\":\"Mozilla/5.0 (Linux; Android 8.1.0; OPPO R11t Build/OPM1.171019.011; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/76.0.3809.89 Mobile Safari/537.36 "
+-- qist/json/厂长影视.json (line 4 col 1)
+   "{\r\n\"站名\":\"厂长影视\",\r\n\"主页url\":\"https://czzy.top/\",\r\n//发布页https://www.czzy.site/https://www.cz01.vip/\r\n\"请求头\": \"User-Agent$Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chr"
+-- qist/xiaosa/XBPQ/养生堂.json (line 3 col 5)
+   "{\r\n    \"首页\": \"0\",\r\n    // \"播放链接前缀\": \"https://www.gyf.lol\",\r\n    \"数组\": \"data\\\":{\\\"tit&&s_log\",\r\n    \"图片\": \"https://p0.ssl.cdn.btime.com/+ssl.cdn.btime.com/&&\\\"\",\r\n    \"副标题\": \"le\\\":\\\"&&\\\"\",\r\n    \"标题\": \""
+-- qist/xiaosa/XYQHiker/BT天堂.json (line 20 col 5)
+   "{\r\n    \"规则名\": \"BT天堂\",\r\n    \"规则作者\": \"\",\r\n    \"请求头参数\": \"PC_UA\",\r\n    \"网页编码格式\": \"UTF-8\",\r\n    \"图片是否需要代理\": \"0\",\r\n    \"是否开启获取首页数据\": \"1\",\r\n    \"首页推荐链接\": \"https://www.bttt11.com\",\r\n    \"首页列表数组规则\": \"body&&.ul"
+-- qist/xiaosa/XYQHiker/七新影视.json (line 16 col 5)
+   "{\r\n    \"规则名\": \"七新影视\",\r\n    \"规则作者\": \"\",\r\n    \"请求头参数\": \"手机\",\r\n    \"网页编码格式\": \"UTF-8\",\r\n    \"图片是否需要代理\": \"0\",\r\n    \"是否开启获取首页数据\": \"1\",\r\n    \"首页推荐链接\": \"http://www.7xdy.com\",\r\n    \"首页列表数组规则\": \"body&&.stui-vod"
+-- qist/xiaosa/XYQHiker/九八影视.json (line 8 col 5)
+   "{\r\n    \"规则名\": \"九八剧\",\r\n    \"规则作者\": \"香雅情\",\r\n    \"请求头参数\": \"User-Agent$手机#Referer$http://www.98wap.com/\",\r\n    \"网页编码格式\": \"UTF-8\",\r\n    \"图片是否需要代理\": \"0\",\r\n    \"是否开启获取首页数据\": \"1\",\r\n    //首页推荐数据获取链接\r\n    \"首页推荐"
+-- qist/xiaosa/XYQHiker/八号影视.json (line 17 col 5)
+   "{\r\n    \"规则名\": \"八号影视\",\r\n    \"规则作者\": \"\",\r\n    \"请求头参数\": \"User-Agent$手机#accept$text/html\",\r\n    \"网页编码格式\": \"UTF-8\",\r\n    \"图片是否需要代理\": \"0\",\r\n    \"是否开启获取首页数据\": \"0\",\r\n    \"首页推荐链接\": \"http://www.bahaotv.com\",\r\n "
+-- qist/xiaosa/XYQHiker/剧圈影视.json (line 18 col 5)
+   "{\r\n    \"规则名\": \"剧圈圈\",\r\n    \"规则作者\": \"香雅情\",\r\n    \"OCR_API\":\"https://api.nn.ci/ocr/b64/text\",\r\n    \"请求头参数\": \"MOBILE_UA\",\r\n    \"网页编码格式\": \"UTF-8\",\r\n    \"图片是否需要代理\": \"否\",\r\n    \"是否开启获取首页数据\": \"1\",\r\n    \"首页推荐链接\""
+-- qist/xiaosa/XYQHiker/巴士动漫.json (line 17 col 5)
+   "{\r\n    \"规则名\": \"动漫巴士\",\r\n    \"规则作者\": \"\",\r\n    \"请求头参数\": \"User-Agent$MOBILE_UA#Accept$text/html#accept-language$zh-CN,zh;q=0.8\",\r\n    \"网页编码格式\": \"UTF-8\",\r\n    \"图片是否需要代理\": \"0\",\r\n    \"是否开启获取首页数据\": \"1\",\r\n    "
+-- qist/xiaosa/XYQHiker/来看影视.json (line 23 col 5)
+   "{\r\n    \"规则名\": \"来看点播\",\r\n    \"规则作者\": \"\",\r\n    \"请求头参数\": \"User-Agent$PC_UA#accept$text/html\",\r\n    \"网页编码格式\": \"UTF-8\",\r\n    \"图片是否需要代理\": \"0\",\r\n    \"是否开启获取首页数据\": \"1\",\r\n    \"首页推荐链接\": \"https://lkvod.org\",\r\n   "
+-- qist/xiaosa/XYQHiker/电影港.json (line 1 col 1)
+   "//写法思路来海阔视界，xpath筛选。本人是海阔用户，所以搬了海阔的jsoup写法过来。2022年9月17日\r\n//jsoup规则写法请查阅海阔视界或者海阔影视相关教程。不支持js写法\r\n//本文档为完整模板，请不要去无中生有添加多余的键值参数。\r\n{\r\n    //规则名\r\n    \"title\": \"电影港\",\r\n    //作者\r\n    \"author\": \"香雅情\",\r\n    //请"
+-- qist/xiaosa/XYQHiker/盒子影视.json (line 17 col 5)
+   "{\r\n    \"规则名\": \"电影盒子\",\r\n    \"规则作者\": \"\",\r\n    \"请求头参数\": \"手机\",\r\n    \"网页编码格式\": \"UTF-8\",\r\n    \"图片是否需要代理\": \"0\",\r\n    \"是否开启获取首页数据\": \"0\",\r\n    \"首页推荐链接\": \"http://80kp.com\",\r\n    \"首页列表数组规则\": \"body&&.stui-vodlist"
+-- qist/xiaosa/XYQHiker/看看影视.json (line 16 col 5)
+   "{\r\n    \"规则名\": \"看一看\",\r\n    \"规则作者\": \"\",\r\n    \"请求头参数\": \"User-Agent$手机#Referer$https://www.kykhd.cc/\",\r\n    \"网页编码格式\": \"UTF-8\",\r\n    \"图片是否需要代理\": \"0\",\r\n    \"是否开启获取首页数据\": \"1\",\r\n    \"首页推荐链接\": \"https://www.kyk"
+-- qist/xiaosa/XYQHiker/短剧屋.json (line 17 col 5)
+   "{\r\n    \"规则名\": \"短剧屋\",\r\n    \"规则作者\": \"\",\r\n    \"请求头参数\": \"手机\",\r\n    \"网页编码格式\": \"UTF-8\",\r\n    \"图片是否需要代理\": \"0\",\r\n    \"是否开启获取首页数据\": \"1\",\r\n    \"首页推荐链接\": \"http://www.metaysw.com\",\r\n    \"首页列表数组规则\": \"body&&.vod-vo"
+-- qist/xiaosa/XYQHiker/骚火影视.json (line 17 col 5)
+   "{\r\n    \"规则名\": \"骚火电影VIP\",\r\n    \"规则作者\": \"\",\r\n    \"请求头参数\": \"User-Agent$MOBILE_UA#Referer$https://saohuo.tv\",\r\n    \"网页编码格式\": \"UTF-8\",\r\n    \"图片是否需要代理\": \"0\",\r\n    \"是否开启获取首页数据\": \"0\",\r\n    \"首页推荐链接\": \"https://"
+-- qist/xiaosa/json/BSDM.json (line 17 col 5)
+   "{\r\n    \"规则名\": \"动漫巴士\",\r\n    \"规则作者\": \"\",\r\n    \"请求头参数\": \"User-Agent$MOBILE_UA#Accept$text/html#accept-language$zh-CN,zh;q=0.8\",\r\n    \"网页编码格式\": \"UTF-8\",\r\n    \"图片是否需要代理\": \"0\",\r\n    \"是否开启获取首页数据\": \"1\",\r\n    "
+-- qist/xiaosa/json/DYG.json (line 1 col 1)
+   "//写法思路来海阔视界，xpath筛选。本人是海阔用户，所以搬了海阔的jsoup写法过来。2022年9月17日\r\n//jsoup规则写法请查阅海阔视界或者海阔影视相关教程。不支持js写法\r\n//本文档为完整模板，请不要去无中生有添加多余的键值参数。\r\n{\r\n    //规则名\r\n    \"title\": \"电影港\",\r\n    //作者\r\n    \"author\": \"香雅情\",\r\n    //请"
+-- qist/xiaosa/json/JQYS.json (line 18 col 5)
+   "{\r\n    \"规则名\": \"剧圈圈\",\r\n    \"规则作者\": \"香雅情\",\r\n    \"OCR_API\":\"https://api.nn.ci/ocr/b64/text\",\r\n    \"请求头参数\": \"MOBILE_UA\",\r\n    \"网页编码格式\": \"UTF-8\",\r\n    \"图片是否需要代理\": \"否\",\r\n    \"是否开启获取首页数据\": \"1\",\r\n    \"首页推荐链接\""
+
+# Q6d BOM / comments / trailing-comma file lists
+-- bom
+   qist/cat/js/config_open99.json
+   qist/cat/js/config_open99_online.json
+   qist/cat/js/config_open_online.json
+   qist/xiaosa/json/哔哩视频.json
+-- comments
+   cliya/18.json
+   cliya/18duocang.json
+   cliya/cangku.json
+   cliya/duocang.json
+   qist/9918.json
+   qist/99188.json
+   qist/XYQ.json
+   qist/FTY/nmys.json
+   qist/json/api黑木耳.json
+   qist/json/BSDM.json
+   qist/json/dj看球.json
+   qist/json/dmw.json
+   qist/json/DYG.json
+   qist/json/JQYS.json
+   qist/json/nmys.json
+   qist/json/企鹅直播.json
+   qist/json/厂长影视.json
+   qist/XBPQ/bttt.json
+   qist/XBPQ/养生堂.json
+   qist/xiaosa/json/BSDM.json
+   qist/xiaosa/json/DYG.json
+   qist/xiaosa/json/JQYS.json
+   qist/xiaosa/XBPQ/养生堂.json
+   qist/xiaosa/XBPQ/骚火影视.json
+   qist/xiaosa/XYQHiker/BT天堂.json
+   qist/xiaosa/XYQHiker/七新影视.json
+   qist/xiaosa/XYQHiker/九八影视.json
+   qist/xiaosa/XYQHiker/八号影视.json
+   qist/xiaosa/XYQHiker/剧圈影视.json
+   qist/xiaosa/XYQHiker/巴士动漫.json
+   qist/xiaosa/XYQHiker/来看影视.json
+   qist/xiaosa/XYQHiker/电影港.json
+   qist/xiaosa/XYQHiker/盒子影视.json
+   qist/xiaosa/XYQHiker/看看影视.json
+   qist/xiaosa/XYQHiker/短剧屋.json
+   qist/xiaosa/XYQHiker/骚火影视.json
+   qist/XYQBiu/网易CC直播.json
+   qist/XYQHiker/996影视.json
+   qist/XYQHiker/七新影视.json
+   qist/XYQHiker/剧圈影视.json
+   qist/XYQHiker/可可影视.json
+   qist/XYQHiker/哔嘀影视.json
+   qist/XYQHiker/巴士动漫.json
+   qist/XYQHiker/播视童趣.json
+   qist/XYQHiker/来看影视.json
+   qist/XYQHiker/河马短剧.json
+   qist/XYQHiker/爱你短剧.json
+   qist/XYQHiker/玩偶哥哥.json
+   qist/XYQHiker/电影港.json
+   qist/XYQHiker/短剧屋.json
+   tvyuan/tvbox_full.json
+-- trailing
+   qist/dianshi.json
+   qist/jsm.json
+   qist/json/dj看球.json
+   qist/tools/dianshi.json
+   qist/tools/jsm.json
+
+# Q6e base64-bearing files
+   tvyuan/tvbox_full.json                         tokens=172
+   qist/cat/tjs/tv_config.json                    tokens=46
+   qist/cat/tjs/open_config.json                  tokens=45
+   qist/xiaosa/json/采集静态.json                     tokens=15
+   qist/367.json                                  tokens=14
+   qist/0821.json                                 tokens=12
+   qist/0826.json                                 tokens=12
+   qist/xiaosa/api.json                           tokens=10
+   qist/dianshi.json                              tokens=9
+   qist/fty.json                                  tokens=9
+   qist/jsm.json                                  tokens=9
+   qist/json/market.json                          tokens=8
+   tvyuan/tvbox_multi.json                        tokens=5
+   cliya/18.json                                  tokens=4
+   cliya/18duocang.json                           tokens=3

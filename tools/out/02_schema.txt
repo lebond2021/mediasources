@@ -1,0 +1,226 @@
+# config JSON inventory (class tvbox-config)
+repo    path                       top-level keys                                                                mode       
+------  -------------------------  ----------------------------------------------------------------------------  -----------
+qist    0821.json                  doh,flags,lives,logo,parses,rules,sites,spider,wallpaper                      raw        
+qist    0825.json                  ads,doh,lives,rules,sites,spider,wallpaper                                    raw        
+qist    0826.json                  lives,logo,sites,spider,wallpaper                                             raw        
+qist    0827.json                  ads,doh,rules,sites,spider,wallpaper                                          raw        
+qist    367.json                   ads,doh,flags,ijk,lives,logo,parses,rules,sites,spider,wallpaper,warningText  raw        
+qist    9918.json                  lives,logo,rules,sites,spider,wallpaper                                       raw        
+qist    99188.json                 lives,logo,rules,sites,spider,wallpaper                                       raw        
+qist    dianshi.json               ads,danmaku,doh,flags,lives,parses,rules,sites,spider,wallpaper               raw        
+qist    fty.json                   hosts,lives,logo,rules,sites,spider,wallpaper                                 raw        
+qist    js.json                    ads,doh,flags,lives,parses,rules,sites,spider,wallpaper                       raw        
+qist    jsm.json                   ads,danmaku,doh,flags,hosts,lives,parses,rules,sites,spider,wallpaper         raw        
+qist    XYQ.json                   ads,flags,ijk,lives,parses,rules,sites,spider,wallpaper                       json5-clean
+qist    cat/tjs/18_tv_config.json  ads,doh,ijk,lives,parses,rules,sites,wallpaper                                raw        
+qist    cat/tjs/tv_config.json     ads,doh,ijk,lives,parses,rules,sites,wallpaper                                raw        
+qist    tools/dianshi.json         ads,danmaku,doh,flags,lives,parses,rules,sites,spider,wallpaper               raw        
+qist    tools/jsm.json             ads,danmaku,doh,flags,hosts,lives,parses,rules,sites,spider,wallpaper         raw        
+qist    xiaosa/api.json            ads,danmaku,doh,flags,lives,logo,parses,rules,sites,spider,wallpaper          raw        
+tvyuan  tvbox.json                 lives,parses,sites,spider                                                     raw        
+tvyuan  tvbox_collect.json         lives,parses,sites,spider                                                     raw        
+tvyuan  tvbox_full.json            lives,parses,sites,spider                                                     raw        
+
+TOTAL config json = 20
+
+# Q2 top-level key frequency (N=20 config files)
+key          count  pct   value type(s)
+-----------  -----  ----  -------------
+sites        20     100%  list:20      
+lives        19     95%   list:19      
+spider       18     90%   str:18       
+wallpaper    17     85%   str:17       
+rules        16     80%   list:16      
+parses       14     70%   list:14      
+doh          12     60%   list:12      
+ads          12     60%   list:12      
+flags        9      45%   list:9       
+logo         7      35%   str:7        
+danmaku      5      25%   str:5        
+ijk          4      20%   list:4       
+hosts        3      15%   list:3       
+warningText  1      5%    str:1        
+
+# Q2b presence matrix for doc-listed keys
+key        cliya  qist  tvbox  tvyuan  files_with
+---------  -----  ----  -----  ------  ----------
+sites      0      17    0      3       20        
+parses     0      11    0      3       14        
+lives      0      16    0      3       19        
+spider     0      15    0      3       18        
+flags      0      9     0      0       9         
+rules      0      16    0      0       16        
+ijk        0      4     0      0       4         
+ads        0      12    0      0       12        
+doh        0      12    0      0       12        
+hosts      0      3     0      0       3         
+proxy      0      0     0      0       0         
+wallpaper  0      17    0      0       17        
+logo       0      7     0      0       7         
+notice     0      0     0      0       0         
+headers    0      0     0      0       0         
+timeout    0      0     0      0       0         
+style      0      0     0      0       0         
+ext        0      0     0      0       0         
+homepage   0      0     0      0       0         
+
+# Q3 sites total across config files: 2989 (from 20 configs)
+
+# Q3a site field frequency (N=2989)
+field        count  pct 
+-----------  -----  ----
+key          2989   100%
+name         2989   100%
+type         2989   100%
+api          2989   100%
+searchable   2037   68% 
+ext          1761   59% 
+quickSearch  1556   52% 
+changeable   1350   45% 
+filterable   1026   34% 
+style        544    18% 
+timeout      519    17% 
+playerType   183    6%  
+jar          173    6%  
+categories   70     2%  
+header       63     2%  
+playUrl      60     2%  
+recordable   45     2%  
+genre        43     1%  
+indexs       39     1%  
+类型           12     0%  
+homePage     11     0%  
+hide         10     0%  
+order_num    10     0%  
+gridview     5      0%  
+playurl      4      0%  
+url          3      0%  
+type_flag    1      0%  
+click        1      0%  
+lang         1      0%  
+proxy        1      0%  
+ua           1      0%  
+
+# Q3b type distribution (raw value)
+type  count  pct  
+----  -----  -----
+3     2546   85.2%
+1     282    9.4% 
+0     84     2.8% 
+4     76     2.5% 
+"3"   1      0.0% 
+
+# Q3c api coarse kind distribution (N=2989)
+api_kind       count  pct  
+-------------  -----  -----
+csp_key        1864   62.4%
+local_path.js  488    16.3%
+http_vod_api   335    11.2%
+http_other     142    4.8% 
+http_php       90     3.0% 
+local_path.py  68     2.3% 
+other          2      0.1% 
+
+# Q3c2 api fine bucket (local paths split by bundled dir)
+api_detail       count  pct  
+---------------  -----  -----
+csp_key          1864   62.4%
+local:lib        431    14.4%
+http_vod_api     335    11.2%
+http_other       142    4.8% 
+http_php         90     3.0% 
+local:js         59     2.0% 
+local:py         49     1.6% 
+local:cat        6      0.2% 
+local:FTY        5      0.2% 
+local:drpy_libs  2      0.1% 
+local:liba       2      0.1% 
+other            2      0.1% 
+local:ext        1      0.0% 
+local:root       1      0.0% 
+
+# Q3c3 type x api_kind cross tab
+type  csp_key  local_path.js  http_vod_api  http_other  http_php  local_path.py  other  n   
+----  -------  -------------  ------------  ----------  --------  -------------  -----  ----
+3     1863     488            0             125         0         68             2      2546
+1     0        0              276           0           6         0              0      282 
+0     0        0              49            0           35        0              0      84  
+4     0        0              10            17          49        0              0      76  
+"3"   1        0              0             0           0         0              0      1   
+
+# Q3d api samples per type (up to 6 each, diverse kinds)
+-- type=3 n=2546
+   [csp_key     ] name=【神秘的哥哥们】         key=豆                    api=csp_DouDouGuard
+   [http_other  ] name=⚽Jrs┃球迷          key=Jrsjs                api=https://gh-proxy.net/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/drpy2.min.js
+   [local_path.js] name=官源┃360[js]       key=drpy_js_360影视        api=./lib/drpy2.min.js
+   [local_path.py] name=ITalkBB • 外      key=italkbbtv            api=./py/ITalkBBTV.py
+   [other       ] name=[1434ms|金鹰] 🇨🇳央视 key=py_cctv              api=py_cctv
+-- type=1 n=282
+   [http_vod_api] name=百度┃采集            key=百度                   api=https://api.apibdzy.com/api.php/provide/vod?ac=list
+   [http_php    ] name=色猫(FQ)           key=semaozy.com          api=https://caiji.semaozy.net/inc/apijson_vod.php
+-- type=0 n=84
+   [http_vod_api] name=量子┃采集            key=量子                   api=https://cj.lziapi.com/api.php/provide/vod/at/xml/
+   [http_php    ] name=成人05             key=wmcj8.com            api=http://wmcj8.com/inc/sapi.php
+-- type=4 n=76
+   [http_vod_api] name=[125ms|我的] AcFun key=AcFuns               api=https://www.acfuns.net/api.php/provide/vod
+   [http_php    ] name=[156ms|直播] 采集集合+ key=采集集合                 api=http://zhangqun1818.serv00.net/cj/cjjh.php
+   [http_other  ] name=[156ms|直播] 采集┃聚合 key=裤佬JS聚合               api=http://zhangqun1818.serv00.net/cj/cjjh.php?ac=list
+-- type="3" n=1
+   [csp_key     ] name=AList┃网盘         key=csp_AList            api=csp_AList
+
+# Q3d2 jar field + playerType values
+   jar=http://我不是.摸鱼儿.top/by/jar/moyuer.php;md5;b752c 45
+   jar=./xyqxbpq.jar                                  38
+   jar=./jar/XBPQ_upgraded.jar;md5;c10ebfca316c4ac51c 15
+   jar=https://zl.wpscdn.cn/2026/06/18/space_img/3c75 14
+   jar=./jar/gm.jar                                   6
+   jar=https://wp.kayyw.com/f/bobgtv/%E5%B0%B1%E5%87% 6
+   jar=https://tv.菜妮丝.top/jar/feimao0528.jar;md5;b81a 3
+   jar=https://pan.szfx.top/down.php/c5c866ed8f092c35 3
+   jar=https://wp.kayyw.com/f/Odakcd/vox.jar          3
+   jar=https://dlink.host/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3 2
+   jar=https://wp.kayyw.com/f/wNYrhE/fm.jar           2
+   jar=./jars/Huya.jar                                2
+   playerType: {"2": 90, "0": 38, "1": 21, "\"2\"": 20, "\"1\"": 14}
+   timeout: {"60": 231, "30": 137, "10": 100, "15": 16, "120": 15, "12": 11, "50": 9}
+   style: {"{\"type\": \"list\"}": 124, "{\"type\": \"rect\", \"ratio\": 1.597}": 70, "{\"type\": \"rect\", \"ratio\": 1}": 60, "{\"type\": \"rect\", \"ratio\": 1.33}": 56, "{\"type\": \"rect\", \"ratio\": 1.618}": 50, "{\"type\": \"list\", \"ratio\": 1.433}": 43, "{\"type\": \"rect\", \"ratio\": 1.433}": 34, "{\"type\": \"rect\", \"ratio\": 3.8}": 15, "{\"type\": \"rect\", \"ratio\": 1.755}": 11, "{\"type\": \"rect\", \"ratio\": 1.333}": 11}
+
+# Q3e ext forms
+ext form          count  pct  
+----------------  -----  -----
+missing           1228   41.1%
+other-str         802    26.8%
+json-obj          540    18.1%
+url               286    9.6% 
+likely-base64     98     3.3% 
+empty             23     0.8% 
+json-str(parsed)  12     0.4% 
+
+# Q3f key naming: total keys=2989, unique=1902
+prefix: {"other": 2783, "csp_": 206}
+top duplicated keys (same file): 
+   push_agent                   16
+   玩偶                           11
+   量子                           10
+   非凡                           10
+   配置中心                         10
+   新6V                          9
+   cc                           9
+   暴風                           8
+   索尼                           8
+   drpy_js_奇珍异兽                 8
+   drpy_js_百忙无果                 8
+   drpy_js_腾云驾雾                 8
+   drpy_js_优酷                   8
+   苹果                           7
+   drpy_js_360影视                7
+
+# Q3g other common fields by type (searchable/quickSearch/filterable/playerType/jar/...)
+type  n     searchable  quickSearch  filterable  playerType  jar  timeout  headers  extend  clickSelector  changeable  searchUrl  categories  style  playerUrl  ua  referer  hide  logo  ext 
+----  ----  ----------  -----------  ----------  ----------  ---  -------  -------  ------  -------------  ----------  ---------  ----------  -----  ---------  --  -------  ----  ----  ----
+3     2546  1677        1335         863         156         173  519      0        0       0              1263        0          0           486    0          1   0        1     0     1728
+1     282   274         165          131         27          0    0        0        0       0              81          0          61          34     0          0   0        1     0     24  
+0     84    82          53           29          0           0    0        0        0       0              4           0          9           24     0          0   0        0     0     7   
+4     76    3           2            2           0           0    0        0        0       0              1           0          0           0      0          0   0        8     0     1   
+"3"   1     1           1            1           0           0    0        0        0       0              1           0          0           0      0          0   0        0     0     1   
