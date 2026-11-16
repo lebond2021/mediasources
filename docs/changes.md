@@ -1,15 +1,84 @@
 # 本轮变化
 
 - 上一轮：4242 站
-- 本轮：4242 站
-- **新增：0**
-- **移除（探测失效 / 类名无实现 / 引用数不足）：0**
-- 保留：4242
+- 本轮：4646 站
+- **新增：435**
+- **移除（探测失效 / 类名无实现 / 引用数不足）：31**
+- 保留：4211
 
 ## 新增站点（前 40）
 
-- （无）
+- 0号优酷 `0` http://api.000zy.com/provide/vod/from/youku/a...
+- 0号搜狐 `0` http://api.000zy.com/provide/vod/from/sohu/at...
+- 0号资源 `0` http://api.000zy.com/provide/vod/at/xml
+- 1886资源 `1` http://cj.1886zy.co/inc/api.php
+- 18av貓 `3` https://mirror.ghproxy.com/https://raw.github...
+- 2048成人短剧 `3` https://gh-proxy.org/https://raw.githubuserco...
+- 2K芒果内置 `3` https://gitee.com/zj521jj/little-tiger-spot/r...
+- 300分类 `3` csp_XYQHiker
+- 5060影院(M) `3` csp_AppYs
+- 51吸瓜动态版.py `3` https://daili.korice.eu.org/https://raw.githu...
+- 555TV(M) `3` csp_AppYs
+- 555影视·XPathFilter `3` csp_XPathFilter
+- 555影视·XPathFilter2 `3` csp_XPathFilter
+- 555影视·XPathFilter3 `3` csp_XPathFilter
+- 555电影(M) `3` csp_AppYs
+- 57短剧 `3` https://gh-proxy.org/https://raw.githubuserco...
+- 80K影视(M) `3` csp_AppYs
+- 88影视 `3` https://gh-proxy.com/https://github.com/ge6bu...
+- 88看球·fastly.jsdelivr.net `3` https://fastly.jsdelivr.net/gh/gaotianliuyun/...
+- 88看球·ghproxy.net `3` https://ghproxy.net/https://raw.githubusercon...
+- 91短剧 `3` https://hk.gh-proxy.org/https://raw.githubuse...
+- 93合1 `3` https://gh-proxy.org/https://raw.githubuserco...
+- AList┃网盘12 `3` csp_AList
+- AList┃网盘4 `3` csp_AList
+- AList┃网盘9 `3` csp_AList
+- Auete影视(SP) `3` csp_Auete
+- B站｜戏曲 `3` csp_Bili
+- CJT影视(XP) `3` csp_XPathMac
+- CJT影院(M) `3` csp_AppYs
+- DSYS.py `3` https://daili.korice.eu.org/https://raw.githu...
+- FoFo影院·gh-proxy.org2 `3` https://gh-proxy.org/https://raw.githubuserco...
+- MV音乐 `4` https://zhxy.eu.org/api/KTV%E6%AD%8C%E5%8E%85...
+- Pandalive `3` https://gh-proxy.com/https://github.com/ge6bu...
+- Phb.py `3` https://daili.korice.eu.org/https://raw.githu...
+- PikPaka分享 `3` csp_PikPakShare
+- PikPak分享·PikPakShare3 `3` csp_PikPakShare
+- StripChat `3` https://gh-proxy.com/https://github.com/ge6bu...
+- T4公共2 `4` https://t4.secan.icu/vod?sites=all&ali_token=...
+- T4爬虫阿里搜索用 `4` https://service-59u7dsoa-1308372858.gz.apigw....
+- TG搜索|网盘搜索·TGYunPan2 `3` csp_TGYunPan
 
 ## 移除站点（前 40）
 
-- （无）
+- [软件] 卡卡｜动漫 `3` csp_AppGet
+- [金鹰] 💂大师兄┃影视 `3` csp_XBPQ
+- ♻️广播 `3` csp_XBPQ
+- 《好帅🎦短剧》 `3` csp_XBPQ
+- 优质资源(🔥) `0` https://api.yzzy-api.com/inc/ldg_api_all.php/...
+- 大地资源 `0` http://dadiapi.com/sea_api.php
+- 官源┃腾讯[js] `3` https://fastly.jsdelivr.net/gh/city10666/tvbo...
+- 无尽资源·api.wujinapi.com2 `1` https://api.wujinapi.com/api.php/provide/vod/...
+- 星芽｜短剧·cnb.cool `3` https://cnb.cool/fish2018/xs/-/git/raw/main/p...
+- 樱花·ys.cxkjg.cn `1` https://ys.cxkjg.cn/api/provide/vod?source=53...
+- 橘子｜APP `3` csp_AppGet
+- 欧克🐱弹幕4K `3` csp_Wogg
+- 玩偶·Wogg5 `3` csp_Wogg
+- 玩偶叔叔|网盘 `3` csp_Wobg
+- 玩偶｜4K·Wogg3 `3` csp_Wogg
+- 盘搜|集合·so.yinpai.xyz `4` http://so.yinpai.xyz/wanpan.php?type=quark|uc...
+- 采集 | 旺旺短剧 `0` https://wwzy.tv/api.php/provide/vod
+- 阿里 | 📨推送 `0` csp_Push
+- 高中 • 课堂·Bili2 `3` csp_Bili
+- 🌟剧圈圈(XYQH) `3` csp_XYQHiker
+- 🎉樱花|采集 `1` https://m3u8.apiyhzy.com/api.php/provide/vod/
+- 🎦农民影视2 `3` csp_XBPQ
+- 🎧┃明星┃MV `3` csp_Bili
+- 👭世界杯直播👭 `4` https://jsnzkpg.us.ci
+- 👭旺旺短剧👭 `4` http://zhangqun1818.serv00.net/ww.php
+- 👽玩偶哥哥·WoGG4 `3` csp_WoGG
+- 🔥骚火电影VIP(XYQH) `3` csp_XYQHiker
+- 🖍︎蜡笔资源┃4K弹幕·Wobg `3` csp_Wobg
+- 🚌动漫巴士(XYQH) `3` csp_XYQHiker
+- 🧑🏻‍农民影视·XYQHiker2 `3` csp_XYQHiker
+- 🧡工厂┃收集 `0` http://yonghu.ffzyapi8.com/api.php/provide/vo...

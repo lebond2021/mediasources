@@ -160,7 +160,10 @@ def clean_site(s: dict) -> dict:
             if not v:
                 continue
         if k == "type":
-            v = as_int(v, 3) if not isinstance(v, int) else v
+            t = as_int(v, 3) if not isinstance(v, int) else v
+            if t not in range(0, 12):
+                return {}   # type 只允许 0..11，-1/99 之类直接丢
+            v = t
         elif k in _FLAG_KEYS:
             v = 1 if str(v).lower() in ("1", "true", "yes") else 0
         elif k == "api":
@@ -192,10 +195,31 @@ def build_config(records: list[SiteRecord], parses: list[dict], lives: list[dict
                  limit: int | None = None) -> dict:
     ordered = order_records(records, drop_dead=drop_dead, limit=limit)
     sites = []
+    seen_sig: set[tuple[str, str, str]] = set()
+    seen_keys: set[str] = set()
     for r in ordered:
         s = clean_site(r.data)
         if not s:
             continue
+        # 输出级最后一道去重：clean_site 会把中文 URL 百分号编码、丢掉坏 jar，
+        # 两条原本不同的站点可能因此变成完全一样，这里按「清洗后」的 (api, ext, jar) 再收敛。
+        ext = s.get("ext")
+        sig = (str(s.get("api") or ""),
+               "" if ext is None else json.dumps(ext, ensure_ascii=False, sort_keys=True),
+               str(s.get("jar") or ""))
+        if sig in seen_sig:
+            continue
+        seen_sig.add(sig)
+        # key 全配置唯一（TVBox 用 key 做本地缓存主键，重复会串数据）
+        key = str(s.get("key") or "")
+        if not key or key in seen_keys:
+            base = (key or "site")[:56]
+            i = 2
+            while f"{base}_{i}" in seen_keys:
+                i += 1
+            key = f"{base}_{i}"
+            s["key"] = key
+        seen_keys.add(key)
         if name_tag and r.alive == 1 and r.latency_ms and r.latency_ms > 0:
             s["name"] = f"[{r.latency_ms}ms]{s.get('name', '')}"
         sites.append(s)

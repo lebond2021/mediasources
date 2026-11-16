@@ -11,7 +11,7 @@ import time
 from collections import defaultdict
 
 from . import __version__
-from .dedupe import (collapse_by_api, dedupe_channel_groups, dedupe_lives,
+from .dedupe import (collapse_by_api, collapse_identical, dedupe_channel_groups, dedupe_lives,
                      dedupe_parses, dedupe_sites, disambiguate_names, dup_stats,
                      fix_keys)
 from .extract import (extract_from_page, extract_jar_urls, github_tree,
@@ -438,10 +438,13 @@ def cmd_build(args) -> int:
 
     records = main_records
     api_merged = 0
+    ident_merged = 0
     if not args.no_api_collapse:
         records, api_merged = collapse_by_api(records)
-        log(f"  同接口收敛 {api_merged} 条 → 主配置 {len(records)} 站")
-        records_all, _ = collapse_by_api(records_all)
+    records, ident_merged = collapse_identical(records)
+    log(f"  同接口收敛 {api_merged} 条 / 同(api,ext)收敛 {ident_merged} 条 → 主配置 {len(records)} 站")
+    records_all, _ = collapse_by_api(records_all)
+    records_all, _ = collapse_identical(records_all)
 
     changed = disambiguate_names(records)
     keyfix = fix_keys(records)

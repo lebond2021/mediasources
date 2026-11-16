@@ -1,6 +1,7 @@
 """去重：站点（多策略）、解析、直播；并修正 key 冲突。"""
 from __future__ import annotations
 
+import json
 import re
 from collections import defaultdict
 
@@ -208,6 +209,45 @@ def dedupe_channel_groups(groups: list[dict]) -> list[dict]:
 _COLLECT_TYPES = (0, 1, 2, 5, 6, 7, 8)
 # 同一个 api 被写成多种 type 时，优先保留「最通用/最可能可用」的那个
 _TYPE_PREF = {1: 5, 0: 4, 6: 3, 2: 2, 7: 1, 5: 1, 8: 1}
+
+
+def collapse_identical(records: list[SiteRecord]) -> tuple[list[SiteRecord], int]:
+    """同一 (api, ext) 只保留一条。
+
+    典型场景：同一个 py 脚本 / csp 类被不同配置写成 type 3 和 type 4，
+    后端去重（按 type 分组）不会合并，但 TVBox 里会显示成两个一模一样的分组。
+    """
+    buckets: dict[tuple[str, str, str], list[SiteRecord]] = defaultdict(list)
+    for r in records:
+        api = str(r.data.get("api") or "")
+        ext = r.data.get("ext")
+        sig = "" if ext is None else json.dumps(ext, ensure_ascii=False, sort_keys=True)
+        jar = str(r.data.get("jar") or "")
+        buckets[(api, sig, jar)].append(r)
+
+    out: list[SiteRecord] = []
+    merged = 0
+    for group in buckets.values():
+        if len(group) == 1:
+            out.append(group[0])
+            continue
+        group.sort(key=lambda r: (
+            -(r.alive or 0),
+            -len(r.sources),
+            -_TYPE_PREF.get(as_int(r.data.get("type"), 3), 0),
+            len(str(r.data.get("name") or "")),
+        ))
+        keep = group[0]
+        srcs = set(keep.sources)
+        for r in group[1:]:
+            srcs |= set(r.sources)
+            merged += 1
+        keep.sources = sorted(srcs)
+        out.append(keep)
+
+    order = {id(r): i for i, r in enumerate(records)}
+    out.sort(key=lambda r: order.get(id(r), 0))
+    return out, merged
 
 
 def collapse_by_api(records: list[SiteRecord]) -> tuple[list[SiteRecord], int]:
