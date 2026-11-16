@@ -138,7 +138,7 @@ tools/
 | 直连 raw（最新，无需 CDN 缓存） | https://raw.githubusercontent.com/lebond2021/mediasources/dist/index.json |
 | 精简版（300 站，低配盒子） | https://cdn.jsdelivr.net/gh/lebond2021/mediasources@dist/index_lite.json |
 | 多仓版（影视仓） | https://cdn.jsdelivr.net/gh/lebond2021/mediasources@dist/storehouse.json |
-| 全量档（6.3 万站，仅供归档，勿填盒子） | https://cdn.jsdelivr.net/gh/lebond2021/mediasources@dist/index_all.json |
+| 全量档（约 7 万站，仅供归档，勿填盒子） | https://cdn.jsdelivr.net/gh/lebond2021/mediasources@dist/index_all.json |
 | GitHub Pages（待 Actions 恢复后启用） | https://lebond2021.github.io/mediasources/index.json |
 
 `dist` 分支永远只有一个提交（每次强推覆盖），所以仓库体积不会随天数膨胀；`main` 分支只放代码。
@@ -163,7 +163,16 @@ powershell -NoProfile -ExecutionPolicy Bypass -File tools\update.ps1
 powershell -NoProfile -ExecutionPolicy Bypass -File tools\update.ps1 -PublishOnly   # 只重发当前 dist
 ```
 
-日志在 `data/logs/update-*.log`（保留最近 30 份）。计划任务开启 "错过补跑"，关机错过的会在下次开机后补一次。
+日志在 `data/logs/update-*.log`（保留最近 30 份）。计划任务开启「错过补跑」，关机错过的会在下次开机后补一次。
+
+每轮还会生成两份对比文件，随构建一起发布到 `dist` 分支：
+
+- `CHANGES.md`（= `docs/changes.md`）：本轮**新增 / 移除**的站点清单
+- `REPORT.md`（= `docs/aggregation-report.md`）：规模、type 分布、域名排行
+
+```powershell
+py tools/diff_report.py --out docs/changes.md   # 手动查看本轮变化
+```
 
 ## 9. 已知限制
 
