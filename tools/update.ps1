@@ -71,6 +71,8 @@ Run 'build'    { & $py -m tvh build --workers 96 --timeout 8 --jar-top 30 }
 Run 'validate' { & $py tools/validate.py --all }
 Run 'report'   { & $py tools/report.py }
 Run 'diff'     { & $py tools/diff_report.py --out docs/changes.md }
+# 直播配置单独发布到 pomf/kappa（直播加载器只认 Content-Type: application/json 的主机）
+Run 'publish-live' { & $py tools/publish_live.py }
 }
 
 $idx = Join-Path $root 'dist\index.json'
