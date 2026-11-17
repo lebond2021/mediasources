@@ -66,6 +66,11 @@ if ($originUrl -match 'github\.com/([^/]+/[^/]+?)(\.git)?/?$') {
     } catch { L '  取上一轮快照失败（首次运行可忽略）' }
 }
 Run 'build'    { & $py -m tvh build --workers 96 --timeout 8 --jar-top 30 }
+# 3.5 精选：逐站实测速率/画质 + 内容筛查 → 把 index.json 从几千站裁到 100 出头
+Run 'rate'     { & $py tools/rate_sites.py --from dist/index_all.json --workers 40 --timeout 6 }
+Run 'rate-host'{ & $py tools/rate_hosts.py --min-kbps 250 --workers 32 }
+Run 'screen'   { & $py tools/screen_content.py --from dist/index_all.json --only-ok --workers 28 }
+Run 'curate'   { & $py tools/curate.py --min-kbps 250 --max-measured 80 --max-csp 90 --lite 40 }
 # 4.0 首页站源：实测采集站 → 质量排序 → 前置到 index.json（TVBox 留空首页站源时用 sites[0]）
 Run 'home'     { & $py tools/make_home.py --probe 300 --keep 120 }
 Run 'promote'  { & $py tools/promote_home.py }
