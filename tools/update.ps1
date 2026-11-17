@@ -66,6 +66,12 @@ if ($originUrl -match 'github\.com/([^/]+/[^/]+?)(\.git)?/?$') {
     } catch { L '  取上一轮快照失败（首次运行可忽略）' }
 }
 Run 'build'    { & $py -m tvh build --workers 96 --timeout 8 --jar-top 30 }
+# 4.0 首页站源：实测采集站 → 质量排序 → 前置到 index.json（TVBox 留空首页站源时用 sites[0]）
+Run 'home'     { & $py tools/make_home.py --probe 300 --keep 120 }
+Run 'promote'  { & $py tools/promote_home.py }
+# 4.1 直播：频道名归一 → 逐条测速 → 同频道多源合并 → 剔除慢源
+Run 'live'     { & $py tools/build_live.py --workers 128 --min-kbps 180 --per-channel 3 --candidates 24 --probe-lists 900 }
+Run 'emit-live' { & $py tools/emit_lives.py }
 
 # 4) 校验与报告（校验失败只记日志，不阻断发布）
 Run 'validate' { & $py tools/validate.py --all }
@@ -86,6 +92,7 @@ if ($NoPush) { L '跳过发布（-NoPush）'; exit 0 }
 $pub = Join-Path $env:TEMP ("tvh-pub-" + [guid]::NewGuid().ToString('N').Substring(0, 8))
 New-Item -ItemType Directory -Force -Path $pub | Out-Null
 Copy-Item (Join-Path $root 'dist\*.json') $pub -Force
+Copy-Item (Join-Path $root 'dist\*.m3u') $pub -Force
 Copy-Item (Join-Path $root 'docs\aggregation-report.md') (Join-Path $pub 'REPORT.md') -Force
 if (Test-Path (Join-Path $root 'docs\changes.md')) { Copy-Item (Join-Path $root 'docs\changes.md') (Join-Path $pub 'CHANGES.md') -Force }
 

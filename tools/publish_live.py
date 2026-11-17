@@ -88,8 +88,8 @@ def main() -> int:
     ok_jsd, info_jsd = probe(jsd, True)
     print(f"  jsdelivr         {jsd}  {'✓' if ok_jsd else '✗'} {info_jsd}")
 
-    # 聚合总列表 live_all.m3u 也备一份到文件床：jsDelivr 是主，文件床是备用
-    all_m3u = os.path.join(DIST, "live_all.m3u")
+    # 聚合总列表也备一份到文件床：jsDelivr 用 .txt（text/plain），.m3u 会被 CDN 标成 audio/x-mpegurl
+    all_m3u = os.path.join(DIST, "live_all.txt")
     all_mirrors = {}
     if os.path.exists(all_m3u):
         for name, fn in (("pomf2.lain.la", upload_pomf), ("kappa.lol", upload_kappa)):
@@ -117,10 +117,11 @@ def main() -> int:
             "primary": jsd if ok_jsd else (mirrors.get("pomf2.lain.la") or raw),
             "mirrors": {**mirrors, "raw(仅供点播加载器)": raw},
             "lives": n_lives,
-            "all_m3u": f"https://cdn.jsdelivr.net/gh/{REPO}@{BRANCH}/live_all.m3u",
+            "all_m3u": f"https://cdn.jsdelivr.net/gh/{REPO}@{BRANCH}/live_all.txt",
             "all_m3u_mirrors": all_mirrors,
-            "note": "直播加载器要求 Content-Type: application/json；raw.githubusercontent 返回 text/plain 会被静默忽略。"
-                    "lives[0] 指向 live_all.m3u —— 我们自己合并去重后的总频道表。",
+            "note": "直播加载器要求配置 JSON 的 Content-Type 是 application/json（raw 返回 text/plain 会被静默忽略）；"
+                    "而它会把 m3u 总表当 JS 模块解析，jsDelivr 对 .m3u 返回 audio/x-mpegurl 会报 evaluateModule 错误，"
+                    "所以总表用 .txt（text/plain）。lives[0] 指向我们自己合并去重后的总频道表。",
         },
         "variants": {
             "index_lite.json（300 站精简）": f"https://cdn.jsdelivr.net/gh/{REPO}@{BRANCH}/index_lite.json",

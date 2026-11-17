@@ -64,6 +64,12 @@ jobs:
           curl -fsSL "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/dist/index.json" \
             -o data/state/prev_index.json || echo "无历史快照（首次运行）"
           python -m tvh build --workers 96 --timeout 8 --jar-top 30
+          # 首页站源：实测采集站 → 质量排序 → 前置到 sites[0]
+          python tools/make_home.py --probe 300 --keep 120 || true
+          python tools/promote_home.py || true
+          # 直播：频道归一 → 逐条测速 → 同频道多源合并 → 剔除慢源
+          python tools/build_live.py --workers 128 --min-kbps 180 --per-channel 3 --candidates 24 --probe-lists 900 || true
+          python tools/emit_lives.py || true
 
       - name: 校验与报告
         run: |
@@ -80,6 +86,7 @@ jobs:
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           rm -rf /tmp/pub && mkdir -p /tmp/pub
           cp dist/*.json /tmp/pub/
+          cp dist/*.m3u /tmp/pub/ 2>/dev/null || true
           cp docs/aggregation-report.md /tmp/pub/REPORT.md
           cp docs/changes.md /tmp/pub/CHANGES.md 2>/dev/null || true
           cd /tmp/pub

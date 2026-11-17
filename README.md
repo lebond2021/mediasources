@@ -107,7 +107,9 @@ csp 类型站点（`type:3` + `csp_XXX`）必须由 jar 里的同名类实现，
 | `index_lite.json` | 按可用性/延迟排序的前 300 站 | 低配盒子、加载慢 |
 | `index_collect.json` | 只要采集站（无 jar 依赖，最稳） | 不想依赖爬虫 |
 | `index_spider.json` | 只要 csp 爬虫站（已配站点级 jar） | 想看更多片源 |
-| `index_lives.json` | 直播源，`lives` 带频道分组 | 看电视直播 |
+| `index_lives.json` | 直播配置：`lives[0]` 是聚合总表，其后是 7 条备用列表 | 看电视直播 |
+| `live_all.m3u` | 聚合总表本体：频道归一 + 测速 + 同频道多源（一频道最多 3 条线路） | 想直接看全表 |
+| `index_home.json` | 首页站源候选（实测可用 + 质量排序，首位已改名 `★主站`） | 不想自己挑首页站源 |
 | `storehouse.json` | 多仓：每个来源仓库一条 | 想自己挑仓库 |
 
 ## 7. 目录结构
@@ -134,16 +136,25 @@ tools/
 
 | 用途 | 链接 |
 | --- | --- |
-| **点播主链接**（jsDelivr 加速，国内可用） | https://cdn.jsdelivr.net/gh/lebond2021/mediasources@dist/index.json |
-| 点播直连 raw（最新，无需 CDN 缓存） | https://raw.githubusercontent.com/lebond2021/mediasources/dist/index.json |
-| **直播主链接**（2830 条播放列表源） | https://cdn.jsdelivr.net/gh/lebond2021/mediasources@dist/index_lives.json |
-| 直播备用镜像 | https://pomf2.lain.la/f/31ow3yxs.json ／ https://kappa.lol/4phSKo |
+| **点播主链接**（最新，无需 CDN 缓存） | https://raw.githubusercontent.com/lebond2021/mediasources/dist/index.json |
+| 点播镜像（jsDelivr 加速，国内可用） | https://cdn.jsdelivr.net/gh/lebond2021/mediasources@dist/index.json |
+| **直播主链接**（`application/json`，实测可用） | https://pomf2.lain.la/f/dcdls81s.json |
+| 直播备用镜像 | https://kappa.lol/JtqqX6 ／ https://cdn.jsdelivr.net/gh/lebond2021/mediasources@dist/index_lives.json |
+| 直播总表（77 频道 / 118 源，可直接当播放列表） | https://raw.githubusercontent.com/lebond2021/mediasources/dist/live_all.m3u |
+| **免选首页站源**（实测站点 + 质量排序，首位即默认站） | https://raw.githubusercontent.com/lebond2021/mediasources/dist/index_home.json |
 | 精简版（300 站，低配盒子） | https://cdn.jsdelivr.net/gh/lebond2021/mediasources@dist/index_lite.json |
 | 多仓版（影视仓） | https://cdn.jsdelivr.net/gh/lebond2021/mediasources@dist/storehouse.json |
-| 全量档（约 7 万站，仅供归档，勿填盒子） | https://cdn.jsdelivr.net/gh/lebond2021/mediasources@dist/index_all.json |
-| GitHub Pages（待 Actions 恢复后启用） | https://lebond2021.github.io/mediasources/index.json |
+| 全量档（约 6.9 万站，仅供归档，勿填盒子） | https://cdn.jsdelivr.net/gh/lebond2021/mediasources@dist/index_all.json |
 
-> ⚠️ **直播链接不要用 raw.githubusercontent.com。** 真机实测（BlueStacks + TVBox q215613905）：点播加载器对 `Content-Type: text/plain` 无所谓，但直播加载器只在响应头是 `application/json` 时才解析；raw 返回 `text/plain`，直播页会静默忽略、回落到内置「测试频道」。jsDelivr / pomf / kappa 都返回 `application/json`，可正常生效。
+### 直播为什么要分两个文件、还挑主机
+
+真机实测（BlueStacks + TVBox `com.github.tvbox.osc.jun`）踩出来的三条硬规则：
+
+1. **配置 JSON 必须是 `application/json`**。raw 返回 `text/plain`，直播加载器会静默忽略并回落到内置「测试频道」；点播加载器不挑，所以点播可以放 raw。
+2. **总表 m3u 必须走 `text/plain`**。jsDelivr 对 `.m3u` 返回 `audio/x-mpegurl`，实测会被当 JS 模块解析并报 `evaluateModule-error ... unexpected token '#EXTM3U'`；`.txt` 也一样走模块解析。用 raw 的 `live_all.m3u`（`text/plain`）稳。
+3. **`dist` 分支每次必须整目录强推**。曾经手推单个 `index_lives.json` 把 `live_all.m3u` 从分支上冲掉，raw 直接 404，直播立刻回落测试频道。
+
+换新配置后如果直播页仍是「测试频道」，先 `am force-stop` 再重进；`LivePlayActivity` 已在栈上时不会重读配置。
 
 `dist` 分支永远只有一个提交（每次强推覆盖），所以仓库体积不会随天数膨胀；`main` 分支只放代码。
 
@@ -177,6 +188,16 @@ powershell -NoProfile -ExecutionPolicy Bypass -File tools\update.ps1 -PublishOnl
 ```powershell
 py tools/diff_report.py --out docs/changes.md   # 手动查看本轮变化
 ```
+
+每天这一轮还会额外做三件事：
+
+| 步骤 | 命令 | 作用 |
+| --- | --- | --- |
+| 首页站源 | `py tools/make_home.py --probe 300 --keep 120` → `py tools/promote_home.py` | 实测采集站的分类数与延迟，把最能用的站前置成 `sites[0]`（TVBox 留空首页站源时用它） |
+| 直播整合 | `py tools/build_live.py --workers 128 --min-kbps 180 --per-channel 3` | 频道名归一去重 → 逐条真拉流测速 → 同频道合并多源、慢源直接丢 |
+| 直播装配 | `py tools/emit_lives.py` | 把总表写进 `index_lives.json` 的 `lives[0]`，再挂 7 条备用列表 |
+
+直播测速的门槛是 **180 KB/s**（低于此值不进产物），每频道最多保留 3 条线路，按实测速度降序——TVBox 播不动会自动切下一条。
 
 ## 9. 已知限制
 
