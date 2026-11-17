@@ -88,6 +88,22 @@ def main() -> int:
     ok_jsd, info_jsd = probe(jsd, True)
     print(f"  jsdelivr         {jsd}  {'✓' if ok_jsd else '✗'} {info_jsd}")
 
+    # 聚合总列表 live_all.m3u 也备一份到文件床：jsDelivr 是主，文件床是备用
+    all_m3u = os.path.join(DIST, "live_all.m3u")
+    all_mirrors = {}
+    if os.path.exists(all_m3u):
+        for name, fn in (("pomf2.lain.la", upload_pomf), ("kappa.lol", upload_kappa)):
+            try:
+                u = fn(all_m3u)
+                r = requests.get(u, timeout=180)
+                ok = r.status_code == 200 and b"#EXTM3U" in r.content[:200]
+                print(f"  live_all {name:12s} {u}  {'✓' if ok else '✗'} "
+                      f"{len(r.content)//1024}KB")
+                if ok:
+                    all_mirrors[name] = u
+            except Exception as e:  # noqa: BLE001
+                print(f"  live_all {name:12s} 上传失败 {e}")
+
     idx = os.path.join(DIST, "index.json")
     n_sites = len(json.load(open(idx, encoding="utf-8")).get("sites") or []) if os.path.exists(idx) else 0
     out = {
@@ -101,7 +117,10 @@ def main() -> int:
             "primary": jsd if ok_jsd else (mirrors.get("pomf2.lain.la") or raw),
             "mirrors": {**mirrors, "raw(仅供点播加载器)": raw},
             "lives": n_lives,
-            "note": "直播加载器要求 Content-Type: application/json；raw.githubusercontent 返回 text/plain 会被静默忽略。",
+            "all_m3u": f"https://cdn.jsdelivr.net/gh/{REPO}@{BRANCH}/live_all.m3u",
+            "all_m3u_mirrors": all_mirrors,
+            "note": "直播加载器要求 Content-Type: application/json；raw.githubusercontent 返回 text/plain 会被静默忽略。"
+                    "lives[0] 指向 live_all.m3u —— 我们自己合并去重后的总频道表。",
         },
         "variants": {
             "index_lite.json（300 站精简）": f"https://cdn.jsdelivr.net/gh/{REPO}@{BRANCH}/index_lite.json",
