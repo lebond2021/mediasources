@@ -231,6 +231,28 @@ py tools/agg_server.py --port 8008 --public https://<隧道域名>
 
 注意：这条链路依赖你的服务在跑，关机就没了；它是**可选增强**，`dist` 分支上的静态配置（4509 站 + 原生聚合搜索）不依赖它。
 
+## 8.7 精选：把 4000+ 站裁到 100 出头
+
+4000 多个站电视盒子加载不动，而且**最快的往往是色情站**——必须按「真实画质 + 真实速率 + 内容类型」三重实测来裁。
+
+```powershell
+py tools/rate_sites.py --from dist/index_all.json --workers 40 --timeout 6   # 逐站测：延迟/分类/线路速度
+py tools/rate_hosts.py --min-kbps 250                                        # 补测播放线路域名
+py tools/screen_content.py --from dist/index_all.json --only-ok --workers 28 # 抓两页片名判定内容类型
+py tools/curate.py --min-kbps 250 --max-measured 80 --max-csp 90 --lite 40   # 出精选配置
+```
+
+实测口径：
+
+| 步骤 | 做法 | 判据 |
+| --- | --- | --- |
+| 速率 | 取 `ac=detail` 的第一条播放地址，有 `STREAM-INF` 就挑最高码率变体，读 400KB / 5 秒 | ≥250 KB/s 才留 |
+| 画质 | 解析 `RESOLUTION=1920x1080`，无 master 时用速率反推 | 720P 以上优先排序 |
+| 马甲站 | 记录播放线路域名，同一域名只留最快的一个 | 31 个域名合并掉约 1/3 冗余 |
+| 内容 | 抓两页片名做敏感词比，≥20% 直接判成人站丢弃 | 首轮 173 个可播站里剔掉 68 个 |
+
+1428 个采集站实测结果：可播 221、≥250 KB/s 的 85、内容正常的 154。最终 `index.json` = **111 站（85 KB）**，`index_lite.json` = 21 站，名字带 `[1080P 1.2MB/s]` 这样的实测标签，按画质与速度排序。
+
 ## 9. 已知限制
 
 - csp 站点的真实播放能力无法在不运行 jar 的前提下验证，只能保证「类名存在 + ext 可达」。

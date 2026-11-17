@@ -39,10 +39,12 @@ def check_config(path: str) -> list[str]:
         return ["顶层不是对象"]
 
     sites = cfg.get("sites")
+    relax = bool(re.search(r"(live|channel|probe)", os.path.basename(path).lower()))
     if not isinstance(sites, list):
-        errs.append("缺少 sites 数组")
+        if not relax:
+            errs.append("缺少 sites 数组")
         sites = []
-    if not sites and "live" not in os.path.basename(path).lower():
+    if not sites and not re.search(r"(live|channel|probe)", os.path.basename(path).lower()):
         errs.append("sites 为空")
 
     keys = Counter()

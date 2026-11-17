@@ -376,6 +376,19 @@ class Handler(BaseHTTPRequestHandler):
                 return
             if ac == "detail":
                 ids = q.get("ids") or q.get("id") or ""
+                # TVBox 的分类翻页也会用 ac=detail&t=..&pg=..（没有 ids），要当成列表处理
+                if not ids and ("t" in q or "pg" in q or "f" in q):
+                    pg = int(q.get("pg") or q.get("page") or 1)
+                    gid = int(q.get("t") or 0)
+                    items = AGG.listing(gid, pg)
+                    self._send({
+                        "code": 1, "msg": "数据列表", "page": pg, "pagecount": 9999,
+                        "limit": "20", "total": len(items) * 9999,
+                        "class": [{"type_id": g["type_id"], "type_name": g["type_name"]} for g in GROUPS]
+                                 + [{"type_id": 0, "type_name": "全部"}],
+                        "list": items,
+                    })
+                    return
                 self._send({"code": 1, "msg": "数据列表", "page": 1, "pagecount": 1,
                             "limit": "20", "total": 1, "list": AGG.detail(ids)})
                 return
