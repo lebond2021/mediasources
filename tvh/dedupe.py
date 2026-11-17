@@ -8,6 +8,7 @@ from collections import defaultdict
 from .model import (SiteRecord, norm_name, parse_lives, site_backend_id,
                     site_dedupe_id, site_signature, site_sort_rank)
 from .util import as_int, host_of, is_http, norm_url, sha1
+from urllib.parse import urlsplit
 
 
 def _fill_missing(dst: dict, src: dict) -> None:
@@ -160,13 +161,32 @@ def dedupe_parses(parses: list[dict], limit: int = 0) -> list[dict]:
     return out
 
 
+_LOOPBACK_HOSTS = {"127.0.0.1", "localhost", "0.0.0.0", "::1", "[::1]"}
+
+
+def is_dead_local_url(url: str) -> bool:
+    """源作者自己电脑上的本地代理（127.0.0.1:10079 / :3066 之类）对别人永远是死的。"""
+    if not url:
+        return False
+    low = url.lower()
+    if "127.0.0.1" in low or "localhost" in low or "0.0.0.0" in low or "[::1]" in low:
+        return True
+    if not is_http(url):
+        return False
+    try:
+        h = (urlsplit(url).hostname or "").lower()
+    except ValueError:
+        return False
+    return h in _LOOPBACK_HOSTS or h.startswith("127.")
+
+
 def dedupe_lives(lives: list[dict]) -> list[dict]:
     """按 URL 去重直播源，并按「被多少个配置引用」排序（越主流越靠前）。"""
     seen: dict[str, dict] = {}
     cnt: dict[str, int] = {}
     for e in lives:
         url = str(e.get("url") or "")
-        if not url:
+        if not url or is_dead_local_url(url):
             continue
         key = norm_url(url) if is_http(url) else url
         if key in seen:
@@ -200,6 +220,15 @@ def dedupe_channel_groups(groups: list[dict]) -> list[dict]:
                 newc = {"name": cn, "urls": list(dict.fromkeys(c.get("urls") or []))}
                 slot["channels"].append(newc)
                 by_chan[cn] = newc
+    # 丢掉只剩本地占位地址的频道
+    for g in merged.values():
+        keep = []
+        for c in g["channels"]:
+            urls = [u for u in c["urls"] if not is_dead_local_url(u)]
+            if urls:
+                c["urls"] = urls
+                keep.append(c)
+        g["channels"] = keep
     out = [g for g in merged.values() if g["channels"]]
     out.sort(key=lambda g: -len(g["channels"]))
     return out

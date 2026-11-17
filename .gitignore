@@ -10,3 +10,6 @@ __pycache__/
 *.log
 *.tmp
 .DS_Store
+
+# 本机安卓测试环境（SDK/APK/截图，不进仓库）
+.android/

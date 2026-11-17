@@ -480,11 +480,15 @@ def cmd_build(args) -> int:
     write_json(os.path.join(DIST, "index_spider.json"),
                build_config(spider_only, parses, [], [], g, spider=spider_url, drop_dead=False))
 
-    # 频道组格式（影视仓/新版 FongMi）单独一份，不影响主配置兼容性
+    # 直播单独一份：TVBox/CatVod 系吃「播放列表源」扁平 lives（真机验证过），
+    # 频道组格式另出 index_lives_grouped.json 给影视仓/FongMi 系。
+    write_json(os.path.join(DIST, "index_lives.json"),
+               build_config([], parses, lives_all, None, g, spider=spider_url,
+                            drop_dead=False, limit=0))
     if groups:
-        write_json(os.path.join(DIST, "index_lives.json"),
-                   build_config(records, parses, [], groups, g, spider=spider_url,
-                                drop_dead=not args.keep_dead, limit=args.limit))
+        write_json(os.path.join(DIST, "index_lives_grouped.json"),
+                   build_config([], parses, [], groups, g, spider=spider_url,
+                                drop_dead=False, limit=0))
 
     # 多仓：可用的子源
     ok_sources = []

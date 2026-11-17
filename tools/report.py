@@ -130,10 +130,22 @@ def main() -> int:
     A("3. 互联网侦察：4677 条经 HTTP 200 验证的源地址，见 `seeds/web_sources.txt` 与 `docs/recon-web.md`。")
     A("4. BFS 抓取：配置内 `storeHouse`/`urls`、列表页 `data-url`/`href`、纯文本清单。")
     A("")
-    if pub and pub.get("url"):
+    if pub and (pub.get("vod") or pub.get("url")):
         A("## 7. 发布链接")
         A("")
-        A(f"- **主链接（一条搞定）**：{pub['url']}")
+        vod = pub.get("vod") or {}
+        live = pub.get("live") or {}
+        if vod:
+            A(f"- **点播主链接**：{vod.get('primary')}（{vod.get('sites')} 站）")
+            A(f"- 点播镜像：{vod.get('mirror')}")
+        else:
+            A(f"- **主链接（一条搞定）**：{pub['url']}")
+        if live:
+            A(f"- **直播主链接**：{live.get('primary')}（{live.get('lives')} 条）")
+            for name, u in (live.get("mirrors") or {}).items():
+                A(f"  - 直播镜像 {name}：{u}")
+            if live.get("note"):
+                A(f"  - 注意：{live['note']}")
         for name, u in (pub.get("mirrors") or {}).items():
             A(f"- 镜像 {name}：{u}")
         for name, u in (pub.get("variants") or {}).items():

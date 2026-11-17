@@ -134,12 +134,16 @@ tools/
 
 | 用途 | 链接 |
 | --- | --- |
-| 主链接（jsDelivr 加速，国内可用） | https://cdn.jsdelivr.net/gh/lebond2021/mediasources@dist/index.json |
-| 直连 raw（最新，无需 CDN 缓存） | https://raw.githubusercontent.com/lebond2021/mediasources/dist/index.json |
+| **点播主链接**（jsDelivr 加速，国内可用） | https://cdn.jsdelivr.net/gh/lebond2021/mediasources@dist/index.json |
+| 点播直连 raw（最新，无需 CDN 缓存） | https://raw.githubusercontent.com/lebond2021/mediasources/dist/index.json |
+| **直播主链接**（2830 条播放列表源） | https://cdn.jsdelivr.net/gh/lebond2021/mediasources@dist/index_lives.json |
+| 直播备用镜像 | https://pomf2.lain.la/f/31ow3yxs.json ／ https://kappa.lol/4phSKo |
 | 精简版（300 站，低配盒子） | https://cdn.jsdelivr.net/gh/lebond2021/mediasources@dist/index_lite.json |
 | 多仓版（影视仓） | https://cdn.jsdelivr.net/gh/lebond2021/mediasources@dist/storehouse.json |
 | 全量档（约 7 万站，仅供归档，勿填盒子） | https://cdn.jsdelivr.net/gh/lebond2021/mediasources@dist/index_all.json |
 | GitHub Pages（待 Actions 恢复后启用） | https://lebond2021.github.io/mediasources/index.json |
+
+> ⚠️ **直播链接不要用 raw.githubusercontent.com。** 真机实测（BlueStacks + TVBox q215613905）：点播加载器对 `Content-Type: text/plain` 无所谓，但直播加载器只在响应头是 `application/json` 时才解析；raw 返回 `text/plain`，直播页会静默忽略、回落到内置「测试频道」。jsDelivr / pomf / kappa 都返回 `application/json`，可正常生效。
 
 `dist` 分支永远只有一个提交（每次强推覆盖），所以仓库体积不会随天数膨胀；`main` 分支只放代码。
 
@@ -147,7 +151,7 @@ tools/
 
 1. **本机/局域网**：`py tools/serve.py` → `http://<你的IP>:8080/index.json`。
 2. **GitHub（当前采用）**：`tools/update.ps1` 每天把 `dist/` 强推到 `dist` 分支。
-3. **匿名文件床**（临时备用）：`py tools/publish2.py dist/index.json`（pomf + kappa + uguu，自动回读校验）。
+3. **匿名文件床**（临时备用）：`py tools/publish_live.py`（上传直播配置到 pomf + kappa 并回读校验，同时刷新 `dist/published.json`）。
 
 ## 8.5 每日自动更新
 

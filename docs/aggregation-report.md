@@ -1,10 +1,10 @@
 # TVBox 媒体源聚合报告
 
-生成时间：2026-11-16 20:14 ｜ 工作目录：`C:\Users\Nick\Documents\tvbox`
+生成时间：2026-11-17 18:32 ｜ 工作目录：`C:\Users\Nick\Documents\tvbox`
 
 ## 1. 一句话结论
 
-从 **6705** 个可解析配置中抓到 **635,231** 条站点条目，按后端指纹去重后剩 **7,363** 个独立站点，其中严格可用（爬虫类名可解析 + 未判死）**4,664** 个，最终合成一份 `index.json`（2181 KB），在 TVBox 里填一条链接即可加载全部源。
+从 **6705** 个可解析配置中抓到 **635,231** 条站点条目，按后端指纹去重后剩 **7,363** 个独立站点，其中严格可用（爬虫类名可解析 + 未判死）**4,664** 个，最终合成一份 `index.json`（2040 KB），在 TVBox 里填一条链接即可加载全部源。
 
 ## 2. 关键数字
 
@@ -22,7 +22,7 @@
 | 探测：活 / 死 / 未测 | 2,523 / 2,752 / 2,564 |
 | 全局 spider | `https://gh-proxy.com/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar` |
 | strict 剔除（爬虫类名缺失） | 2,848 |
-| 直播源（去重后） | 43,928 |
+| 直播源（去重后） | 43,794 |
 | 解析器（parses） | 200 |
 | 多仓来源 | 4,437 |
 
@@ -30,12 +30,12 @@
 
 | 文件 | 站点数 | 体积 | 说明 |
 | --- | --- | --- | --- |
-| `index.json` | 4664 | 2181 KB | 主配置（严格 + 探测，日常填这个） |
-| `index_all.json` | 69676 | 30783 KB | 全量（不做 strict-spider 过滤） |
-| `index_lite.json` | 300 | 547 KB | 精简 300 站，低配盒子用 |
-| `index_collect.json` | 1827 | 1015 KB | 只要采集站（不依赖 jar） |
-| `index_spider.json` | 5327 | 2217 KB | 只要 csp 爬虫站（已配站点级 jar） |
-| `index_lives.json` | 4664 | 7953 KB | 直播源全量（含频道分组） |
+| `index.json` | 4664 | 2040 KB | 主配置（严格 + 探测，日常填这个） |
+| `index_all.json` | 69676 | 30649 KB | 全量（不做 strict-spider 过滤） |
+| `index_lite.json` | 300 | 407 KB | 精简 300 站，低配盒子用 |
+| `index_collect.json` | 1827 | 892 KB | 只要采集站（不依赖 jar） |
+| `index_spider.json` | 5327 | 2094 KB | 只要 csp 爬虫站（已配站点级 jar） |
+| `index_lives.json` | 0 | 605 KB | 直播源全量（含频道分组） |
 | `storehouse.json` | 4437 | 677 KB | 多仓：每个来源一条 |
 | `stats.json` | - | 9 KB | 统计原始数据 |
 | `sources.json` | - | 1641 KB | 每个来源 URL 的状态 |
@@ -83,14 +83,17 @@
 
 ## 7. 发布链接
 
-- **主链接（一条搞定）**：https://pomf2.lain.la/f/zsfi987w.json
-- 镜像 pomf2.lain.la：https://pomf2.lain.la/f/zsfi987w.json
-- 镜像 kappa.lol：https://kappa.lol/zkTeVG
-- 镜像 uguu.se(3h)：https://d.uguu.se/LAGmdmWzBMSX.json
-- 变体 index_lite.json(300站)：https://pomf2.lain.la/f/vg4v8foi.json
-- 变体 index_lite.json 镜像：https://kappa.lol/O9XT67
-- 变体 storehouse.json(多仓)：https://pomf2.lain.la/f/9bxmppiy.json
-- 变体 storehouse.json 镜像：https://kappa.lol/3jUWxg
+- **点播主链接**：https://raw.githubusercontent.com/lebond2021/mediasources/dist/index.json（4664 站）
+- 点播镜像：https://cdn.jsdelivr.net/gh/lebond2021/mediasources@dist/index.json
+- **直播主链接**：https://cdn.jsdelivr.net/gh/lebond2021/mediasources@dist/index_lives.json（2830 条）
+  - 直播镜像 pomf2.lain.la：https://pomf2.lain.la/f/31ow3yxs.json
+  - 直播镜像 kappa.lol：https://kappa.lol/4phSKo
+  - 直播镜像 raw(仅供点播加载器)：https://raw.githubusercontent.com/lebond2021/mediasources/dist/index_lives.json
+  - 注意：直播加载器要求 Content-Type: application/json；raw.githubusercontent 返回 text/plain 会被静默忽略。
+- 变体 index_lite.json（300 站精简）：https://cdn.jsdelivr.net/gh/lebond2021/mediasources@dist/index_lite.json
+- 变体 storehouse.json（多仓）：https://cdn.jsdelivr.net/gh/lebond2021/mediasources@dist/storehouse.json
+- 变体 index_all.json（全量）：https://raw.githubusercontent.com/lebond2021/mediasources/dist/index_all.json
+- 变体 index_lives_grouped.json（频道组）：https://cdn.jsdelivr.net/gh/lebond2021/mediasources@dist/index_lives_grouped.json
 
 ## 8. 复现
 

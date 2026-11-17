@@ -42,7 +42,7 @@ def check_config(path: str) -> list[str]:
     if not isinstance(sites, list):
         errs.append("缺少 sites 数组")
         sites = []
-    if not sites:
+    if not sites and "live" not in os.path.basename(path).lower():
         errs.append("sites 为空")
 
     keys = Counter()

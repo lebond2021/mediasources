@@ -13,6 +13,25 @@ GLOBAL_LIST_KEYS = ("flags", "rules", "ijk", "ads", "doh", "hosts", "proxy", "he
 GLOBAL_SCALAR_KEYS = ("wallpaper", "logo", "notice", "style", "timeout", "ext", "homepage",
                       "ua", "playerType", "doh", "lives")
 
+# 合并后的全局段上限：源站自用的代理/DoH 规则留太多会把播放器的网络层压垮
+# （实测：proxy 里残留 127.0.0.1:7890 与 raw.githubusercontent.com 的规则，会让 TVBox
+#  启动内置代理 3066 去转发全部请求，代理起不来就整机 ECONNREFUSED）。
+_LIST_CAP = {"doh": 4, "ijk": 2, "proxy": 0, "rules": 200, "ads": 200,
+             "hosts": 200, "headers": 64, "flags": 100}
+# 指向本机/示例域名的写法一律视为脏数据
+_JUNK_RE = re.compile(r"(?:example\.(?:invalid|com)|localhost|127\.0\.0\.1|0\.0\.0\.0|::1)", re.I)
+
+
+def _junk_values(v) -> bool:
+    """v 里任一字符串命中本机/示例地址即视为脏。"""
+    if isinstance(v, str):
+        return bool(_JUNK_RE.search(v))
+    if isinstance(v, (list, tuple)):
+        return any(_junk_values(x) for x in v)
+    if isinstance(v, dict):
+        return any(_junk_values(x) for x in v.values())
+    return False
+
 
 def _dedupe_by(items: list[dict], keys: tuple[str, ...]) -> list[dict]:
     seen, out = set(), []
@@ -60,6 +79,17 @@ def merge_globals(docs_globals: list[dict], base: dict | None = None) -> dict:
                 out[key] = list(dict.fromkeys(pool))[:20]
             else:
                 out[key] = _dedupe_by(pool, ("name", "url"))
+        # 统一收口：丢掉指向本机/示例域名的条目，再按上限截断
+        cur = out.get(key)
+        if isinstance(cur, list):
+            cur = [it for it in cur if not _junk_values(it)]
+            cap = _LIST_CAP.get(key)
+            if cap is not None:
+                cur = cur[:cap] if cap else []
+            if cur:
+                out[key] = cur
+            else:
+                out.pop(key, None)
     for key in GLOBAL_SCALAR_KEYS:
         if out.get(key) not in (None, "", [], {}):
             continue
@@ -68,6 +98,10 @@ def merge_globals(docs_globals: list[dict], base: dict | None = None) -> dict:
             if v not in (None, "", [], {}):
                 out[key] = v
                 break
+    # base 里带进来的、以及为 0 上限的段（如 proxy）直接删掉
+    for key, cap in _LIST_CAP.items():
+        if not cap:
+            out.pop(key, None)
     return out
 
 
@@ -189,6 +223,34 @@ def _clean_dict(d: dict) -> dict:
             if not str(k).startswith("_") and v not in (None, "")}
 
 
+def clean_live(item: dict) -> dict:
+    """规整一条直播源：必须有 http url、name、整数 type（CatVod 里缺 type 会被整段丢弃）。"""
+    if not isinstance(item, dict):
+        return {}
+    url = str(item.get("url") or "").strip()
+    if not is_http(url):
+        return {}
+    out = _clean_dict(item)
+    name = str(out.get("name") or "").strip()
+    if not name:
+        name = url.rstrip("/").rsplit("/", 1)[-1][:32] or "直播源"
+    out["name"] = name
+    out["url"] = url
+    t = as_int(out.get("type"), 0)
+    out["type"] = t if t in (0, 1, 2, 3) else 0
+    pt = out.get("playerType")
+    if pt is not None:
+        pt = as_int(pt, -1)
+        if pt in (0, 1, 2):
+            out["playerType"] = pt
+        else:
+            out.pop("playerType", None)
+    for k in ("logo", "epg"):
+        if k in out and _junk_values(out[k]):
+            out.pop(k)
+    return out
+
+
 def build_config(records: list[SiteRecord], parses: list[dict], lives: list[dict],
                  groups: list[dict], globals_: dict, *, spider: str = "",
                  name_tag: bool = False, drop_dead: bool = True,
@@ -232,7 +294,8 @@ def build_config(records: list[SiteRecord], parses: list[dict], lives: list[dict
         cfg["lives"] = [{"group": g.get("group"), "channels": g.get("channels") or []}
                         for g in groups]
     elif lives:
-        cfg["lives"] = [_clean_dict(x) for x in lives]
+        cleaned = (clean_live(x) for x in lives)
+        cfg["lives"] = [x for x in cleaned if x]
     if parses:
         cfg["parses"] = [_clean_dict(x) for x in parses]
     for k in ("flags", "rules", "ijk", "ads", "doh", "hosts", "proxy", "headers"):
