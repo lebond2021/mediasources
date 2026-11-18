@@ -1,0 +1,345 @@
+{
+ "generated_at": "2026-11-18T19:57:30+0800",
+ "elapsed_s": 270.9,
+ "sources_crawled": 6760,
+ "urls_seen": 8001,
+ "sites_total": 7238,
+ "sites_alive": 2284,
+ "sites_dead": 2454,
+ "sites_unknown": 2500,
+ "by_type": {
+  "3": 5041,
+  "1": 1420,
+  "0": 392,
+  "4": 221,
+  "5": 117,
+  "6": 30,
+  "8": 13,
+  "2": 3,
+  "-1": 1
+ },
+ "by_type_name": {
+  "csp爬虫": 5041,
+  "json采集": 1420,
+  "xml采集": 392,
+  "csp接口": 221,
+  "json扩展": 117,
+  "xml扩展": 30,
+  "xml聚合": 13,
+  "xml自定义": 3,
+  "type-1": 1
+ },
+ "parses": 200,
+ "lives": 43122,
+ "top_hosts": [
+  [
+   "gh-proxy.org",
+   707
+  ],
+  [
+   "raw.githubusercontent.com",
+   176
+  ],
+  [
+   "gh-proxy.com",
+   142
+  ],
+  [
+   "ghfast.top",
+   86
+  ],
+  [
+   "catbox.n13.club",
+   79
+  ],
+  [
+   "127.0.0.1",
+   74
+  ],
+  [
+   "clun.top",
+   68
+  ],
+  [
+   "ghproxy.net",
+   59
+  ],
+  [
+   "tvrss.huawuhen.store",
+   54
+  ],
+  [
+   "play.iptv365.org",
+   42
+  ]
+ ],
+ "probe": {
+  "alive": 2479,
+  "dead": 2705,
+  "unknown": 2530
+ },
+ "spider": {
+  "chosen": "https://gh-proxy.com/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar",
+  "strict_dropped": 2819,
+  "report": [
+   {
+    "url": "https://gh-proxy.com/https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar",
+    "refs": 1618,
+    "ok": true,
+    "size": 2684075,
+    "dex": 1,
+    "classes_found": 125,
+    "coverage": 0.056
+   },
+   {
+    "url": "https://raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar",
+    "refs": 598,
+    "ok": true,
+    "size": 2684075,
+    "dex": 1,
+    "classes_found": 125,
+    "coverage": 0.056
+   },
+   {
+    "url": "https://gh-proxy.com/raw.githubusercontent.com/gaotianliuyun/gao/master/jar/pg.jar",
+    "refs": 548,
+    "ok": true,
+    "size": 2684075,
+    "dex": 1,
+    "classes_found": 125,
+    "coverage": 0.056
+   },
+   {
+    "url": "https://ghfast.top/https://raw.githubusercontent.com/dql521/TVBox/main/assets/30eaaa92_pg.jar",
+    "refs": 391,
+    "ok": true,
+    "size": 2684075,
+    "dex": 1,
+    "classes_found": 125,
+    "coverage": 0.056
+   },
+   {
+    "url": "https://g.33445500.xyz/https://raw.githubusercontent.com/qist/tvbox/refs/heads/master/jar/spider.jar",
+    "refs": 760,
+    "ok": true,
+    "size": 1700116,
+    "dex": 1,
+    "classes_found": 124,
+    "coverage": 0.055
+   },
+   {
+    "url": "https://gitee.com/starlinkapi/jar/raw/master/jar/new.jar",
+    "refs": 832,
+    "ok": true,
+    "size": 2097556,
+    "dex": 1,
+    "classes_found": 111,
+    "coverage": 0.05
+   },
+   {
+    "url": "https://ghfast.top/https://raw.githubusercontent.com/dql521/TVBox/main/assets/58f691e3_spider.jar",
+    "refs": 443,
+    "ok": true,
+    "size": 1859860,
+    "dex": 1,
+    "classes_found": 105,
+    "coverage": 0.047
+   },
+   {
+    "url": "https://raw.githubusercontent.com/xmbjm/svip/refs/heads/main/svip.jar",
+    "refs": 624,
+    "ok": true,
+    "size": 1937792,
+    "dex": 1,
+    "classes_found": 98,
+    "coverage": 0.044
+   },
+   {
+    "url": "https://gh-proxy.com/https://raw.githubusercontent.com/xmbjm/svip/refs/heads/main/svip.jar",
+    "refs": 624,
+    "ok": true,
+    "size": 1937792,
+    "dex": 1,
+    "classes_found": 98,
+    "coverage": 0.044
+   },
+   {
+    "url": "https://gh-proxy.com/https://raw.githubusercontent.com/xzwei528/qixia/main/qixia.jar",
+    "refs": 763,
+    "ok": true,
+    "size": 1134868,
+    "dex": 1,
+    "classes_found": 89,
+    "coverage": 0.04
+   },
+   {
+    "url": "https://gh-proxy.com/raw.githubusercontent.com/CandyMuj/ResourceInterface/main/TVBox/candymuj.jar",
+    "refs": 518,
+    "ok": true,
+    "size": 685892,
+    "dex": 1,
+    "classes_found": 46,
+    "coverage": 0.021
+   },
+   {
+    "url": "https://gh-proxy.com/raw.githubusercontent.com/yw88075/tvbox/main/HeChengChaXiu.jar",
+    "refs": 1329,
+    "ok": true,
+    "size": 1107247,
+    "dex": 1,
+    "classes_found": 40,
+    "coverage": 0.018
+   },
+   {
+    "url": "https://gh-proxy.com/https://raw.githubusercontent.com/HeChengChaXiu/tvbox/main/hccx/HeChengChaXiu.jar",
+    "refs": 496,
+    "ok": true,
+    "size": 696542,
+    "dex": 1,
+    "classes_found": 39,
+    "coverage": 0.017
+   },
+   {
+    "url": "https://ghproxy.net/https://raw.githubusercontent.com/13998394872/TVBox/main/jar/xyq.jar",
+    "refs": 406,
+    "ok": true,
+    "size": 384731,
+    "dex": 1,
+    "classes_found": 38,
+    "coverage": 0.017
+   },
+   {
+    "url": "https://gh-proxy.com/https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/custom_spider.jar",
+    "refs": 392,
+    "ok": true,
+    "size": 493982,
+    "dex": 1,
+    "classes_found": 34,
+    "coverage": 0.015
+   },
+   {
+    "url": "https://ghproxy.net/https://raw.githubusercontent.com/13998394872/TVBox/main/jar/xbpq.jar",
+    "refs": 648,
+    "ok": true,
+    "size": 433189,
+    "dex": 1,
+    "classes_found": 13,
+    "coverage": 0.006
+   },
+   {
+    "url": "https://raw.githubusercontent.com/jar/pg.jar",
+    "refs": 1060,
+    "ok": false,
+    "err": "http-404",
+    "size": 14
+   },
+   {
+    "url": "https://ghfast.top/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar",
+    "refs": 789,
+    "ok": false,
+    "err": "http-404",
+    "size": 14
+   },
+   {
+    "url": "https://gh-proxy.com/https://raw.githubusercontent.com/nzsm/tvbox-server/main/jar/spider.jar",
+    "refs": 729,
+    "ok": false,
+    "err": "http-404",
+    "size": 14
+   },
+   {
+    "url": "https://gh.jasonzeng.dev/https://raw.githubusercontent.com/xmbjm/svip/refs/heads/main/svip.jar",
+    "refs": 624,
+    "ok": false,
+    "err": "SSLError: HTTPSConnectionPool(host='gh.jasonzeng.dev', port=443): Max retries exceeded with url: /https://raw.githubusercontent.com/xmbjm/svip/refs/heads/main/svip.jar (Caused by SSLError(SSLEOFError(",
+    "size": 0
+   },
+   {
+    "url": "https://cdn.jsdelivr.net/gh/liu673cn/box@main/libs/jar/HCCX.jar",
+    "refs": 597,
+    "ok": false,
+    "err": "http-403",
+    "size": 9
+   },
+   {
+    "url": "https://gcore.jsdelivr.net/gh/dql521/TVBox@main/assets/58f691e3_spider.jar",
+    "refs": 536,
+    "ok": false,
+    "err": "http-403",
+    "size": 9
+   },
+   {
+    "url": "https://daili.korice.eu.org/https://raw.githubusercontent.com/qist/tvbox/refs/heads/master/jar/pg.jar",
+    "refs": 525,
+    "ok": false,
+    "err": "ReadTimeout: HTTPSConnectionPool(host='daili.korice.eu.org', port=443): Read timed out. (read timeout=8.0)",
+    "size": 0
+   },
+   {
+    "url": "https://daili.korice.eu.org/https://raw.githubusercontent.com/yuanwangokk-1/TV-BOX/8310f2998309365ada002f8ca498744d5c5b83f0/%E7%BA%AF%E7%A6%8F%E5%88%A9/jar/xyq.jar",
+    "refs": 511,
+    "ok": false,
+    "err": "ReadTimeout: HTTPSConnectionPool(host='daili.korice.eu.org', port=443): Read timed out. (read timeout=8.0)",
+    "size": 0
+   },
+   {
+    "url": "https://daili.korice.eu.org/https://raw.githubusercontent.com/yuanwangokk-1/TV-BOX/8310f2998309365ada002f8ca498744d5c5b83f0/%E7%BA%AF%E7%A6%8F%E5%88%A9/jar/xyqxbpq.jar",
+    "refs": 490,
+    "ok": false,
+    "err": "ReadTimeout: HTTPSConnectionPool(host='daili.korice.eu.org', port=443): Read timed out. (read timeout=8.0)",
+    "size": 0
+   },
+   {
+    "url": "https://gcore.jsdelivr.net/gh/dql521/TVBox@main/assets/30eaaa92_pg.jar",
+    "refs": 472,
+    "ok": false,
+    "err": "http-403",
+    "size": 9
+   },
+   {
+    "url": "https://ghf.xn--eqrr82bzpe.top/https://raw.githubusercontent.com/sqspot/tac/main/Xymz.jar",
+    "refs": 399,
+    "ok": false,
+    "err": "ReadTimeout: HTTPSConnectionPool(host='ghf.xn--eqrr82bzpe.top', port=443): Read timed out. (read timeout=6)",
+    "size": 0
+   },
+   {
+    "url": "https://g.blfrp.cn/https://raw.githubusercontent.com/yuanwangokk-1/TV-BOX/main/PG/pg.jar",
+    "refs": 366,
+    "ok": false,
+    "err": "http-404",
+    "size": 14
+   },
+   {
+    "url": "https://cdn.jsdelivr.net/gh/dql521/TVBox@main/assets/58f691e3_spider.jar",
+    "refs": 361,
+    "ok": false,
+    "err": "http-403",
+    "size": 9
+   },
+   {
+    "url": "https://gcore.jsdelivr.net/gh/dql521/TVBox@main/assets/e800c0f8_yqx.jar",
+    "refs": 348,
+    "ok": false,
+    "err": "http-403",
+    "size": 9
+   }
+  ]
+ },
+ "dup": {
+  "total": 644567,
+  "unique_by_backend": 72907,
+  "unique_by_exact": 77488,
+  "unique_by_key": 38746,
+  "unique_by_name": 56907,
+  "unique_by_signature": 194713,
+  "dup_rate_backend": 0.8869,
+  "dup_rate_key": 0.9399,
+  "names_fixed": 2336,
+  "keys_fixed": 2160
+ },
+ "raw_sites": 644567,
+ "sites_full": 71875,
+ "sites_main": 4589,
+ "channel_groups": 531
+}

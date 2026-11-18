@@ -1,0 +1,26 @@
+{
+ "published_at": "2026-11-18",
+ "vod": {
+  "primary": "https://raw.githubusercontent.com/lebond2021/mediasources/dist/index.json",
+  "mirror": "https://cdn.jsdelivr.net/gh/lebond2021/mediasources@dist/index.json",
+  "sites": 107
+ },
+ "live": {
+  "primary": "https://cdn.jsdelivr.net/gh/lebond2021/mediasources@dist/index_lives.json",
+  "mirrors": {
+   "pomf2.lain.la": "https://pomf2.lain.la/f/ck325ry3.json",
+   "kappa.lol": "https://kappa.lol/7ImW4h",
+   "raw(仅供点播加载器)": "https://raw.githubusercontent.com/lebond2021/mediasources/dist/index_lives.json"
+  },
+  "lives": 8,
+  "all_m3u": "https://cdn.jsdelivr.net/gh/lebond2021/mediasources@dist/live_all.txt",
+  "all_m3u_mirrors": {},
+  "note": "直播加载器要求配置 JSON 的 Content-Type 是 application/json（raw 返回 text/plain 会被静默忽略）；而它会把 m3u 总表当 JS 模块解析，jsDelivr 对 .m3u 返回 audio/x-mpegurl 会报 evaluateModule 错误，所以总表用 .txt（text/plain）。lives[0] 指向我们自己合并去重后的总频道表。"
+ },
+ "variants": {
+  "index_lite.json（300 站精简）": "https://cdn.jsdelivr.net/gh/lebond2021/mediasources@dist/index_lite.json",
+  "storehouse.json（多仓）": "https://cdn.jsdelivr.net/gh/lebond2021/mediasources@dist/storehouse.json",
+  "index_all.json（全量）": "https://raw.githubusercontent.com/lebond2021/mediasources/dist/index_all.json",
+  "index_lives_grouped.json（频道组）": "https://cdn.jsdelivr.net/gh/lebond2021/mediasources@dist/index_lives_grouped.json"
+ }
+}
